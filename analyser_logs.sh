@@ -47,13 +47,31 @@ mkdir -p "$DOSSIER_JOUR"
   echo -e "\n📌 Utilisation disque :"
   df -h
 
-  echo -e "\n📌 Utilisation mémoire :"
+  echo -e "\n📌 Utilisation mémoire (RAM + Swap) :"
   free -h
 
-  echo -e "\n📌 Top processus gourmands :"
+  echo -e "\n📌 Détail mémoire :"
+  total=$(free -m | awk '/^Mem:/ {print $2}')
+  used=$(free -m | awk '/^Mem:/ {print $3}')
+  swap_total=$(free -m | awk '/^Swap:/ {print $2}')
+  swap_used=$(free -m | awk '/^Swap:/ {print $3}')
+  printf "RAM utilisée : %s MiB / %s MiB (%.2f%%)\n" "$used" "$total" "$(echo "$used * 100 / $total" | bc -l)"
+  printf "SWAP utilisée : %s MiB / %s MiB (%.2f%%)\n" "$swap_used" "$swap_total" "$(echo "$swap_used * 100 / $swap_total" | bc -l)"
+
+  echo -e "\n📌 Top 10 processus utilisant le plus de RAM :"
+  ps -eo user,pid,%mem,rss,comm --sort=-%mem | head -11
+
+  echo -e "\n📌 Nombre total de processus par utilisateur (top 5) :"
+  ps -eo user= | sort | uniq -c | sort -nr | head -5
+
+  echo -e "\n📌 Consommation mémoire par type de processus :"
+  ps -eo comm,%mem --sort=-%mem | grep -v COMMAND | \
+    awk '{arr[$1]+=$2} END {for (p in arr) printf "%-20s : %.2f%%\n", p, arr[p]}' | sort -k3 -nr | head -15
+
+  echo -e "\n📌 Top processus gourmands CPU :"
   ps aux --sort=-%cpu | head -10
 
-  echo -e "\n📌 Ports ouverts :"
+  echo -e "\n📌 Ports ouverts (hors localhost) :"
   ss -tuln | grep -v "127.0.0.1"
 
   echo -e "\n📌 Services en échec :"
