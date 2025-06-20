@@ -13,6 +13,8 @@ FICHIERS_SOURCE=(
   "/var/log/auth.log"
   "/var/log/syslog"
   "/var/log/nginx/access.log"
+  "/var/log/apache2/access.log"
+  "/var/www/sarahHasaera/logs/access.log"
 )
 
 MOTS_CLES=(
@@ -88,6 +90,21 @@ mkdir -p "$DOSSIER_JOUR"
 
   echo -e "\n📌 Tentatives sudo échouées :"
   journalctl _COMM=sudo | grep 'authentication failure' | tail -20 2>/dev/null || echo "Pas de journal sudo disponible."
+
+  echo -e "\n📌 Vérification des logs web (Nginx/Apache/autres) :"
+  for FICHIER in "${FICHIERS_SOURCE[@]}"; do
+    if [[ "$FICHIER" =~ access\.log$ ]]; then
+      if [[ -f "$FICHIER" ]]; then
+        if [[ -s "$FICHIER" ]]; then
+          echo "✅ $FICHIER existe et contient des données."
+        else
+          echo "⚠️ $FICHIER est vide."
+        fi
+      else
+        echo "❌ $FICHIER est introuvable."
+      fi
+    fi
+  done
 
   echo -e "\n📌 IPs actives dans les logs :"
   for FICHIER in "${FICHIERS_SOURCE[@]}"; do
