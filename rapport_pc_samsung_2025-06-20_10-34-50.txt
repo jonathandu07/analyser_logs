@@ -1,0 +1,133 @@
+🛡️ Rapport d’analyse – PC Samsung
+============================================================
+Date : Friday 20 June 2025, 10:34:50
+
+🖥️ Informations système
+========================================
+Système        : Windows
+Nom d'hôte     : BOOK-3-Ultra
+Version        : 10.0.26100
+Édition        : Windows-11-10.0.26100-SP0
+Architecture   : AMD64
+Nom du PC      : BOOK-3-ULTRA
+Utilisateur    : Jonathan
+
+🧠 Processeur
+========================================
+Nom            : 13th Gen Intel(R) Core(TM) i9-13900H
+Fréquence      : 2600.00 MHz
+Cœurs (logiques/physiques) : 20 / 14
+Utilisation (%) : 7.5%
+
+🎮 Carte graphique
+========================================
+Nom         : NVIDIA GeForce RTX 4070 Laptop GPU
+Mémoire     : 0.0MB / 8188.0MB
+Température : 50.0 °C
+Charge      : 0.0%
+
+🧮 Mémoire RAM
+========================================
+Totale       : 31.57 GB
+Utilisée     : 19.44 GB
+Libre        : 12.13 GB
+Pourcentage  : 61.6 %
+
+🔁 Mémoire swap
+========================================
+Totale     : 36.24 GB
+Utilisée   : 0.38 GB
+Libre      : 35.86 GB
+Pourcentage: 1.1 %
+
+💽 Disques
+========================================
+C:\ (C:\)
+  Total      : 930.96 GB
+  Utilisé    : 496.60 GB
+  Libre      : 434.36 GB
+  Pourcentage: 53.3 %
+
+D:\ (D:\)
+  Total      : 1862.89 GB
+  Utilisé    : 132.90 GB
+  Libre      : 1730.00 GB
+  Pourcentage: 7.1 %
+
+E:\ (E:\)
+  Total      : 0.03 GB
+  Utilisé    : 0.00 GB
+  Libre      : 0.03 GB
+  Pourcentage: 0.0 %
+
+F:\ (F:\)
+  Total      : 928.19 GB
+  Utilisé    : 546.12 GB
+  Libre      : 382.06 GB
+  Pourcentage: 58.8 %
+
+G:\ (G:\)
+  Total      : 1.44 GB
+  Utilisé    : 1.44 GB
+  Libre      : 0.00 GB
+  Pourcentage: 100.0 %
+
+🌐 Réseau
+========================================
+Interface : Ethernet 3
+  MAC           : 0A-00-27-00-00-15
+  Adresse IP    : 192.168.56.1
+  Masque        : 255.255.255.0
+Interface : Connexion au réseau local
+  MAC           : 00-FF-B0-69-EE-01
+  Adresse IP    : 169.254.128.65
+  Masque        : 255.255.0.0
+Interface : Connexion au réseau local* 1
+  MAC           : F4-6D-3F-7D-6A-D2
+  Adresse IP    : 169.254.36.176
+  Masque        : 255.255.0.0
+Interface : Connexion au réseau local* 2
+  MAC           : F6-6D-3F-7D-6A-D1
+  Adresse IP    : 169.254.89.101
+  Masque        : 255.255.0.0
+Interface : VMware Network Adapter VMnet1
+  MAC           : 00-50-56-C0-00-01
+  Adresse IP    : 192.168.142.1
+  Masque        : 255.255.255.0
+Interface : VMware Network Adapter VMnet8
+  MAC           : 00-50-56-C0-00-08
+  Adresse IP    : 192.168.214.1
+  Masque        : 255.255.255.0
+Interface : Wi-Fi
+  MAC           : F4-6D-3F-7D-6A-D1
+  Adresse IP    : 192.168.10.124
+  Masque        : 255.255.255.0
+Interface : Connexion réseau Bluetooth
+  MAC           : F4-6D-3F-7D-6A-D5
+  Adresse IP    : 169.254.131.146
+  Masque        : 255.255.0.0
+Interface : vEthernet (Default Switch)
+  MAC           : 00-15-5D-10-01-00
+  Adresse IP    : 172.24.64.1
+  Masque        : 255.255.240.0
+Interface : Loopback Pseudo-Interface 1
+  Adresse IP    : 127.0.0.1
+  Masque        : 255.0.0.0
+
+🔍 Top 10 processus (RAM)
+========================================
+|   PID | Nom                     | CPU   | Mémoire    |
+|-------|-------------------------|-------|------------|
+|  5044 | MemCompression          | 0.0%  | 2419.68 MB |
+| 40516 | msedgewebview2.exe      | 0.0%  | 1017.74 MB |
+| 40120 | explorer.exe            | 0.0%  | 671.50 MB  |
+| 14432 | MsMpEng.exe             | 0.0%  | 397.08 MB  |
+| 34848 | msedge.exe              | 0.0%  | 276.11 MB  |
+| 52932 | Code.exe                | 0.0%  | 274.35 MB  |
+| 51836 | msedge.exe              | 0.0%  | 260.93 MB  |
+|  5700 | PhoneExperienceHost.exe | 0.0%  | 248.51 MB  |
+| 42428 | Code.exe                | 0.0%  | 247.28 MB  |
+| 21236 | msedge.exe              | 0.0%  | 240.36 MB  |
+
+============================================================
+✅ Rapport terminé.
