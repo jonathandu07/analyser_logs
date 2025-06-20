@@ -1,20 +1,21 @@
 #!/bin/bash
 
 # === CONFIGURATION ===
-REPO_DIR="/root/analyser_logs"
-DATE_DIR="$(date +%F)"
-LOGS_DIR="$REPO_DIR/logs/$DATE_DIR"
-ARCHIVE_FILE="$REPO_DIR/logs/logs_$DATE_DIR.tar.gz"
-LOGFILE="$LOGS_DIR/log_$(date +%F_%Hh%Mm).log"
-GIT_LOG_ERR="/root/analyser_logs/git_push_errors.log"
+DOSSIER_REPO="/root/analyser_logs"
+DATE_FR="$(date +%d-%m-%Y)"
+HEURE_FR="$(date +%Hh%Mm)"
+DOSSIER_JOUR="$DOSSIER_REPO/logs/$DATE_FR"
+ARCHIVE="$DOSSIER_REPO/logs/journal_$DATE_FR.tar.gz"
+FICHIER_LOG="$DOSSIER_JOUR/journal_${DATE_FR}_${HEURE_FR}.log"
+FICHIER_ERREUR_GIT="$DOSSIER_REPO/journal_erreurs_git.log"
 
-SOURCE_LOGS=(
+FICHIERS_SOURCE=(
   "/var/log/auth.log"
   "/var/log/syslog"
   "/var/log/nginx/access.log"
 )
 
-KEYWORDS=(
+MOTS_CLES=(
   "Failed password"
   "Invalid user"
   "authentication failure"
@@ -26,41 +27,75 @@ KEYWORDS=(
   "wp-login"
 )
 
-# === CRÉATION DU RÉPERTOIRE DU JOUR ===
-mkdir -p "$LOGS_DIR"
+# === CRÉATION DU DOSSIER DU JOUR ===
+mkdir -p "$DOSSIER_JOUR"
 
-# === CRÉATION DU RAPPORT DE LOG ===
+# === GÉNÉRATION DU RAPPORT ===
 {
-  echo "🛡️ Rapport de sécurité - $(date '+%Y-%m-%d %H:%M:%S')"
-  echo "======================================================"
+  echo "🛡️ Rapport de sécurité – $(date '+%d/%m/%Y à %Hh%M')"
+  echo "=========================================================="
 
-  echo -e "\n📌 Top IPs actives :"
-  for LOG in "${SOURCE_LOGS[@]}"; do
-    [[ -f "$LOG" ]] && grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' "$LOG" | sort | uniq -c | sort -nr | head -10
+  echo -e "\n📌 Uptime et charge système :"
+  uptime
+
+  echo -e "\n📌 Connexions SSH actives :"
+  who
+
+  echo -e "\n📌 Derniers redémarrages :"
+  last reboot | head -10
+
+  echo -e "\n📌 Utilisation disque :"
+  df -h
+
+  echo -e "\n📌 Utilisation mémoire :"
+  free -h
+
+  echo -e "\n📌 Top processus gourmands :"
+  ps aux --sort=-%cpu | head -10
+
+  echo -e "\n📌 Ports ouverts :"
+  ss -tuln | grep -v "127.0.0.1"
+
+  echo -e "\n📌 Services en échec :"
+  systemctl --failed
+
+  echo -e "\n📌 Derniers paquets installés :"
+  grep " install " /var/log/dpkg.log | tail -10 2>/dev/null || echo "Fichier dpkg.log non disponible."
+
+  echo -e "\n📌 Utilisateurs système :"
+  cut -d: -f1 /etc/passwd | sort
+
+  echo -e "\n📌 Utilisateurs autorisés sudo :"
+  getent group sudo
+
+  echo -e "\n📌 Tentatives sudo échouées :"
+  journalctl _COMM=sudo | grep 'authentication failure' | tail -20 2>/dev/null || echo "Pas de journal sudo disponible."
+
+  echo -e "\n📌 IPs actives dans les logs :"
+  for FICHIER in "${FICHIERS_SOURCE[@]}"; do
+    [[ -f "$FICHIER" ]] && grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' "$FICHIER" | sort | uniq -c | sort -nr | head -10
   done
 
-  echo -e "\n🚨 Activité suspecte détectée :"
-  for LOG in "${SOURCE_LOGS[@]}"; do
-    [[ -f "$LOG" ]] && for keyword in "${KEYWORDS[@]}"; do
-      grep "$keyword" "$LOG"
+  echo -e "\n🚨 Recherche d’activité suspecte :"
+  for FICHIER in "${FICHIERS_SOURCE[@]}"; do
+    [[ -f "$FICHIER" ]] && for mot in "${MOTS_CLES[@]}"; do
+      echo -e "\n🔎 $mot dans $FICHIER :"
+      grep --color=never "$mot" "$FICHIER" | tail -10
     done
   done
-} > "$LOGFILE"
+} > "$FICHIER_LOG"
 
-# === SUPPRESSION DES LOGS DE +7 JOURS ===
-find "$REPO_DIR/logs" -type f -name "*.log" -mtime +7 -exec rm -f {} \;
+# === NETTOYAGE DES LOGS DE PLUS DE 7 JOURS ===
+find "$DOSSIER_REPO/logs" -type f -name "*.log" -mtime +7 -exec rm -f {} \;
 
-# === COMPRESSION DU DOSSIER DU JOUR ===
-tar -czf "$ARCHIVE_FILE" -C "$REPO_DIR/logs" "$DATE_DIR"
+# === COMPRESSION DU JOURNAL DU JOUR ===
+tar -czf "$ARCHIVE" -C "$DOSSIER_REPO/logs" "$DATE_FR"
 
-# (Optionnel) Supprimer les fichiers bruts après compression :
-# rm -rf "$LOGS_DIR"
+# === COMMIT ET ENVOI GIT ===
+cd "$DOSSIER_REPO"
+git add logs/
+git commit -m "📦 Journaux complets du $DATE_FR" > /dev/null 2>&1
 
-# === GIT COMMIT & PUSH ===
-cd "$REPO_DIR"
-git add "logs/"
-git commit -m "📦 Logs compressés du $DATE_DIR" > /dev/null 2>&1
-
-if ! git push >> "$GIT_LOG_ERR" 2>&1; then
-  echo "❌ Échec du git push le $(date '+%Y-%m-%d %H:%M:%S')" >> "$GIT_LOG_ERR"
+if ! git push >> "$FICHIER_ERREUR_GIT" 2>&1; then
+  echo "❌ Échec de l’envoi Git le $(date '+%d/%m/%Y à %Hh%M')" >> "$FICHIER_ERREUR_GIT"
 fi
