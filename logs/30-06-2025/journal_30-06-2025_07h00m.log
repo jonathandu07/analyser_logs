@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 22/06/2025 à 06h00
+🛡️ Rapport de sécurité – 30/06/2025 à 07h00
 ==========================================================
 
 📌 Uptime et charge système :
- 06:00:03 up 10 days, 12:27,  1 user,  load average: 0.00, 0.00, 0.00
+ 07:00:02 up 18 days, 13:27,  1 user,  load average: 0.00, 0.00, 0.00
 
 📌 Connexions SSH actives :
 root     pts/2        Jun 19 14:08 (tmux(75255).%0)
@@ -35,25 +35,25 @@ overlay          28G   22G  5.3G  81% /var/lib/docker/overlay2/c8a1d2e12effca018
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       807Mi        33Mi       332Ki       1.2Gi       1.1Gi
-Swap:          975Mi       304Mi       671Mi
+Mem:           1.9Gi       775Mi        39Mi       328Ki       1.2Gi       1.2Gi
+Swap:          975Mi       391Mi       584Mi
 
 📌 Détail mémoire :
-RAM utilisée : 807 MiB / 1977 MiB (40.82%)
-SWAP utilisée : 304 MiB / 975 MiB (31.18%)
+RAM utilisée : 775 MiB / 1977 MiB (39.20%)
+SWAP utilisée : 391 MiB / 975 MiB (40.10%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-999        54130  9.3 188464 mysqld
-root       75272  8.1 164516 node
-root       54476  6.3 127620 gunicorn
-root       75260  2.5 51696 npm run dev --h
-mysql      47228  2.3 48492 mariadbd
-root        6803  2.1 43872 systemd-journal
-root       53856  1.9 39700 dockerd
-root       72778  1.7 35408 snapd
-root         505  1.0 21612 containerd
-root       75288  0.6 13624 esbuild
+root       75272  9.4 191352 node
+999        54130  7.2 146064 mysqld
+root       54476  5.1 103948 gunicorn
+root        6803  3.8 77392 systemd-journal
+root       75260  2.3 46716 npm run dev --h
+mysql      47228  2.0 40864 mariadbd
+root       53856  1.6 34416 dockerd
+root       72778  1.5 31832 snapd
+root       75288  1.2 25684 esbuild
+root         505  1.0 20912 containerd
 
 📌 Nombre total de processus par utilisateur (top 5) :
     105 root
@@ -63,33 +63,33 @@ root       75288  0.6 13624 esbuild
       1 mysql
 
 📌 Consommation mémoire par type de processus :
-mysqld               : 9.30%
-node                 : 8.10%
-gunicorn             : 6.70%
-mariadbd             : 2.30%
-systemd-journal      : 2.10%
-dockerd              : 1.90%
-snapd                : 1.70%
+node                 : 9.40%
+mysqld               : 7.20%
+gunicorn             : 5.50%
+systemd-journal      : 3.80%
+mariadbd             : 2.00%
+dockerd              : 1.60%
+snapd                : 1.50%
+esbuild              : 1.20%
 containerd           : 1.00%
 nginx                : 0.90%
-containerd-shim      : 0.90%
 systemd              : 0.80%
-esbuild              : 0.60%
-docker-proxy         : 0.50%
+containerd-shim      : 0.70%
 dhclient             : 0.50%
+docker-proxy         : 0.40%
 systemd-timesyn      : 0.30%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root       89607  100  0.2   9124  4396 ?        R    06:00   0:00 ps aux --sort=-%cpu
-root       89566  7.6  0.1   3792  2780 ?        S    06:00   0:00 /bin/bash ./analyser_logs.sh
-999        54130  0.3  9.3 1740852 188464 ?      Ssl  Jun13  40:51 mysqld
-root       75288  0.0  0.6 1235936 13624 pts/2   Sl+  Jun19   2:02 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.2 --ping
-root       75272  0.0  8.1 5563628 164516 pts/2  Sl+  Jun19   2:00 node /var/www/sarahHasaera/node_modules/.bin/../vite/bin/vite.js --host
-root         505  0.0  1.0 1340504 21612 ?       Ssl  Jun11   5:59 /usr/bin/containerd
-root       53856  0.0  1.9 1901960 39700 ?       Ssl  Jun13   4:32 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-root       54107  0.0  0.4  31236  8692 ?        Ss   Jun13   2:57 /usr/local/bin/python3.12 /usr/local/bin/gunicorn --chdir /app --bind 0.0.0.0:8000 main.wsgi:application --access-logfile - --error-logfile -
-mysql      47228  0.0  2.3 1146724 48492 ?       Ssl  Jun13   1:47 /usr/sbin/mariadbd
+999        54130  0.3  7.2 1740852 146064 ?      Ssl  Jun13  80:27 mysqld
+root       75288  0.0  1.2 1237216 25684 pts/2   Sl+  Jun19   8:15 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.2 --ping
+root       75272  0.0  9.4 5586204 191352 pts/2  Sl+  Jun19   7:34 node /var/www/sarahHasaera/node_modules/.bin/../vite/bin/vite.js --host
+root         505  0.0  1.0 1340504 20912 ?       Ssl  Jun11  10:08 /usr/bin/containerd
+root       53856  0.0  1.6 1901960 34416 ?       Ssl  Jun13   8:46 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root       54107  0.0  0.4  31236  8136 ?        Ss   Jun13   5:47 /usr/local/bin/python3.12 /usr/local/bin/gunicorn --chdir /app --bind 0.0.0.0:8000 main.wsgi:application --access-logfile - --error-logfile -
+mysql      47228  0.0  2.0 1146724 40864 ?       Ssl  Jun13   3:28 /usr/sbin/mariadbd
+root      133377  0.0  0.0      0     0 ?        I    06:46   0:00 [kworker/1:3-events]
+root      122476  0.0  0.0      0     0 ?        I    Jun28   0:14 [kworker/0:3-events]
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
