@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 24/06/2025 à 23h00
+🛡️ Rapport de sécurité – 03/07/2025 à 00h00
 ==========================================================
 
 📌 Uptime et charge système :
- 23:00:03 up 13 days,  5:27,  1 user,  load average: 0.02, 0.03, 0.00
+ 00:00:03 up 21 days,  6:27,  1 user,  load average: 0.03, 0.07, 0.03
 
 📌 Connexions SSH actives :
 root     pts/2        Jun 19 14:08 (tmux(75255).%0)
@@ -19,7 +19,7 @@ wtmp begins Sat Apr 26 00:29:50 2025
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
 tmpfs           198M  1.2M  197M   1% /run
-/dev/vda2        28G   22G  5.3G  81% /
+/dev/vda2        28G   22G  5.2G  81% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop1       53M   53M     0 100% /snap/certbot/4728
@@ -28,48 +28,48 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
 /dev/loop4       53M   53M     0 100% /snap/certbot/4738
 tmpfs           198M  4.0K  198M   1% /run/user/1000
-overlay          28G   22G  5.3G  81% /var/lib/docker/overlay2/5660e34359f15c4f7a1057a2e9fd177619a17269b69f251838a2d5d55b937c09/merged
-overlay          28G   22G  5.3G  81% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+overlay          28G   22G  5.2G  81% /var/lib/docker/overlay2/5660e34359f15c4f7a1057a2e9fd177619a17269b69f251838a2d5d55b937c09/merged
+overlay          28G   22G  5.2G  81% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
 /dev/loop0       45M   45M     0 100% /snap/snapd/24724
 /dev/loop5       62M   62M     0 100% /snap/core24/1010
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       781Mi       136Mi       332Ki       1.1Gi       1.2Gi
-Swap:          975Mi       387Mi       588Mi
+Mem:           1.9Gi       768Mi        51Mi       328Ki       1.2Gi       1.2Gi
+Swap:          975Mi       391Mi       584Mi
 
 📌 Détail mémoire :
-RAM utilisée : 781 MiB / 1977 MiB (39.50%)
-SWAP utilisée : 387 MiB / 975 MiB (39.69%)
+RAM utilisée : 768 MiB / 1977 MiB (38.85%)
+SWAP utilisée : 391 MiB / 975 MiB (40.10%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root       75272  9.4 191964 node
-999        54130  7.0 143616 mysqld
-root       54476  5.0 102728 gunicorn
-root        6803  2.5 51468 systemd-journal
-root       75260  2.3 46992 npm run dev --h
-mysql      47228  2.0 41152 mariadbd
-root       53856  1.6 34308 dockerd
-root       72778  1.6 32904 snapd
-root       75288  1.2 25784 esbuild
-root         505  1.0 20964 containerd
+root       75272  9.5 192472 node
+999        54130  7.3 148184 mysqld
+root       54476  5.3 108212 gunicorn
+root        6803  4.4 89476 systemd-journal
+root       75260  2.3 46708 npm run dev --h
+mysql      47228  2.0 40764 mariadbd
+root       53856  1.7 34576 dockerd
+root       72778  1.5 31672 snapd
+root       75288  1.2 25780 esbuild
+root         505  1.0 20864 containerd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-    105 root
+    106 root
       2 www-data
       2 jonathan
       1 systemd-timesync
       1 mysql
 
 📌 Consommation mémoire par type de processus :
-node                 : 9.40%
-mysqld               : 7.00%
-gunicorn             : 5.40%
-systemd-journal      : 2.50%
+node                 : 9.50%
+mysqld               : 7.30%
+gunicorn             : 5.70%
+systemd-journal      : 4.40%
 mariadbd             : 2.00%
-snapd                : 1.60%
-dockerd              : 1.60%
+dockerd              : 1.70%
+snapd                : 1.50%
 esbuild              : 1.20%
 containerd           : 1.00%
 nginx                : 0.90%
@@ -81,15 +81,15 @@ systemd-timesyn      : 0.30%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root      104442  100  0.2   9124  4396 ?        R    23:00   0:00 ps aux --sort=-%cpu
-root      104401  8.3  0.1   3792  2780 ?        S    23:00   0:00 /bin/bash ./analyser_logs.sh
-999        54130  0.3  7.0 1740852 143616 ?      Ssl  Jun13  54:05 mysqld
-root       75288  0.0  1.2 1237216 25784 pts/2   Sl+  Jun19   4:06 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.2 --ping
-root       75272  0.0  9.4 5585948 191964 pts/2  Sl+  Jun19   4:00 node /var/www/sarahHasaera/node_modules/.bin/../vite/bin/vite.js --host
-root         505  0.0  1.0 1340504 20964 ?       Ssl  Jun11   7:23 /usr/bin/containerd
-root       53856  0.0  1.6 1901960 34308 ?       Ssl  Jun13   5:58 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-root       54107  0.0  0.4  31236  8136 ?        Ss   Jun13   3:54 /usr/local/bin/python3.12 /usr/local/bin/gunicorn --chdir /app --bind 0.0.0.0:8000 main.wsgi:application --access-logfile - --error-logfile -
-mysql      47228  0.0  2.0 1146724 41152 ?       Ssl  Jun13   2:21 /usr/sbin/mariadbd
+root      148236  100  0.2   9124  4396 ?        R    00:00   0:00 ps aux --sort=-%cpu
+root      148226 66.6  0.3 168984  7348 ?        RNs  00:00   0:00 (ogrotate)
+root      148188  6.2  0.1   3792  2784 ?        S    00:00   0:00 /bin/bash ./analyser_logs.sh
+999        54130  0.3  7.3 1740852 148184 ?      Ssl  Jun13  93:34 mysqld
+root       75288  0.0  1.2 1237216 25780 pts/2   Sl+  Jun19  10:21 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.2 --ping
+root       75272  0.0  9.5 5587920 192472 pts/2  Sl+  Jun19   9:23 node /var/www/sarahHasaera/node_modules/.bin/../vite/bin/vite.js --host
+root         505  0.0  1.0 1340504 20864 ?       Ssl  Jun11  11:31 /usr/bin/containerd
+root       53856  0.0  1.7 1901960 34576 ?       Ssl  Jun13  10:12 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root       54107  0.0  0.4  31236  8136 ?        Ss   Jun13   6:44 /usr/local/bin/python3.12 /usr/local/bin/gunicorn --chdir /app --bind 0.0.0.0:8000 main.wsgi:application --access-logfile - --error-logfile -
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
@@ -118,16 +118,6 @@ SUB    = The low-level unit activation state, values depend on unit type.
 2 loaded units listed.
 
 📌 Derniers paquets installés :
-2025-06-19 13:37:43 install python3-talloc:arm64 <none> 2.4.0-f2
-2025-06-19 13:37:44 install python3-samba:arm64 <none> 2:4.17.12+dfsg-0+deb12u1
-2025-06-19 13:38:46 install samba-common:all <none> 2:4.17.12+dfsg-0+deb12u1
-2025-06-19 13:38:46 install samba-common-bin:arm64 <none> 2:4.17.12+dfsg-0+deb12u1
-2025-06-19 13:39:08 install samba-dsdb-modules:arm64 <none> 2:4.17.12+dfsg-0+deb12u1
-2025-06-19 13:39:18 install smbclient:arm64 <none> 2:4.17.12+dfsg-0+deb12u1
-2025-06-19 14:07:48 install libevent-core-2.1-7:arm64 <none> 2.1.12-stable-8
-2025-06-19 14:08:13 install libutempter0:arm64 <none> 1.2.1-3
-2025-06-19 14:08:14 install tmux:arm64 <none> 3.3a-3
-2025-06-20 10:26:49 install bc:arm64 <none> 1.07.1-3
 
 📌 Utilisateurs système :
 _apt
@@ -168,7 +158,7 @@ Jun 13 19:47:44 nac sudo[4457]: pam_unix(sudo:auth): authentication failure; log
 ❌ /var/www/sarahHasaera/logs/access.log est introuvable.
 
 📌 IPs actives dans les logs :
-      6 192.168.1.165
+    135 192.168.1.165
 
 🚨 Recherche d’activité suspecte :
 
@@ -183,8 +173,11 @@ Jun 13 19:47:44 nac sudo[4457]: pam_unix(sudo:auth): authentication failure; log
 🔎 possible break-in attempt dans /var/log/nginx/access.log :
 
 🔎 403 dans /var/log/nginx/access.log :
+192.168.1.165 - - [02/Jul/2025:17:38:45 +0200] "GET /static/images/12066writinghandmediumskintone_111431.png HTTP/1.1" 200 44035 "https://jonathan-nac.fr/a-propos/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6780.69 Safari/537.36 Edg/133.0.2893.107"
 
 🔎 404 dans /var/log/nginx/access.log :
+192.168.1.165 - - [02/Jul/2025:17:38:49 +0200] "GET /media/formations/area_plot.png HTTP/1.1" 404 159 "https://jonathan-nac.fr/realisations/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6780.69 Safari/537.36 Edg/133.0.2893.107"
+192.168.1.165 - - [02/Jul/2025:17:38:49 +0200] "GET /media/formations/maxresdefault_3.jpg HTTP/1.1" 404 159 "https://jonathan-nac.fr/realisations/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6780.69 Safari/537.36 Edg/133.0.2893.107"
 
 🔎 SQL syntax dans /var/log/nginx/access.log :
 
