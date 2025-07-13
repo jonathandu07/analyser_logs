@@ -1,0 +1,175 @@
+🛡️ Rapport de sécurité – 14/07/2025 à 00h00
+==========================================================
+
+📌 Uptime et charge système :
+ 00:00:02 up 4 days, 19:38,  0 user,  load average: 1.44, 1.42, 1.48
+
+📌 Connexions SSH actives :
+
+📌 Derniers redémarrages :
+reboot   system boot  6.1.0-37-arm64   Wed Jul  9 04:21   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jul  3 20:14   still running
+reboot   system boot  6.1.0-34-arm64   Wed Jun 11 17:32   still running
+reboot   system boot  6.1.0-34-arm64   Wed Jun 11 16:48   still running
+reboot   system boot  6.1.0-34-arm64   Tue May 27 18:36   still running
+reboot   system boot  6.1.0-33-arm64   Sat Apr 26 00:29   still running
+
+wtmp begins Sat Apr 26 00:29:50 2025
+
+📌 Utilisation disque :
+Filesystem      Size  Used Avail Use% Mounted on
+udev            940M     0  940M   0% /dev
+tmpfs           198M  1.1M  197M   1% /run
+/dev/vda2        28G   23G  4.2G  85% /
+tmpfs           989M     0  989M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/loop4       53M   53M     0 100% /snap/certbot/4728
+/dev/loop2       62M   62M     0 100% /snap/core24/1010
+/dev/loop3       45M   45M     0 100% /snap/snapd/24724
+/dev/loop0       53M   53M     0 100% /snap/certbot/4738
+/dev/loop1       62M   62M     0 100% /snap/core24/992
+/dev/vda1       512M  6.1M  506M   2% /boot/efi
+overlay          28G   23G  4.2G  85% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+overlay          28G   23G  4.2G  85% /var/lib/docker/overlay2/5660e34359f15c4f7a1057a2e9fd177619a17269b69f251838a2d5d55b937c09/merged
+/dev/loop6       43M   43M     0 100% /snap/snapd/24787
+
+📌 Utilisation mémoire (RAM + Swap) :
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       836Mi        48Mi       1.1Mi       1.2Gi       1.1Gi
+Swap:          975Mi       319Mi       656Mi
+
+📌 Détail mémoire :
+RAM utilisée : 841 MiB / 1977 MiB (42.54%)
+SWAP utilisée : 319 MiB / 975 MiB (32.72%)
+
+📌 Top 10 processus utilisant le plus de RAM :
+USER         PID %MEM   RSS COMMAND
+999         1103 11.6 235512 mysqld
+root        1835  7.1 144912 gunicorn
+mysql        616  6.7 137244 mariadbd
+root         225  6.6 134016 systemd-journal
+root         645  3.5 72596 dockerd
+root     3785456  3.3 67664 node
+root     3785417  2.7 56592 npm run build
+root     1224413  2.4 48808 snapd
+root         536  1.9 39772 containerd
+root        1061  0.9 18828 containerd-shim
+
+📌 Nombre total de processus par utilisateur (top 5) :
+    104 root
+      2 www-data
+      1 systemd-timesync
+      1 mysql
+      1 messagebus
+
+📌 Consommation mémoire par type de processus :
+mysqld               : 11.60%
+gunicorn             : 7.80%
+mariadbd             : 6.70%
+systemd-journal      : 6.60%
+dockerd              : 3.50%
+node                 : 3.40%
+snapd                : 2.40%
+containerd           : 1.90%
+containerd-shim      : 1.70%
+docker-proxy         : 1.00%
+nginx                : 0.70%
+systemd              : 0.50%
+systemd-timesyn      : 0.30%
+systemd-logind       : 0.30%
+sshd                 : 0.30%
+
+📌 Top processus gourmands CPU :
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     3785456  119  3.5 1033080 70928 ?       Dl   00:00   0:00 node /usr/bin/vite build
+root     3785417 45.8  2.7 830512 56592 ?        Ssl  00:00   0:00 npm run build
+root     3785470  4.0  0.1   3792  2768 ?        S    00:00   0:00 /bin/bash ./analyser_logs.sh
+999         1103  1.1 11.6 1740800 235512 ?      Ssl  Jul09  77:37 mysqld
+root           1  0.2  0.5 168908 12020 ?        Ss   Jul09  20:26 /sbin/init
+root          14  0.2  0.0      0     0 ?        I    Jul09  16:41 [rcu_sched]
+root         225  0.0  6.6 201224 134016 ?       Ss   Jul09   4:56 /lib/systemd/systemd-journald
+message+     527  0.0  0.2   9560  4052 ?        Ss   Jul09   4:23 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         645  0.0  3.5 1910216 72596 ?       Ssl  Jul09   3:31 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+📌 Ports ouverts (hors localhost) :
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:68         0.0.0.0:*          
+tcp   LISTEN 0      511          0.0.0.0:443        0.0.0.0:*          
+tcp   LISTEN 0      511          0.0.0.0:80         0.0.0.0:*          
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      4096         0.0.0.0:8010       0.0.0.0:*          
+tcp   LISTEN 0      511             [::]:80            [::]:*          
+tcp   LISTEN 0      128             [::]:22            [::]:*          
+tcp   LISTEN 0      4096            [::]:8010          [::]:*          
+
+📌 Services en échec :
+  UNIT             LOAD   ACTIVE SUB    DESCRIPTION
+* mnt-radarr.mount loaded failed failed /mnt/radarr
+* mnt-sonarr.mount loaded failed failed /mnt/sonarr
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+2 loaded units listed.
+
+📌 Derniers paquets installés :
+
+📌 Utilisateurs système :
+_apt
+backup
+bin
+daemon
+games
+irc
+jonathan
+list
+lp
+mail
+man
+messagebus
+mysql
+news
+nobody
+proxy
+root
+sshd
+sync
+sys
+systemd-network
+systemd-timesync
+uucp
+www-data
+
+📌 Utilisateurs autorisés sudo :
+sudo:x:27:
+
+📌 Tentatives sudo échouées :
+Jun 13 19:47:29 nac sudo[4455]: pam_unix(sudo:auth): authentication failure; logname=jonathan uid=1000 euid=0 tty=/dev/pts/0 ruser=jonathan rhost=  user=jonathan
+Jun 13 19:47:44 nac sudo[4457]: pam_unix(sudo:auth): authentication failure; logname=jonathan uid=1000 euid=0 tty=/dev/pts/0 ruser=jonathan rhost=  user=jonathan
+
+📌 Vérification des logs web (Nginx/Apache/autres) :
+⚠️ /var/log/nginx/access.log est vide.
+❌ /var/log/apache2/access.log est introuvable.
+❌ /var/www/sarahHasaera/logs/access.log est introuvable.
+
+📌 IPs actives dans les logs :
+
+🚨 Recherche d’activité suspecte :
+
+🔎 Failed password dans /var/log/nginx/access.log :
+
+🔎 Invalid user dans /var/log/nginx/access.log :
+
+🔎 authentication failure dans /var/log/nginx/access.log :
+
+🔎 Did not receive identification string dans /var/log/nginx/access.log :
+
+🔎 possible break-in attempt dans /var/log/nginx/access.log :
+
+🔎 403 dans /var/log/nginx/access.log :
+
+🔎 404 dans /var/log/nginx/access.log :
+
+🔎 SQL syntax dans /var/log/nginx/access.log :
+
+🔎 wp-login dans /var/log/nginx/access.log :
