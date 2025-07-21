@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 13/07/2025 à 03h00
+🛡️ Rapport de sécurité – 21/07/2025 à 03h00
 ==========================================================
 
 📌 Uptime et charge système :
- 03:00:02 up 3 days, 22:38,  0 user,  load average: 1.71, 1.57, 1.57
+ 03:00:02 up 11 days, 22:38,  0 user,  load average: 1.52, 1.81, 1.72
 
 📌 Connexions SSH actives :
 
@@ -20,76 +20,76 @@ wtmp begins Sat Apr 26 00:29:50 2025
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
 tmpfs           198M  1.1M  197M   1% /run
-/dev/vda2        28G   23G  4.3G  84% /
+/dev/vda2        28G   24G  3.4G  88% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop4       53M   53M     0 100% /snap/certbot/4728
 /dev/loop2       62M   62M     0 100% /snap/core24/1010
 /dev/loop3       45M   45M     0 100% /snap/snapd/24724
 /dev/loop0       53M   53M     0 100% /snap/certbot/4738
-/dev/loop1       62M   62M     0 100% /snap/core24/992
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
-overlay          28G   23G  4.3G  84% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
-overlay          28G   23G  4.3G  84% /var/lib/docker/overlay2/5660e34359f15c4f7a1057a2e9fd177619a17269b69f251838a2d5d55b937c09/merged
+overlay          28G   24G  3.4G  88% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+overlay          28G   24G  3.4G  88% /var/lib/docker/overlay2/5660e34359f15c4f7a1057a2e9fd177619a17269b69f251838a2d5d55b937c09/merged
 /dev/loop6       43M   43M     0 100% /snap/snapd/24787
+/dev/loop5       62M   62M     0 100% /snap/core24/1059
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       885Mi        54Mi       1.1Mi       1.1Gi       1.1Gi
-Swap:          975Mi       259Mi       716Mi
+Mem:           1.9Gi       671Mi        33Mi       1.0Mi       1.3Gi       1.3Gi
+Swap:          975Mi       494Mi       481Mi
 
 📌 Détail mémoire :
-RAM utilisée : 886 MiB / 1977 MiB (44.82%)
-SWAP utilisée : 259 MiB / 975 MiB (26.56%)
+RAM utilisée : 671 MiB / 1977 MiB (33.94%)
+SWAP utilisée : 494 MiB / 975 MiB (50.67%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-999         1103 13.0 264396 mysqld
-root         225 10.1 205208 systemd-journal
-mysql        616  8.0 163868 mariadbd
-root        1835  7.1 144900 gunicorn
-root         645  3.6 73212 dockerd
-root     3098128  3.2 65852 node
-root     3098116  2.8 56852 npm run build
-root     1224413  2.4 49080 snapd
-root         536  1.9 39880 containerd
-root        1061  0.9 18604 containerd-shim
+root         225  9.9 201900 systemd-journal
+999         1103  8.6 174872 mysqld
+root        1835  6.1 124968 gunicorn
+root      994538  4.3 88256 npm install
+root         645  2.5 51920 dockerd
+mysql        616  2.0 41432 mariadbd
+root     1224413  1.8 37644 snapd
+root         536  1.6 34400 containerd
+root        1061  0.6 13248 containerd-shim
+root           1  0.5 11532 systemd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-    101 root
+     98 root
       2 www-data
       1 systemd-timesync
       1 mysql
       1 messagebus
 
 📌 Consommation mémoire par type de processus :
-mysqld               : 13.00%
-systemd-journal      : 10.10%
-mariadbd             : 8.00%
-gunicorn             : 7.80%
-dockerd              : 3.60%
-node                 : 3.30%
-snapd                : 2.40%
-containerd           : 1.90%
-containerd-shim      : 1.70%
-docker-proxy         : 1.00%
-nginx                : 0.70%
+systemd-journal      : 9.90%
+mysqld               : 8.60%
+gunicorn             : 6.60%
+dockerd              : 2.50%
+mariadbd             : 2.00%
+snapd                : 1.80%
+containerd           : 1.60%
+containerd-shim      : 1.10%
+docker-proxy         : 0.80%
+nginx                : 0.60%
 systemd              : 0.50%
 systemd-timesyn      : 0.30%
 systemd-logind       : 0.30%
 sshd                 : 0.30%
+systemd-udevd        : 0.20%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root     3098128  116  3.5 1033080 71652 ?       Rl   03:00   0:00 node /usr/bin/vite build
-root     3098183  100  0.2   9124  4372 ?        R    03:00   0:00 ps aux --sort=-%cpu
-root     3098116 46.6  2.8 830508 56852 ?        Ssl  03:00   0:00 npm run build
-root     3098142  5.2  0.1   3792  2768 ?        S    03:00   0:00 /bin/bash ./analyser_logs.sh
-999         1103  1.1 13.0 1740800 264396 ?      Ssl  Jul09  63:46 mysqld
-root           1  0.2  0.5 168908 12020 ?        Ss   Jul09  16:41 /sbin/init
-root          14  0.2  0.0      0     0 ?        I    Jul09  13:40 [rcu_sched]
-root         225  0.0 10.1 303336 205208 ?       Ss   Jul09   4:01 /lib/systemd/systemd-journald
-message+     527  0.0  0.2   9560  4052 ?        Ss   Jul09   3:35 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root      994538  121  4.4 1054784 89276 ?       Rsl  02:59   0:03 npm install
+root      994598  100  0.2   9124  4368 ?        R    03:00   0:00 ps aux --sort=-%cpu
+root      994557  5.0  0.1   3792  2764 ?        S    03:00   0:00 /bin/bash ./analyser_logs.sh
+999         1103  1.1  8.6 1740800 174872 ?      Ssl  Jul09 192:04 mysqld
+root           1  0.2  0.5 168908 11532 ?        Ss   Jul09  51:06 /sbin/init
+root          14  0.2  0.0      0     0 ?        I    Jul09  41:16 [rcu_sched]
+root         225  0.0  9.9 307060 201900 ?       Ss   Jul09  12:18 /lib/systemd/systemd-journald
+message+     527  0.0  0.2   9560  4052 ?        Ss   Jul09  10:52 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         645  0.0  2.5 1910216 51920 ?       Ssl  Jul09   8:37 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
