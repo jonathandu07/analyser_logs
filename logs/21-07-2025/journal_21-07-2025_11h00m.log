@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 13/07/2025 à 11h00
+🛡️ Rapport de sécurité – 21/07/2025 à 11h00
 ==========================================================
 
 📌 Uptime et charge système :
- 11:00:02 up 4 days,  6:38,  0 user,  load average: 1.97, 1.75, 1.63
+ 11:00:03 up 12 days,  6:38,  0 user,  load average: 1.61, 1.53, 1.54
 
 📌 Connexions SSH actives :
 
@@ -20,59 +20,59 @@ wtmp begins Sat Apr 26 00:29:50 2025
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
 tmpfs           198M  1.1M  197M   1% /run
-/dev/vda2        28G   23G  4.3G  85% /
+/dev/vda2        28G   24G  3.4G  88% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop4       53M   53M     0 100% /snap/certbot/4728
 /dev/loop2       62M   62M     0 100% /snap/core24/1010
 /dev/loop3       45M   45M     0 100% /snap/snapd/24724
 /dev/loop0       53M   53M     0 100% /snap/certbot/4738
-/dev/loop1       62M   62M     0 100% /snap/core24/992
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
-overlay          28G   23G  4.3G  85% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
-overlay          28G   23G  4.3G  85% /var/lib/docker/overlay2/5660e34359f15c4f7a1057a2e9fd177619a17269b69f251838a2d5d55b937c09/merged
+overlay          28G   24G  3.4G  88% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+overlay          28G   24G  3.4G  88% /var/lib/docker/overlay2/5660e34359f15c4f7a1057a2e9fd177619a17269b69f251838a2d5d55b937c09/merged
 /dev/loop6       43M   43M     0 100% /snap/snapd/24787
+/dev/loop5       62M   62M     0 100% /snap/core24/1059
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       871Mi        42Mi       1.1Mi       1.1Gi       1.1Gi
-Swap:          975Mi       285Mi       690Mi
+Mem:           1.9Gi       636Mi        69Mi       1.0Mi       1.3Gi       1.3Gi
+Swap:          975Mi       496Mi       479Mi
 
 📌 Détail mémoire :
-RAM utilisée : 871 MiB / 1977 MiB (44.06%)
-SWAP utilisée : 285 MiB / 975 MiB (29.23%)
+RAM utilisée : 637 MiB / 1977 MiB (32.22%)
+SWAP utilisée : 496 MiB / 975 MiB (50.87%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-999         1103 12.4 252404 mysqld
-root         225  7.6 155832 systemd-journal
-mysql        616  7.4 151580 mariadbd
-root        1835  7.2 146040 gunicorn
-root     3360335  4.1 84756 npm install
-root         645  3.6 73184 dockerd
-root     1224413  2.4 48848 snapd
-root         536  1.9 39760 containerd
-root        1061  0.9 18828 containerd-shim
-root        1060  0.8 16852 containerd-shim
+999         1103  8.5 173372 mysqld
+root         225  7.3 148936 systemd-journal
+root        1835  6.1 123764 gunicorn
+root     1257157  3.1 64772 npm install
+root         645  2.5 51196 dockerd
+mysql        616  1.9 40000 mariadbd
+root     1224413  1.7 34984 snapd
+root         536  1.6 33800 containerd
+root        1061  0.6 13088 containerd-shim
+root           1  0.5 11532 systemd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-    102 root
+    100 root
       2 www-data
       1 systemd-timesync
       1 mysql
       1 messagebus
 
 📌 Consommation mémoire par type de processus :
-mysqld               : 12.40%
-gunicorn             : 7.90%
-systemd-journal      : 7.60%
-mariadbd             : 7.40%
-dockerd              : 3.60%
-snapd                : 2.40%
-containerd           : 1.90%
-containerd-shim      : 1.70%
-docker-proxy         : 1.00%
-nginx                : 0.70%
+mysqld               : 8.50%
+systemd-journal      : 7.30%
+gunicorn             : 6.60%
+dockerd              : 2.50%
+mariadbd             : 1.90%
+snapd                : 1.70%
+containerd           : 1.60%
+containerd-shim      : 1.10%
+docker-proxy         : 0.80%
+nginx                : 0.60%
 systemd              : 0.50%
 systemd-timesyn      : 0.30%
 systemd-logind       : 0.30%
@@ -81,15 +81,15 @@ systemd-udevd        : 0.20%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root     3360335  117  4.1 1050276 84756 ?       Rsl  11:00   0:02 npm install
-root     3360395  100  0.2   9124  4368 ?        R    11:00   0:00 ps aux --sort=-%cpu
-root     3360354  5.2  0.1   3792  2768 ?        S    11:00   0:00 /bin/bash ./analyser_logs.sh
-999         1103  1.1 12.4 1740800 252404 ?      Ssl  Jul09  69:03 mysqld
-root           1  0.2  0.5 168908 12020 ?        Ss   Jul09  18:07 /sbin/init
-root          14  0.2  0.0      0     0 ?        I    Jul09  14:49 [rcu_sched]
-root         225  0.0  7.6 233928 155832 ?       Ss   Jul09   4:22 /lib/systemd/systemd-journald
-message+     527  0.0  0.2   9560  4052 ?        Ss   Jul09   3:53 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
-root         645  0.0  3.6 1910216 73184 ?       Ssl  Jul09   3:07 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root     1257157  107  3.2 838464 66652 ?        Rsl  11:00   0:00 npm install
+root     1257212  100  0.2   9124  4368 ?        R    11:00   0:00 ps aux --sort=-%cpu
+root     1257171  5.0  0.1   3792  2748 ?        S    11:00   0:00 /bin/bash ./analyser_logs.sh
+999         1103  1.1  8.5 1740800 173372 ?      Ssl  Jul09 197:28 mysqld
+root           1  0.2  0.5 168908 11532 ?        Ss   Jul09  52:33 /sbin/init
+root          14  0.2  0.0      0     0 ?        I    Jul09  42:25 [rcu_sched]
+root         225  0.0  7.3 221408 148936 ?       Ss   Jul09  12:39 /lib/systemd/systemd-journald
+message+     527  0.0  0.2   9560  4052 ?        Ss   Jul09  11:11 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         645  0.0  2.5 1910216 51196 ?       Ssl  Jul09   8:51 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
@@ -148,12 +148,11 @@ Jun 13 19:47:29 nac sudo[4455]: pam_unix(sudo:auth): authentication failure; log
 Jun 13 19:47:44 nac sudo[4457]: pam_unix(sudo:auth): authentication failure; logname=jonathan uid=1000 euid=0 tty=/dev/pts/0 ruser=jonathan rhost=  user=jonathan
 
 📌 Vérification des logs web (Nginx/Apache/autres) :
-✅ /var/log/nginx/access.log existe et contient des données.
+⚠️ /var/log/nginx/access.log est vide.
 ❌ /var/log/apache2/access.log est introuvable.
 ❌ /var/www/sarahHasaera/logs/access.log est introuvable.
 
 📌 IPs actives dans les logs :
-     72 192.168.1.165
 
 🚨 Recherche d’activité suspecte :
 
