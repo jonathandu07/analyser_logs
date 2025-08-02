@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 25/07/2025 à 06h00
+🛡️ Rapport de sécurité – 02/08/2025 à 07h00
 ==========================================================
 
 📌 Uptime et charge système :
- 06:00:03 up 16 days,  1:38,  0 user,  load average: 1.82, 1.71, 1.64
+ 07:00:02 up 24 days,  2:38,  0 user,  load average: 1.98, 1.75, 1.69
 
 📌 Connexions SSH actives :
 
@@ -20,7 +20,7 @@ wtmp begins Sat Apr 26 00:29:50 2025
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
 tmpfs           198M  1.1M  197M   1% /run
-/dev/vda2        28G   24G  3.0G  89% /
+/dev/vda2        28G   25G  2.1G  93% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop4       53M   53M     0 100% /snap/certbot/4728
@@ -28,32 +28,32 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop3       45M   45M     0 100% /snap/snapd/24724
 /dev/loop0       53M   53M     0 100% /snap/certbot/4738
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
-overlay          28G   24G  3.0G  89% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
-overlay          28G   24G  3.0G  89% /var/lib/docker/overlay2/5660e34359f15c4f7a1057a2e9fd177619a17269b69f251838a2d5d55b937c09/merged
+overlay          28G   25G  2.1G  93% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+overlay          28G   25G  2.1G  93% /var/lib/docker/overlay2/5660e34359f15c4f7a1057a2e9fd177619a17269b69f251838a2d5d55b937c09/merged
 /dev/loop6       43M   43M     0 100% /snap/snapd/24787
 /dev/loop5       62M   62M     0 100% /snap/core24/1059
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       617Mi        45Mi       1.0Mi       1.4Gi       1.3Gi
-Swap:          975Mi       580Mi       395Mi
+Mem:           1.9Gi       502Mi        79Mi       992Ki       1.4Gi       1.4Gi
+Swap:          975Mi       612Mi       363Mi
 
 📌 Détail mémoire :
-RAM utilisée : 617 MiB / 1977 MiB (31.21%)
-SWAP utilisée : 580 MiB / 975 MiB (59.49%)
+RAM utilisée : 503 MiB / 1977 MiB (25.44%)
+SWAP utilisée : 612 MiB / 975 MiB (62.77%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-999         1103  6.5 133572 mysqld
-root         225  5.7 115792 systemd-journal
-root       35721  4.4 90156 npm install
-root        1835  4.0 81856 gunicorn
-root         645  2.2 45904 dockerd
-root     1224413  1.6 34116 snapd
-root         536  1.4 29328 containerd
-mysql        616  1.2 24632 mariadbd
-root        1061  0.6 13416 containerd-shim
-root        1060  0.5 11368 containerd-shim
+root         225 10.2 208252 systemd-journal
+999         1103  4.8 98120 mysqld
+root        1835  3.7 75504 gunicorn
+root     2114381  2.4 49844 npm
+root         645  1.9 39816 dockerd
+root     1224413  1.6 34368 snapd
+root         536  1.2 24456 containerd
+mysql        616  0.9 18644 mariadbd
+root        1061  0.6 12592 containerd-shim
+root           1  0.5 11284 systemd
 
 📌 Nombre total de processus par utilisateur (top 5) :
     100 root
@@ -63,33 +63,33 @@ root        1060  0.5 11368 containerd-shim
       1 messagebus
 
 📌 Consommation mémoire par type de processus :
-mysqld               : 6.50%
-systemd-journal      : 5.70%
-gunicorn             : 4.40%
-dockerd              : 2.20%
+systemd-journal      : 10.20%
+mysqld               : 4.80%
+gunicorn             : 3.90%
+npm                  : 2.40%
+dockerd              : 1.90%
 snapd                : 1.60%
-containerd           : 1.40%
-mariadbd             : 1.20%
+containerd           : 1.20%
 containerd-shim      : 1.10%
-nginx                : 0.60%
+mariadbd             : 0.90%
+nginx                : 0.70%
 docker-proxy         : 0.60%
 systemd              : 0.50%
 systemd-timesyn      : 0.30%
 systemd-logind       : 0.30%
 sshd                 : 0.30%
-systemd-udevd        : 0.20%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root       35721  119  4.4 1055080 90592 ?       Rsl  05:59   0:03 npm install
-root       35740  5.0  0.1   3792  2764 ?        S    06:00   0:00 /bin/bash ./analyser_logs.sh
-999         1103  1.1  6.5 1740800 133572 ?      Ssl  Jul09 258:13 mysqld
-root           1  0.2  0.5 168908 11308 ?        Ss   Jul09  68:56 /sbin/init
-root          14  0.2  0.0      0     0 ?        I    Jul09  55:34 [rcu_sched]
-root         225  0.0  5.7 188844 115792 ?       Ss   Jul09  16:37 /lib/systemd/systemd-journald
-message+     527  0.0  0.2   9560  4052 ?        Ss   Jul09  14:38 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
-root         645  0.0  2.2 1910216 45904 ?       Ssl  Jul09  11:34 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-root         536  0.0  1.4 1340504 29328 ?       Ssl  Jul09  10:21 /usr/bin/containerd
+root     2114436  100  0.2   9124  4364 ?        R    07:00   0:00 ps aux --sort=-%cpu
+root     2114381 96.8  2.4 763532 50608 ?        Rsl  07:00   0:00 npm
+root     2114391  5.8  0.1   3792  2768 ?        S    07:00   0:00 /bin/bash ./analyser_logs.sh
+999         1103  1.1  4.8 1740800 98120 ?       Ssl  Jul09 387:15 mysqld
+root           1  0.2  0.5 168908 11284 ?        Ss   Jul09 103:39 /sbin/init
+root          14  0.2  0.0      0     0 ?        I    Jul09  83:32 [rcu_sched]
+root         225  0.0 10.2 307008 208252 ?       Ss   Jul09  24:56 /lib/systemd/systemd-journald
+message+     527  0.0  0.2   9560  4052 ?        Ss   Jul09  21:58 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         645  0.0  1.9 1910216 39816 ?       Ssl  Jul09  17:15 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
@@ -103,14 +103,15 @@ tcp   LISTEN 0      128             [::]:22            [::]:*
 tcp   LISTEN 0      4096            [::]:8010          [::]:*          
 
 📌 Services en échec :
-  UNIT             LOAD   ACTIVE SUB    DESCRIPTION
-* mnt-radarr.mount loaded failed failed /mnt/radarr
-* mnt-sonarr.mount loaded failed failed /mnt/sonarr
+  UNIT                       LOAD   ACTIVE SUB    DESCRIPTION
+* mnt-radarr.mount           loaded failed failed /mnt/radarr
+* mnt-sonarr.mount           loaded failed failed /mnt/sonarr
+* snap.certbot.renew.service loaded failed failed Service for snap application certbot.renew
 
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
 SUB    = The low-level unit activation state, values depend on unit type.
-2 loaded units listed.
+3 loaded units listed.
 
 📌 Derniers paquets installés :
 
@@ -148,11 +149,12 @@ Jun 13 19:47:29 nac sudo[4455]: pam_unix(sudo:auth): authentication failure; log
 Jun 13 19:47:44 nac sudo[4457]: pam_unix(sudo:auth): authentication failure; logname=jonathan uid=1000 euid=0 tty=/dev/pts/0 ruser=jonathan rhost=  user=jonathan
 
 📌 Vérification des logs web (Nginx/Apache/autres) :
-⚠️ /var/log/nginx/access.log est vide.
+✅ /var/log/nginx/access.log existe et contient des données.
 ❌ /var/log/apache2/access.log est introuvable.
 ❌ /var/www/sarahHasaera/logs/access.log est introuvable.
 
 📌 IPs actives dans les logs :
+    196 192.168.1.165
 
 🚨 Recherche d’activité suspecte :
 
@@ -167,8 +169,11 @@ Jun 13 19:47:44 nac sudo[4457]: pam_unix(sudo:auth): authentication failure; log
 🔎 possible break-in attempt dans /var/log/nginx/access.log :
 
 🔎 403 dans /var/log/nginx/access.log :
+192.168.1.165 - - [02/Aug/2025:00:06:08 +0200] "GET /static/images/12066writinghandmediumskintone_111431.png HTTP/1.1" 200 44035 "https://jonathan-nac.fr/a-propos/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6809.83 Safari/537.36 Edg/134.0.2867.103"
 
 🔎 404 dans /var/log/nginx/access.log :
+192.168.1.165 - - [02/Aug/2025:00:06:14 +0200] "GET /media/formations/maxresdefault_3.jpg HTTP/1.1" 404 159 "https://jonathan-nac.fr/realisations/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6809.83 Safari/537.36 Edg/134.0.2867.103"
+192.168.1.165 - - [02/Aug/2025:00:06:14 +0200] "GET /media/formations/area_plot.png HTTP/1.1" 404 159 "https://jonathan-nac.fr/realisations/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6809.83 Safari/537.36 Edg/134.0.2867.103"
 
 🔎 SQL syntax dans /var/log/nginx/access.log :
 
