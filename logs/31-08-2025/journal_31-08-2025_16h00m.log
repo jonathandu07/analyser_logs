@@ -1,14 +1,11 @@
-🛡️ Rapport de sécurité – 23/08/2025 à 16h00
+🛡️ Rapport de sécurité – 31/08/2025 à 16h00
 ==========================================================
 
 📌 Uptime et charge système :
- 16:00:03 up 3 days, 23:49,  4 users,  load average: 2.33, 1.73, 1.03
+ 16:00:06 up 11 days, 23:49,  1 user,  load average: 0.12, 0.06, 0.01
 
 📌 Connexions SSH actives :
 jonathan ttyAMA0      Aug 19 16:22
-jonathan pts/0        Aug 23 15:54 (192.168.1.165)
-jonathan pts/1        Aug 23 15:14 (192.168.1.165)
-jonathan pts/2        Aug 23 15:26 (192.168.1.165)
 
 📌 Derniers redémarrages :
 reboot   system boot  6.1.0-37-arm64   Tue Aug 19 16:10   still running
@@ -25,8 +22,8 @@ wtmp begins Sat Apr 26 00:29:50 2025
 📌 Utilisation disque :
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
-tmpfs           198M  936K  197M   1% /run
-/dev/vda2        28G   25G  2.0G  93% /
+tmpfs           198M  924K  197M   1% /run
+/dev/vda2        28G   25G  1.8G  94% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop1       53M   53M     0 100% /snap/certbot/4738
@@ -37,83 +34,83 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
 tmpfs           198M  4.0K  198M   1% /run/user/1000
 /dev/loop6       45M   45M     0 100% /snap/snapd/25205
+/dev/loop3       92M   92M     0 100% /snap/core/17250
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       514Mi        45Mi       920Ki       1.5Gi       1.4Gi
-Swap:          975Mi       8.1Mi       967Mi
+Mem:           1.9Gi       435Mi        69Mi       904Ki       1.5Gi       1.5Gi
+Swap:          975Mi        35Mi       940Mi
 
 📌 Détail mémoire :
-RAM utilisée : 515 MiB / 1977 MiB (26.05%)
-SWAP utilisée : 8 MiB / 975 MiB (0.82%)
+RAM utilisée : 435 MiB / 1977 MiB (22.00%)
+SWAP utilisée : 35 MiB / 975 MiB (3.59%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root       36845  9.2 186416 node
-root       37005  5.5 111788 node
-root         612  3.6 74652 dockerd
-root       36833  3.0 62024 npm run dev --h
-root       36991  3.0 60848 npm run dev --h
-root       34914  2.1 42900 snapd
-root       36852  1.5 30856 esbuild
-root       36992  1.0 21456 systemctl
-root       36911  0.8 16256 systemd-journal
-root           1  0.6 12220 systemd
+root       37239  9.3 189760 node
+root       38103  7.2 147420 systemd-journal
+root         612  3.0 61980 dockerd
+root       37222  2.3 47444 npm run dev --h
+root       37327  1.7 35028 apt-get
+root       34914  1.5 31360 snapd
+root       37619  0.9 18756 dpkg
+root       37624  0.8 17852 frontend
+root       37246  0.7 15872 esbuild
+root           1  0.5 11912 systemd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-    105 root
-      9 jonathan
+    100 root
+      3 jonathan
       1 systemd-timesync
       1 messagebus
 
 📌 Consommation mémoire par type de processus :
-node                 : 14.70%
-dockerd              : 3.60%
-sshd                 : 2.70%
-snapd                : 2.10%
-esbuild              : 1.90%
-systemd              : 1.10%
-bash                 : 1.10%
-systemctl            : 1.00%
-systemd-journal      : 0.80%
+node                 : 9.30%
+systemd-journal      : 7.20%
+dockerd              : 3.00%
+apt-get              : 1.70%
+snapd                : 1.50%
+systemd              : 0.90%
+dpkg                 : 0.90%
+frontend             : 0.80%
+esbuild              : 0.70%
 systemd-timesyn      : 0.30%
 systemd-logind       : 0.30%
-su                   : 0.30%
+sshd                 : 0.30%
 systemd-udevd        : 0.20%
 cron                 : 0.20%
-(sd-pam)             : 0.20%
+bash                 : 0.20%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root       37073  100  0.1   8156  3708 ?        R    16:00   0:00 ps aux --sort=-%cpu
-root         612  1.4  3.6 1901896 74652 ?       Ssl  Aug19  84:58 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-root       37005  0.9  5.5 23093788 111788 ?     Sl   15:55   0:02 node /var/www/sarahHasaera/node_modules/.bin/vite --host
-root       37032  0.9  0.1   3792  2760 ?        S    16:00   0:00 /bin/bash ./analyser_logs.sh
-root       36845  0.5  9.2 23149836 186416 pts/1 Sl+  15:15   0:13 node /var/www/sarahHasaera/node_modules/.bin/vite --host
-root       36991  0.1  3.0 847092 60848 ?        Ssl  15:55   0:00 npm run dev --host
-root          14  0.1  0.0      0     0 ?        I    Aug19   6:33 [rcu_sched]
-root       36911  0.0  0.8  49776 16256 ?        Ss   15:32   0:01 /lib/systemd/systemd-journald
-root       36852  0.0  1.5 1237260 30856 pts/1   Sl+  15:15   0:01 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+root         612  1.5  3.0 1901896 61980 ?       Ssl  Aug19 265:18 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root       68259  0.2  0.1   3792  2784 ?        S    16:00   0:00 /bin/bash ./analyser_logs.sh
+root          14  0.1  0.0      0     0 ?        I    Aug19  20:14 [rcu_sched]
+root       37327  0.1  1.7  67764 35028 ?        S    Aug23  11:39 apt-get purge -y certbot python3-certbot-nginx python3-openssl
+root       38103  0.0  7.2 225908 147420 ?       Ss   Aug23   8:40 /lib/systemd/systemd-journald
+root       37246  0.0  0.7 1235980 15872 ?       Sl   Aug23   6:12 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+root       37239  0.0  9.3 23156696 189760 ?     Sl   Aug23   5:14 node /var/www/sarahHasaera/node_modules/.bin/vite --host
+root       68237  0.0  0.0      0     0 ?        I    15:32   0:00 [kworker/0:1-events]
+root       67807  0.0  0.0      0     0 ?        I    12:08   0:01 [kworker/1:1-events]
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
 udp   UNCONN 0      0            0.0.0.0:68        0.0.0.0:*          
 tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*          
 tcp   LISTEN 0      511                *:5173            *:*          
-tcp   LISTEN 0      511                *:5174            *:*          
 tcp   LISTEN 0      128             [::]:22           [::]:*          
 
 📌 Services en échec :
-  UNIT                          LOAD   ACTIVE SUB    DESCRIPTION
-* mnt-radarr.mount              masked failed failed mnt-radarr.mount
-* mnt-sonarr.mount              masked failed failed mnt-sonarr.mount
-* certbot.service               loaded failed failed Certbot
-* mariadb.service               loaded failed failed MariaDB 10.11.11 database server
-* nginx.service                 loaded failed failed A high performance web server and a reverse proxy server
-* sarahHasaera.service          loaded failed failed App SarahHasaera - Production server
-* snap.certbot.renew.service    loaded failed failed Service for snap application certbot.renew
-* snapd.seeded.service          loaded failed failed Wait until snapd is fully seeded
-* systemd-journal-flush.service loaded failed failed Flush Journal to Persistent Storage
+  UNIT                          LOAD      ACTIVE SUB    DESCRIPTION
+* mnt-radarr.mount              masked    failed failed mnt-radarr.mount
+* mnt-sonarr.mount              masked    failed failed mnt-sonarr.mount
+* certbot.service               not-found failed failed certbot.service
+* mariadb.service               loaded    failed failed MariaDB 10.11.11 database server
+* nginx.service                 loaded    failed failed A high performance web server and a reverse proxy server
+* sarahHasaera.service          loaded    failed failed App SarahHasaera - Production server
+* snap.certbot.renew.service    loaded    failed failed Service for snap application certbot.renew
+* snapd.seeded.service          loaded    failed failed Wait until snapd is fully seeded
+* systemd-journal-flush.service loaded    failed failed Flush Journal to Persistent Storage
 
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
