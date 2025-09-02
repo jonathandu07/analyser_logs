@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 26/08/2025 à 00h00
+🛡️ Rapport de sécurité – 03/09/2025 à 01h00
 ==========================================================
 
 📌 Uptime et charge système :
- 00:00:03 up 6 days,  7:49,  1 user,  load average: 0.16, 0.03, 0.02
+ 01:00:03 up 14 days,  8:49,  1 user,  load average: 0.11, 0.04, 0.05
 
 📌 Connexions SSH actives :
 jonathan ttyAMA0      Aug 19 16:22
@@ -22,11 +22,10 @@ wtmp begins Sat Apr 26 00:29:50 2025
 📌 Utilisation disque :
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
-tmpfs           198M  932K  197M   1% /run
-/dev/vda2        28G   25G  1.9G  94% /
+tmpfs           198M  920K  197M   1% /run
+/dev/vda2        28G   25G  1.8G  94% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
-/dev/loop1       53M   53M     0 100% /snap/certbot/4738
 /dev/loop2       62M   62M     0 100% /snap/core24/1010
 /dev/loop0       53M   53M     0 100% /snap/certbot/4890
 /dev/loop4       43M   43M     0 100% /snap/snapd/24787
@@ -35,63 +34,64 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           198M  4.0K  198M   1% /run/user/1000
 /dev/loop6       45M   45M     0 100% /snap/snapd/25205
 /dev/loop3       92M   92M     0 100% /snap/core/17250
+/dev/loop7       67M   67M     0 100% /snap/certbot/4966
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       460Mi        69Mi       912Ki       1.5Gi       1.5Gi
-Swap:          975Mi        11Mi       964Mi
+Mem:           1.9Gi       410Mi        72Mi       900Ki       1.5Gi       1.5Gi
+Swap:          975Mi        62Mi       913Mi
 
 📌 Détail mémoire :
-RAM utilisée : 461 MiB / 1977 MiB (23.32%)
-SWAP utilisée : 11 MiB / 975 MiB (1.13%)
+RAM utilisée : 410 MiB / 1977 MiB (20.74%)
+SWAP utilisée : 62 MiB / 975 MiB (6.36%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root       37239  9.3 189708 node
-root         612  3.3 67980 dockerd
-root       37222  3.1 63216 npm run dev --h
-root       37327  2.9 59752 apt-get
-root       38103  2.5 51520 systemd-journal
-root       34914  1.9 40280 snapd
+root       37239  8.5 172232 node
+root         612  2.7 55692 dockerd
+root       38103  2.4 49148 systemd-journal
+root       37222  2.2 46500 npm run dev --h
+root       34914  1.7 35608 snapd
 root       37619  0.9 18756 dpkg
 root       37624  0.8 17852 frontend
-root       37246  0.7 15804 esbuild
-root           1  0.6 12252 systemd
+root       37327  0.8 17240 apt-get
+root       37246  0.7 15788 esbuild
+root           1  0.5 11940 systemd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-    104 root
+    101 root
       3 jonathan
       1 systemd-timesync
       1 messagebus
 
 📌 Consommation mémoire par type de processus :
-node                 : 9.30%
-dockerd              : 3.30%
-apt-get              : 2.90%
-systemd-journal      : 2.50%
-snapd                : 1.90%
-systemd              : 1.10%
+node                 : 8.50%
+dockerd              : 2.70%
+systemd-journal      : 2.40%
+snapd                : 1.70%
+systemd              : 0.90%
 dpkg                 : 0.90%
 frontend             : 0.80%
+apt-get              : 0.80%
 esbuild              : 0.70%
 systemd-timesyn      : 0.30%
 systemd-logind       : 0.30%
 sshd                 : 0.30%
-(ogrotate)           : 0.30%
 systemd-udevd        : 0.20%
 cron                 : 0.20%
+whiptail             : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root       48839  8.3  0.1   3792  2780 ?        S    00:00   0:00 /bin/bash ./analyser_logs.sh
-root       48828  1.9  0.3 168760  7972 ?        DNs  Aug25   0:00 (ogrotate)
-root         612  1.5  3.3 1901896 67980 ?       Ssl  Aug19 138:01 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-root          14  0.1  0.0      0     0 ?        I    Aug19  10:38 [rcu_sched]
-root       37327  0.1  2.9  67764 59752 ?        S    Aug23   3:25 apt-get purge -y certbot python3-certbot-nginx python3-openssl
-root       38103  0.0  2.5 107164 51520 ?        Ss   Aug23   2:28 /lib/systemd/systemd-journald
-root       37246  0.0  0.7 1235980 15804 ?       Sl   Aug23   1:48 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
-root       37239  0.0  9.3 23156696 189708 ?     Sl   Aug23   1:42 node /var/www/sarahHasaera/node_modules/.bin/vite --host
-root       48814  0.0  0.0      0     0 ?        I    Aug25   0:00 [kworker/0:0-events]
+root       76763  100  0.1   8156  3708 ?        R    01:00   0:00 ps aux --sort=-%cpu
+root       76722  8.3  0.1   3792  2796 ?        S    01:00   0:00 /bin/bash ./analyser_logs.sh
+root         612  1.5  2.7 1901896 55692 ?       Ssl  Aug19 313:00 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root          14  0.1  0.0      0     0 ?        I    Aug19  23:45 [rcu_sched]
+root       37327  0.0  0.8  67764 17240 ?        S    Aug23  14:31 apt-get purge -y certbot python3-certbot-nginx python3-openssl
+root       38103  0.0  2.4 107096 49148 ?        Ss   Aug23  11:14 /lib/systemd/systemd-journald
+root       37246  0.0  0.7 1235980 15788 ?       Sl   Aug23   7:58 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+root       37239  0.0  8.5 23156696 172232 ?     Sl   Aug23   6:43 node /var/www/sarahHasaera/node_modules/.bin/vite --host
+root       76698  0.0  0.0      0     0 ?        I    00:31   0:00 [kworker/0:2-events]
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
