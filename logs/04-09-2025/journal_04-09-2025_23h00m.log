@@ -1,0 +1,178 @@
+🛡️ Rapport de sécurité – 04/09/2025 à 23h00
+==========================================================
+
+📌 Uptime et charge système :
+ 23:00:03 up 16 days,  6:49,  1 user,  load average: 0.00, 0.00, 0.00
+
+📌 Connexions SSH actives :
+jonathan ttyAMA0      Aug 19 16:22
+
+📌 Derniers redémarrages :
+reboot   system boot  6.1.0-37-arm64   Tue Aug 19 16:10   still running
+reboot   system boot  6.1.0-37-arm64   Sat Aug  9 06:23   still running
+reboot   system boot  6.1.0-37-arm64   Wed Jul  9 04:21   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jul  3 20:14   still running
+reboot   system boot  6.1.0-34-arm64   Wed Jun 11 17:32   still running
+reboot   system boot  6.1.0-34-arm64   Wed Jun 11 16:48   still running
+reboot   system boot  6.1.0-34-arm64   Tue May 27 18:36   still running
+reboot   system boot  6.1.0-33-arm64   Sat Apr 26 00:29   still running
+
+wtmp begins Sat Apr 26 00:29:50 2025
+
+📌 Utilisation disque :
+Filesystem      Size  Used Avail Use% Mounted on
+udev            940M     0  940M   0% /dev
+tmpfs           198M  920K  197M   1% /run
+/dev/vda2        28G   25G  1.8G  94% /
+tmpfs           989M     0  989M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/loop2       62M   62M     0 100% /snap/core24/1010
+/dev/loop0       53M   53M     0 100% /snap/certbot/4890
+/dev/loop4       43M   43M     0 100% /snap/snapd/24787
+/dev/loop5       62M   62M     0 100% /snap/core24/1059
+/dev/vda1       512M  6.1M  506M   2% /boot/efi
+tmpfs           198M  4.0K  198M   1% /run/user/1000
+/dev/loop6       45M   45M     0 100% /snap/snapd/25205
+/dev/loop3       92M   92M     0 100% /snap/core/17250
+/dev/loop7       67M   67M     0 100% /snap/certbot/4966
+
+📌 Utilisation mémoire (RAM + Swap) :
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       404Mi        47Mi       900Ki       1.6Gi       1.5Gi
+Swap:          975Mi        67Mi       908Mi
+
+📌 Détail mémoire :
+RAM utilisée : 404 MiB / 1977 MiB (20.44%)
+SWAP utilisée : 67 MiB / 975 MiB (6.87%)
+
+📌 Top 10 processus utilisant le plus de RAM :
+USER         PID %MEM   RSS COMMAND
+root       37239  8.3 168412 node
+root         612  2.6 53856 dockerd
+root       37222  2.2 46500 npm run dev --h
+root       82655  1.9 38544 systemd-journal
+root       34914  1.7 35748 snapd
+root       37619  0.9 18756 dpkg
+root       37624  0.8 17852 frontend
+root       37246  0.7 15884 esbuild
+root       37327  0.6 13340 apt-get
+root           1  0.5 11940 systemd
+
+📌 Nombre total de processus par utilisateur (top 5) :
+    101 root
+      3 jonathan
+      1 systemd-timesync
+      1 messagebus
+
+📌 Consommation mémoire par type de processus :
+node                 : 8.30%
+dockerd              : 2.60%
+systemd-journal      : 1.90%
+snapd                : 1.70%
+systemd              : 0.90%
+dpkg                 : 0.90%
+frontend             : 0.80%
+esbuild              : 0.70%
+apt-get              : 0.60%
+systemd-timesyn      : 0.30%
+systemd-logind       : 0.30%
+sshd                 : 0.30%
+systemd-udevd        : 0.20%
+cron                 : 0.20%
+whiptail             : 0.10%
+
+📌 Top processus gourmands CPU :
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root       83256  100  0.1   8156  3704 ?        R    23:00   0:00 ps aux --sort=-%cpu
+root       83215  8.3  0.1   3792  2792 ?        S    23:00   0:00 /bin/bash ./analyser_logs.sh
+root         612  1.4  2.6 1901896 53856 ?       Ssl  Aug19 351:29 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root          14  0.1  0.0      0     0 ?        I    Aug19  26:35 [rcu_sched]
+root       37327  0.0  0.6  67764 13340 ?        S    Aug23  16:50 apt-get purge -y certbot python3-certbot-nginx python3-openssl
+root       82655  0.0  1.9  66068 38544 ?        Ss   18:34   0:11 /lib/systemd/systemd-journald
+root       37246  0.0  0.7 1235980 15884 ?       Sl   Aug23   9:23 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+root       37239  0.0  8.3 23156696 168412 ?     Sl   Aug23   7:54 node /var/www/sarahHasaera/node_modules/.bin/vite --host
+root       34914  0.0  1.7 1922000 35748 ?       Ssl  Aug23   1:17 /usr/lib/snapd/snapd
+
+📌 Ports ouverts (hors localhost) :
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:68        0.0.0.0:*          
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*          
+tcp   LISTEN 0      511                *:5173            *:*          
+tcp   LISTEN 0      128             [::]:22           [::]:*          
+
+📌 Services en échec :
+  UNIT                          LOAD      ACTIVE SUB    DESCRIPTION
+* mnt-radarr.mount              masked    failed failed mnt-radarr.mount
+* mnt-sonarr.mount              masked    failed failed mnt-sonarr.mount
+* certbot.service               not-found failed failed certbot.service
+* mariadb.service               loaded    failed failed MariaDB 10.11.11 database server
+* nginx.service                 loaded    failed failed A high performance web server and a reverse proxy server
+* sarahHasaera.service          loaded    failed failed App SarahHasaera - Production server
+* snap.certbot.renew.service    loaded    failed failed Service for snap application certbot.renew
+* snapd.seeded.service          loaded    failed failed Wait until snapd is fully seeded
+* systemd-journal-flush.service loaded    failed failed Flush Journal to Persistent Storage
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+9 loaded units listed.
+
+📌 Derniers paquets installés :
+
+📌 Utilisateurs système :
+_apt
+backup
+bin
+daemon
+games
+irc
+jonathan
+list
+lp
+mail
+man
+messagebus
+mysql
+news
+nobody
+proxy
+root
+sshd
+sync
+sys
+systemd-network
+systemd-timesync
+uucp
+www-data
+
+📌 Utilisateurs autorisés sudo :
+sudo:x:27:
+
+📌 Tentatives sudo échouées :
+
+📌 Vérification des logs web (Nginx/Apache/autres) :
+⚠️ /var/log/nginx/access.log est vide.
+❌ /var/log/apache2/access.log est introuvable.
+❌ /var/www/sarahHasaera/logs/access.log est introuvable.
+
+📌 IPs actives dans les logs :
+
+🚨 Recherche d’activité suspecte :
+
+🔎 Failed password dans /var/log/nginx/access.log :
+
+🔎 Invalid user dans /var/log/nginx/access.log :
+
+🔎 authentication failure dans /var/log/nginx/access.log :
+
+🔎 Did not receive identification string dans /var/log/nginx/access.log :
+
+🔎 possible break-in attempt dans /var/log/nginx/access.log :
+
+🔎 403 dans /var/log/nginx/access.log :
+
+🔎 404 dans /var/log/nginx/access.log :
+
+🔎 SQL syntax dans /var/log/nginx/access.log :
+
+🔎 wp-login dans /var/log/nginx/access.log :
