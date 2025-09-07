@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 30/08/2025 à 10h00
+🛡️ Rapport de sécurité – 07/09/2025 à 11h00
 ==========================================================
 
 📌 Uptime et charge système :
- 10:00:02 up 10 days, 17:49,  1 user,  load average: 0.00, 0.05, 0.04
+ 11:00:02 up 18 days, 18:49,  1 user,  load average: 0.22, 0.09, 0.07
 
 📌 Connexions SSH actives :
 jonathan ttyAMA0      Aug 19 16:22
@@ -26,7 +26,6 @@ tmpfs           198M  924K  197M   1% /run
 /dev/vda2        28G   25G  1.8G  94% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
-/dev/loop1       53M   53M     0 100% /snap/certbot/4738
 /dev/loop2       62M   62M     0 100% /snap/core24/1010
 /dev/loop0       53M   53M     0 100% /snap/certbot/4890
 /dev/loop4       43M   43M     0 100% /snap/snapd/24787
@@ -35,70 +34,75 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           198M  4.0K  198M   1% /run/user/1000
 /dev/loop6       45M   45M     0 100% /snap/snapd/25205
 /dev/loop3       92M   92M     0 100% /snap/core/17250
+/dev/loop7       67M   67M     0 100% /snap/certbot/4966
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       448Mi        69Mi       904Ki       1.5Gi       1.5Gi
-Swap:          975Mi        26Mi       949Mi
+Mem:           1.9Gi       400Mi        51Mi       976Ki       1.6Gi       1.5Gi
+Swap:          975Mi        83Mi       892Mi
 
 📌 Détail mémoire :
-RAM utilisée : 448 MiB / 1977 MiB (22.66%)
-SWAP utilisée : 26 MiB / 975 MiB (2.67%)
+RAM utilisée : 400 MiB / 1977 MiB (20.23%)
+SWAP utilisée : 83 MiB / 975 MiB (8.51%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root       37239  9.3 189760 node
-root       38103  5.5 112976 systemd-journal
-root         612  3.1 63828 dockerd
-root       37222  2.6 53512 npm run dev --h
-root       37327  1.9 39884 apt-get
-root       34914  1.6 33196 snapd
-root       37619  0.9 18756 dpkg
+root       37239  8.2 167064 node
+root       82655  6.1 123976 systemd-journal
+root         612  2.4 50412 dockerd
+root       37222  2.2 46472 npm run dev --h
+root       34914  1.7 35608 snapd
 root       37624  0.8 17852 frontend
-root       37246  0.7 15884 esbuild
-root           1  0.5 11924 systemd
+root       37619  0.7 15940 dpkg
+root       37246  0.7 15904 esbuild
+root           1  0.5 11936 systemd
+jonathan    2273  0.4  9884 systemd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-    101 root
+    102 root
       3 jonathan
+      2 www-data
       1 systemd-timesync
       1 messagebus
 
 📌 Consommation mémoire par type de processus :
-node                 : 9.30%
-systemd-journal      : 5.50%
-dockerd              : 3.10%
-apt-get              : 1.90%
-snapd                : 1.60%
+node                 : 8.20%
+systemd-journal      : 6.10%
+dockerd              : 2.40%
+snapd                : 1.70%
 systemd              : 0.90%
-dpkg                 : 0.90%
 frontend             : 0.80%
+nginx                : 0.70%
 esbuild              : 0.70%
+dpkg                 : 0.70%
 systemd-timesyn      : 0.30%
 systemd-logind       : 0.30%
 sshd                 : 0.30%
+apt-get              : 0.30%
 systemd-udevd        : 0.20%
 cron                 : 0.20%
-bash                 : 0.20%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root       63983  8.3  0.1   3792  2784 ?        S    10:00   0:00 /bin/bash ./analyser_logs.sh
-root         612  1.5  3.1 1901896 63828 ?       Ssl  Aug19 236:25 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-root          14  0.1  0.0      0     0 ?        I    Aug19  18:02 [rcu_sched]
-root       37327  0.1  1.9  67764 39884 ?        S    Aug23   9:45 apt-get purge -y certbot python3-certbot-nginx python3-openssl
-root       38103  0.0  5.5 193148 112976 ?       Ss   Aug23   7:17 /lib/systemd/systemd-journald
-root       37246  0.0  0.7 1235980 15884 ?       Sl   Aug23   5:13 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
-root       37239  0.0  9.3 23156696 189760 ?     Sl   Aug23   4:27 node /var/www/sarahHasaera/node_modules/.bin/vite --host
-root       63102  0.0  0.0      0     0 ?        I    03:28   0:01 [kworker/1:1-events]
-root       34914  0.0  1.6 1921744 33196 ?       Ssl  Aug23   0:44 /usr/lib/snapd/snapd
+root       92236  9.0  0.1   3792  2780 ?        S    11:00   0:00 /bin/bash ./analyser_logs.sh
+root         612  1.4  2.4 1901896 50412 ?       Ssl  Aug19 401:27 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root          14  0.1  0.0      0     0 ?        I    Aug19  30:16 [rcu_sched]
+root       37327  0.0  0.3  67764  7856 ?        S    Aug23  19:50 apt-get purge -y certbot python3-certbot-nginx python3-openssl
+root       82655  0.0  6.1 201340 123976 ?       Ss   Sep04   2:53 /lib/systemd/systemd-journald
+root       37246  0.0  0.7 1235980 15904 ?       Sl   Aug23  11:14 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+root       37239  0.0  8.2 23155072 167064 ?     Sl   Aug23   9:32 node /var/www/sarahHasaera/node_modules/.bin/vite --host
+root       92224  0.0  0.0      0     0 ?        I    10:54   0:00 [kworker/0:1-events]
+root       34914  0.0  1.7 1922000 35608 ?       Ssl  Aug23   1:30 /usr/lib/snapd/snapd
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
 udp   UNCONN 0      0            0.0.0.0:68        0.0.0.0:*          
+tcp   LISTEN 0      511          0.0.0.0:443       0.0.0.0:*          
 tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*          
+tcp   LISTEN 0      511          0.0.0.0:80        0.0.0.0:*          
 tcp   LISTEN 0      511                *:5173            *:*          
 tcp   LISTEN 0      128             [::]:22           [::]:*          
+tcp   LISTEN 0      511             [::]:80           [::]:*          
 
 📌 Services en échec :
   UNIT                          LOAD      ACTIVE SUB    DESCRIPTION
@@ -106,7 +110,6 @@ tcp   LISTEN 0      128             [::]:22           [::]:*
 * mnt-sonarr.mount              masked    failed failed mnt-sonarr.mount
 * certbot.service               not-found failed failed certbot.service
 * mariadb.service               loaded    failed failed MariaDB 10.11.11 database server
-* nginx.service                 loaded    failed failed A high performance web server and a reverse proxy server
 * sarahHasaera.service          loaded    failed failed App SarahHasaera - Production server
 * snap.certbot.renew.service    loaded    failed failed Service for snap application certbot.renew
 * snapd.seeded.service          loaded    failed failed Wait until snapd is fully seeded
@@ -115,7 +118,7 @@ tcp   LISTEN 0      128             [::]:22           [::]:*
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
 SUB    = The low-level unit activation state, values depend on unit type.
-9 loaded units listed.
+8 loaded units listed.
 
 📌 Derniers paquets installés :
 
