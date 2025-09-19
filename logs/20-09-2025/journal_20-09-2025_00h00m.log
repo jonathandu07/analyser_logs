@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 12/09/2025 à 00h00
+🛡️ Rapport de sécurité – 20/09/2025 à 00h00
 ==========================================================
 
 📌 Uptime et charge système :
- 00:00:02 up 23 days,  7:49,  1 user,  load average: 0.06, 0.04, 0.09
+ 00:00:03 up 31 days,  7:49,  1 user,  load average: 0.00, 0.02, 0.00
 
 📌 Connexions SSH actives :
 jonathan ttyAMA0      Aug 19 16:22
@@ -38,25 +38,25 @@ tmpfs           198M  4.0K  198M   1% /run/user/1000
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       393Mi        35Mi       980Ki       1.6Gi       1.5Gi
-Swap:          975Mi        98Mi       877Mi
+Mem:           1.9Gi       371Mi        53Mi       968Ki       1.6Gi       1.6Gi
+Swap:          975Mi       118Mi       857Mi
 
 📌 Détail mémoire :
-RAM utilisée : 394 MiB / 1977 MiB (19.93%)
-SWAP utilisée : 98 MiB / 975 MiB (10.05%)
+RAM utilisée : 371 MiB / 1977 MiB (18.77%)
+SWAP utilisée : 118 MiB / 975 MiB (12.10%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root       37239  7.7 156540 node
-root      101305  7.4 151556 systemd-journal
-root       37222  2.2 46068 npm run dev --h
-root         612  2.2 44704 dockerd
-root       34914  1.8 37100 snapd
-root       37624  0.8 17852 frontend
-root       37246  0.7 15752 esbuild
-root           1  0.5 11712 systemd
-root       37619  0.5 10964 dpkg
-jonathan    2273  0.4  9884 systemd
+root      101305 14.6 296980 systemd-journal
+root       37239  6.0 122688 node
+root         612  1.9 40436 dockerd
+root       34914  1.5 31384 snapd
+root       37222  0.9 18668 npm run dev --h
+root       37624  0.7 15520 frontend
+root           1  0.5 11332 systemd
+root       37246  0.5 10968 esbuild
+jonathan    2273  0.4  9864 systemd
+root       37619  0.3  7628 dpkg
 
 📌 Nombre total de processus par utilisateur (top 5) :
     102 root
@@ -66,33 +66,33 @@ jonathan    2273  0.4  9884 systemd
       1 messagebus
 
 📌 Consommation mémoire par type de processus :
-node                 : 7.70%
-systemd-journal      : 7.40%
-dockerd              : 2.20%
-snapd                : 1.80%
+systemd-journal      : 14.60%
+node                 : 6.00%
+dockerd              : 1.90%
+snapd                : 1.50%
 systemd              : 0.90%
-frontend             : 0.80%
 nginx                : 0.70%
-esbuild              : 0.70%
-dpkg                 : 0.50%
+frontend             : 0.70%
+esbuild              : 0.50%
 systemd-timesyn      : 0.30%
 systemd-logind       : 0.30%
 sshd                 : 0.30%
+dpkg                 : 0.30%
 apt-get              : 0.30%
 systemd-udevd        : 0.20%
 whiptail             : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root      107952  100  0.1   8156  3720 ?        R    00:00   0:00 ps aux --sort=-%cpu
-root      107911  8.3  0.1   3792  2784 ?        S    00:00   0:00 /bin/bash ./analyser_logs.sh
-root         612  1.4  2.2 1901896 44704 ?       Ssl  Aug19 492:20 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-root          14  0.1  0.0      0     0 ?        I    Aug19  36:58 [rcu_sched]
-root       37327  0.0  0.3  67764  7856 ?        S    Aug23  25:18 apt-get purge -y certbot python3-certbot-nginx python3-openssl
-root      101305  0.0  7.4 217672 151556 ?       Ss   Sep10   2:03 /lib/systemd/systemd-journald
-root       37246  0.0  0.7 1235980 15752 ?       Sl   Aug23  14:36 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
-root       37239  0.0  7.7 23155628 156540 ?     Sl   Aug23  12:27 node /var/www/sarahHasaera/node_modules/.bin/vite --host
-root      107852  0.0  0.0      0     0 ?        I    Sep11   0:00 [kworker/0:1-events]
+root         612  1.4  1.9 1901896 40436 ?       Ssl  Aug19 653:33 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root          14  0.1  0.0      0     0 ?        I    Aug19  48:52 [rcu_sched]
+root       37327  0.0  0.3  67764  7344 ?        S    Aug23  35:03 apt-get purge -y certbot python3-certbot-nginx python3-openssl
+root      101305  0.0 14.6 385616 296980 ?       Ss   Sep10  10:34 /lib/systemd/systemd-journald
+root       37246  0.0  0.5 1235980 10968 ?       Sl   Aug23  20:43 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+root       37239  0.0  6.0 23155628 122688 ?     Sl   Aug23  17:33 node /var/www/sarahHasaera/node_modules/.bin/vite --host
+root      135270  0.0  0.0      0     0 ?        I    Sep19   0:00 [kworker/0:0-events_power_efficient]
+root      135281  0.0  0.0      0     0 ?        I    Sep19   0:00 [kworker/u4:1-ext4-rsv-conversion]
+root      132707  0.0  0.0      0     0 ?        I    Sep19   0:04 [kworker/1:1-events]
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
