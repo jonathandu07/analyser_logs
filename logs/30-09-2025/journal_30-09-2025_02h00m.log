@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 22/09/2025 à 02h00
+🛡️ Rapport de sécurité – 30/09/2025 à 02h00
 ==========================================================
 
 📌 Uptime et charge système :
- 02:00:03 up 33 days,  9:49,  1 user,  load average: 0.07, 0.05, 0.02
+ 02:00:03 up 41 days,  9:49,  1 user,  load average: 0.00, 0.01, 0.00
 
 📌 Connexions SSH actives :
 jonathan ttyAMA0      Aug 19 16:22
@@ -28,79 +28,79 @@ tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop0       53M   53M     0 100% /snap/certbot/4890
 /dev/loop4       43M   43M     0 100% /snap/snapd/24787
-/dev/loop5       62M   62M     0 100% /snap/core24/1059
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
 tmpfs           198M  4.0K  198M   1% /run/user/1000
 /dev/loop6       45M   45M     0 100% /snap/snapd/25205
 /dev/loop3       92M   92M     0 100% /snap/core/17250
 /dev/loop7       67M   67M     0 100% /snap/certbot/4966
 /dev/loop1       62M   62M     0 100% /snap/core24/1152
+/dev/loop2       62M   62M     0 100% /snap/core24/1197
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       358Mi        85Mi       968Ki       1.6Gi       1.6Gi
-Swap:          975Mi       127Mi       848Mi
+Mem:           1.9Gi       427Mi        62Mi       968Ki       1.5Gi       1.5Gi
+Swap:          975Mi        68Mi       907Mi
 
 📌 Détail mémoire :
-RAM utilisée : 358 MiB / 1977 MiB (18.11%)
-SWAP utilisée : 127 MiB / 975 MiB (13.03%)
+RAM utilisée : 427 MiB / 1977 MiB (21.60%)
+SWAP utilisée : 68 MiB / 975 MiB (6.97%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root      101305 15.1 307020 systemd-journal
-root       37239  5.4 110736 node
-root         612  1.9 39576 dockerd
-root       34914  1.3 27424 snapd
-root       37222  0.6 12308 npm run dev --h
-root       37624  0.5 11124 frontend
-root           1  0.5 11056 systemd
-root       37246  0.5 10920 esbuild
-jonathan    2273  0.4  9644 systemd
-root       37619  0.3  7628 dpkg
+jonathan  165738  9.3 188828 node
+jonathan  165719  2.7 55076 npm run dev --h
+root      173625  2.2 45508 systemd-journal
+root         612  1.7 36272 dockerd
+root       34914  1.4 30188 snapd
+jonathan  165745  1.4 29876 esbuild
+root           1  0.5 11220 systemd
+jonathan    2273  0.4  9612 systemd
+root       76228  0.3  7456 systemd-logind
+root       86906  0.3  7244 nginx
 
 📌 Nombre total de processus par utilisateur (top 5) :
-    102 root
-      3 jonathan
+     98 root
+      7 jonathan
       2 www-data
       1 systemd-timesync
       1 messagebus
 
 📌 Consommation mémoire par type de processus :
-systemd-journal      : 15.10%
-node                 : 5.40%
-dockerd              : 1.90%
-snapd                : 1.30%
+node                 : 9.30%
+systemd-journal      : 2.20%
+dockerd              : 1.70%
+snapd                : 1.40%
+esbuild              : 1.40%
 systemd              : 0.90%
 nginx                : 0.70%
-frontend             : 0.50%
-esbuild              : 0.50%
 systemd-timesyn      : 0.30%
 systemd-logind       : 0.30%
 sshd                 : 0.30%
-dpkg                 : 0.30%
 systemd-udevd        : 0.20%
+dpkg                 : 0.20%
 apt-get              : 0.20%
 su                   : 0.10%
+ps                   : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root      142502  8.3  0.1   3792  2796 ?        S    02:00   0:00 /bin/bash ./analyser_logs.sh
-root         612  1.4  1.9 1901896 39576 ?       Ssl  Aug19 695:15 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-root          14  0.1  0.0      0     0 ?        I    Aug19  51:58 [rcu_sched]
-root       37327  0.0  0.2  67764  5188 ?        S    Aug23  37:33 apt-get purge -y certbot python3-certbot-nginx python3-openssl
-root      101305  0.0 15.1 401960 307020 ?       Ss   Sep10  12:46 /lib/systemd/systemd-journald
-root       37246  0.0  0.5 1235980 10920 ?       Sl   Aug23  22:16 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
-root       37239  0.0  5.4 23155628 110736 ?     Sl   Aug23  18:53 node /var/www/sarahHasaera/node_modules/.bin/vite --host
-root      142480  0.0  0.0      0     0 ?        I    01:36   0:00 [kworker/0:2-mm_percpu_wq]
-root      142271  0.0  0.0      0     0 ?        I    00:00   0:00 [kworker/1:1-events]
+root      174572  100  0.1   8156  3716 ?        R    02:00   0:00 ps aux --sort=-%cpu
+root      174531  7.6  0.1   3792  2792 ?        S    02:00   0:00 /bin/bash ./analyser_logs.sh
+root         612  1.4  1.7 1901896 36272 ?       Ssl  Aug19 855:51 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root          14  0.1  0.0      0     0 ?        I    Aug19  63:55 [rcu_sched]
+root       37327  0.0  0.2  67764  4492 ?        S    Aug23  47:17 apt-get purge -y certbot python3-certbot-nginx python3-openssl
+root      173625  0.0  2.2  74244 45508 ?        Ss   Sep29   0:15 /lib/systemd/systemd-journald
+jonathan  165738  0.0  9.3 23158856 188828 ?     Sl   Sep27   2:13 node /var/www/sarahHasaera/node_modules/.bin/vite --host 0.0.0.0 --port 5173
+jonathan  165745  0.0  1.4 1237004 29876 ?       Sl   Sep27   1:55 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+root       34914  0.0  1.4 1922256 30188 ?       Ssl  Aug23   3:52 /usr/lib/snapd/snapd
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
 udp   UNCONN 0      0            0.0.0.0:68        0.0.0.0:*          
 tcp   LISTEN 0      511          0.0.0.0:443       0.0.0.0:*          
+tcp   LISTEN 0      511          0.0.0.0:5173      0.0.0.0:*          
 tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*          
 tcp   LISTEN 0      511          0.0.0.0:80        0.0.0.0:*          
-tcp   LISTEN 0      511                *:5173            *:*          
 tcp   LISTEN 0      128             [::]:22           [::]:*          
 tcp   LISTEN 0      511             [::]:80           [::]:*          
 
