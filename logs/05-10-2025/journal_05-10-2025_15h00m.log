@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 27/09/2025 à 14h00
+🛡️ Rapport de sécurité – 05/10/2025 à 15h00
 ==========================================================
 
 📌 Uptime et charge système :
- 14:00:03 up 38 days, 21:49,  1 user,  load average: 0.00, 0.31, 1.54
+ 15:00:03 up 46 days, 22:49,  1 user,  load average: 0.00, 0.05, 0.04
 
 📌 Connexions SSH actives :
 jonathan ttyAMA0      Aug 19 16:22
@@ -23,76 +23,76 @@ wtmp begins Sat Apr 26 00:29:50 2025
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
 tmpfs           198M  924K  197M   1% /run
-/dev/vda2        28G   25G  1.9G  93% /
+/dev/vda2        28G   25G  1.8G  94% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop0       53M   53M     0 100% /snap/certbot/4890
 /dev/loop4       43M   43M     0 100% /snap/snapd/24787
-/dev/loop5       62M   62M     0 100% /snap/core24/1059
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
 tmpfs           198M  4.0K  198M   1% /run/user/1000
 /dev/loop6       45M   45M     0 100% /snap/snapd/25205
 /dev/loop3       92M   92M     0 100% /snap/core/17250
 /dev/loop7       67M   67M     0 100% /snap/certbot/4966
 /dev/loop1       62M   62M     0 100% /snap/core24/1152
+/dev/loop2       62M   62M     0 100% /snap/core24/1197
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       415Mi       135Mi       972Ki       1.5Gi       1.5Gi
-Swap:          975Mi        67Mi       908Mi
+Mem:           1.9Gi       401Mi        42Mi       968Ki       1.6Gi       1.5Gi
+Swap:          975Mi        91Mi       884Mi
 
 📌 Détail mémoire :
-RAM utilisée : 415 MiB / 1977 MiB (20.99%)
-SWAP utilisée : 67 MiB / 975 MiB (6.87%)
+RAM utilisée : 402 MiB / 1977 MiB (20.33%)
+SWAP utilisée : 91 MiB / 975 MiB (9.33%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-jonathan  165738  9.2 187640 node
-jonathan  165719  2.9 58920 npm run dev --h
-root         612  1.8 37048 dockerd
-jonathan  165745  1.4 29192 esbuild
-root       34914  1.3 26932 snapd
-root      165755  0.7 16068 systemd-journal
-root           1  0.5 11260 systemd
-jonathan    2273  0.4  9600 systemd
-root       86906  0.3  7500 nginx
+jonathan  165738  8.9 182028 node
+root      173625  6.5 132592 systemd-journal
+jonathan  165719  2.1 43108 npm run dev --h
+root         612  1.7 36208 dockerd
+root       34914  1.4 29920 snapd
+jonathan  165745  1.4 29760 esbuild
+root           1  0.5 11148 systemd
+jonathan    2273  0.4  9608 systemd
+root       86906  0.3  7520 nginx
 root       76228  0.3  7456 systemd-logind
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     97 root
+     98 root
       7 jonathan
       2 www-data
       1 systemd-timesync
       1 messagebus
 
 📌 Consommation mémoire par type de processus :
-node                 : 9.20%
-dockerd              : 1.80%
+node                 : 8.90%
+systemd-journal      : 6.50%
+dockerd              : 1.70%
+snapd                : 1.40%
 esbuild              : 1.40%
-snapd                : 1.30%
 systemd              : 0.90%
-systemd-journal      : 0.70%
 nginx                : 0.70%
 systemd-timesyn      : 0.30%
 systemd-logind       : 0.30%
 sshd                 : 0.30%
-dpkg                 : 0.30%
 systemd-udevd        : 0.20%
 apt-get              : 0.20%
 su                   : 0.10%
 ps                   : 0.10%
+login                : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root      165778  8.3  0.1   3792  2796 ?        S    14:00   0:00 /bin/bash ./analyser_logs.sh
-root         612  1.4  1.8 1901896 37048 ?       Ssl  Aug19 805:39 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-jonathan  165738  1.3  9.2 23157012 187640 ?     Sl   13:41   0:15 node /var/www/sarahHasaera/node_modules/.bin/vite --host 0.0.0.0 --port 5173
-root          14  0.1  0.0      0     0 ?        I    Aug19  60:10 [rcu_sched]
-jonathan  165745  0.0  1.4 1237004 29192 ?       Sl   13:42   0:00 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
-root      165755  0.0  0.7  49764 16068 ?        Ss   13:44   0:00 /lib/systemd/systemd-journald
-root       37327  0.0  0.2  67764  4632 ?        S    Aug23  44:13 apt-get purge -y certbot python3-certbot-nginx python3-openssl
-jonathan  165719  0.0  2.9 846320 58920 ?        Ssl  13:38   0:00 npm run dev --host 0.0.0.0 --port 5173
-root      165768  0.0  0.0      0     0 ?        I    13:54   0:00 [kworker/0:1-events]
+root      193533  8.3  0.1   3792  2792 ?        S    15:00   0:00 /bin/bash ./analyser_logs.sh
+root         612  1.4  1.7 1901896 36208 ?       Ssl  Aug19 967:07 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root          14  0.1  0.0      0     0 ?        I    Aug19  72:07 [rcu_sched]
+root       37327  0.0  0.2  67764  4372 ?        S    Aug23  54:02 apt-get purge -y certbot python3-certbot-nginx python3-openssl
+root      173625  0.0  6.5 209516 132592 ?       Ss   Sep29   6:12 /lib/systemd/systemd-journald
+jonathan  165745  0.0  1.4 1237004 29760 ?       Sl   Sep27   6:07 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+jonathan  165738  0.0  8.9 23159248 182028 ?     Sl   Sep27   6:00 node /var/www/sarahHasaera/node_modules/.bin/vite --host 0.0.0.0 --port 5173
+root      193519  0.0  0.0      0     0 ?        I    14:50   0:00 [kworker/0:1-events]
+root      193524  0.0  0.0      0     0 ?        I    14:58   0:00 [kworker/u4:2-ext4-rsv-conversion]
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
@@ -154,18 +154,11 @@ sudo:x:27:
 📌 Tentatives sudo échouées :
 
 📌 Vérification des logs web (Nginx/Apache/autres) :
-✅ /var/log/nginx/access.log existe et contient des données.
+⚠️ /var/log/nginx/access.log est vide.
 ❌ /var/log/apache2/access.log est introuvable.
 ❌ /var/www/sarahHasaera/logs/access.log est introuvable.
 
 📌 IPs actives dans les logs :
-    111 192.168.1.10
-      6 127.0.0.1
-      3 137.0.0.0
-      2 192.168.1.197
-      2 192.168.1.165
-      2 108.0.0.0
-      1 134.0.0.0
 
 🚨 Recherche d’activité suspecte :
 
@@ -182,7 +175,6 @@ sudo:x:27:
 🔎 403 dans /var/log/nginx/access.log :
 
 🔎 404 dans /var/log/nginx/access.log :
-192.168.1.10 - - [27/Sep/2025:12:27:59 +0200] "GET /favicon.ico HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
 
 🔎 SQL syntax dans /var/log/nginx/access.log :
 
