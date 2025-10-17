@@ -1,0 +1,164 @@
+🛡️ Rapport de sécurité – 17/10/2025 à 22h28
+==========================================================
+
+📌 Uptime et charge système :
+ 22:28:34 up 7 days, 12:33,  1 user,  load average: 5.63, 7.11, 10.10
+
+📌 Connexions SSH actives :
+jonathan ttyAMA0      Oct 10 10:02
+
+📌 Derniers redémarrages :
+reboot   system boot  6.1.0-37-arm64   Fri Oct 10 09:56   still running
+reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
+reboot   system boot  6.1.0-37-arm64   Tue Aug 19 16:10   still running
+reboot   system boot  6.1.0-37-arm64   Sat Aug  9 06:23   still running
+reboot   system boot  6.1.0-37-arm64   Wed Jul  9 04:21   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jul  3 20:14   still running
+reboot   system boot  6.1.0-34-arm64   Wed Jun 11 17:32   still running
+reboot   system boot  6.1.0-34-arm64   Wed Jun 11 16:48   still running
+reboot   system boot  6.1.0-34-arm64   Tue May 27 18:36   still running
+reboot   system boot  6.1.0-33-arm64   Sat Apr 26 00:29   still running
+
+📌 Utilisation disque :
+Filesystem      Size  Used Avail Use% Mounted on
+udev            940M     0  940M   0% /dev
+tmpfs           198M  992K  197M   1% /run
+/dev/vda2        28G   26G  741M  98% /
+tmpfs           989M     0  989M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/loop1       67M   67M     0 100% /snap/certbot/5058
+/dev/loop3       62M   62M     0 100% /snap/core24/1152
+/dev/loop2       92M   92M     0 100% /snap/core/17250
+/dev/loop0       67M   67M     0 100% /snap/certbot/4966
+/dev/loop5       45M   45M     0 100% /snap/snapd/25205
+/dev/loop4       62M   62M     0 100% /snap/core24/1197
+/dev/loop6       43M   43M     0 100% /snap/snapd/24787
+/dev/vda1       512M  6.1M  506M   2% /boot/efi
+tmpfs           198M  4.0K  198M   1% /run/user/1000
+overlay          28G   26G  741M  98% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+
+📌 Utilisation mémoire (RAM + Swap) :
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       1.3Gi       467Mi       1.1Mi       219Mi       609Mi
+Swap:          975Mi       907Mi        68Mi
+
+📌 Détail mémoire :
+RAM utilisée : 1367 MiB / 1977 MiB (69.15%)
+SWAP utilisée : 907 MiB / 975 MiB (93.03%)
+
+📌 Top 10 processus utilisant le plus de RAM :
+USER         PID %MEM   RSS COMMAND
+jonathan    1637  2.5 51364 node
+root     4155156  1.6 33504 snapd
+root         558  1.2 25640 dockerd
+root     4155278  0.7 15936 systemd-journal
+root         996  0.7 14452 containerd
+jonathan 4150650  0.6 13712 node
+jonathan 4152636  0.5 10260 node
+jonathan    1675  0.4  8928 esbuild
+root           1  0.4  8524 systemd
+jonathan 4151469  0.3  7000 node
+
+📌 Nombre total de processus par utilisateur (top 5) :
+    239 jonathan
+     94 root
+      1 systemd-timesync
+      1 messagebus
+
+📌 Consommation mémoire par type de processus :
+node                 : 39.00%
+snapd                : 1.60%
+dockerd              : 1.20%
+systemd-journal      : 0.70%
+containerd           : 0.70%
+systemd              : 0.60%
+esbuild              : 0.40%
+ps                   : 0.20%
+analyser_logs.s      : 0.20%
+systemd-udevd        : 0.10%
+find                 : 0.10%
+containerd-shim      : 0.10%
+awk                  : 0.10%
+zswap-shrink         : 0.00%
+writeback            : 0.00%
+
+📌 Top processus gourmands CPU :
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root          44  0.9  0.0      0     0 ?        S    Oct10  99:28 [kswapd0]
+root           1  0.3  0.4 168792  8524 ?        Ds   Oct10  41:17 /sbin/init
+root     4154421  0.2  0.0      0     0 ?        I    21:33   0:09 [kworker/1:0-events]
+root     4155324  0.2  0.1   3792  2752 ?        S    22:28   0:00 /bin/bash ./analyser_logs.sh
+root     4155278  0.2  0.7  33276 15936 ?        Ss   22:24   0:00 /lib/systemd/systemd-journald
+root         558  0.1  1.2 1910216 25640 ?       Ssl  Oct10  18:23 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root     4155156  0.1  1.6 1847440 33504 ?       Ssl  22:21   0:00 /usr/lib/snapd/snapd
+jonathan    1675  0.1  0.4 1235980 8928 ?        Sl   Oct10  15:11 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+jonathan    1637  0.1  2.5 23150244 51364 ?      Sl   Oct10  11:52 node /var/www/sarahHasaera/node_modules/.bin/vite --host 0.0.0.0 --port 5173
+
+📌 Ports ouverts (hors localhost) :
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:68         0.0.0.0:*          
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      511          0.0.0.0:5173       0.0.0.0:*          
+tcp   LISTEN 0      128             [::]:22            [::]:*          
+
+📌 Services en échec :
+
+📌 Derniers paquets installés :
+
+📌 Utilisateurs système :
+_apt
+backup
+bin
+daemon
+games
+irc
+jonathan
+list
+lp
+mail
+man
+messagebus
+mysql
+news
+nobody
+proxy
+root
+sshd
+sync
+sys
+systemd-network
+systemd-timesync
+uucp
+www-data
+
+📌 Utilisateurs autorisés sudo :
+sudo:x:27:
+
+📌 Tentatives sudo échouées :
+
+📌 Vérification des logs web (Nginx/Apache/autres) :
+⚠️ /var/log/nginx/access.log est vide.
+❌ /var/log/apache2/access.log est introuvable.
+❌ /var/www/sarahHasaera/logs/access.log est introuvable.
+
+📌 IPs actives dans les logs :
+
+🚨 Recherche d’activité suspecte :
+
+🔎 Failed password dans /var/log/nginx/access.log :
+
+🔎 Invalid user dans /var/log/nginx/access.log :
+
+🔎 authentication failure dans /var/log/nginx/access.log :
+
+🔎 Did not receive identification string dans /var/log/nginx/access.log :
+
+🔎 possible break-in attempt dans /var/log/nginx/access.log :
+
+🔎 403 dans /var/log/nginx/access.log :
+
+🔎 404 dans /var/log/nginx/access.log :
+
+🔎 SQL syntax dans /var/log/nginx/access.log :
+
+🔎 wp-login dans /var/log/nginx/access.log :
