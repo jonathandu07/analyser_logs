@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 10/10/2025 à 19h00
+🛡️ Rapport de sécurité – 18/10/2025 à 19h03
 ==========================================================
 
 📌 Uptime et charge système :
- 19:00:02 up  9:04,  1 user,  load average: 0.54, 0.57, 0.55
+ 19:03:56 up 8 days,  9:08,  1 user,  load average: 11.75, 10.83, 10.86
 
 📌 Connexions SSH actives :
 jonathan ttyAMA0      Oct 10 10:02
@@ -22,8 +22,8 @@ reboot   system boot  6.1.0-33-arm64   Sat Apr 26 00:29   still running
 📌 Utilisation disque :
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
-tmpfs           198M 1000K  197M   1% /run
-/dev/vda2        28G   25G  1.7G  94% /
+tmpfs           198M  980K  197M   1% /run
+/dev/vda2        28G   25G  1.9G  94% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop1       67M   67M     0 100% /snap/certbot/5058
@@ -34,72 +34,71 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop4       62M   62M     0 100% /snap/core24/1197
 /dev/loop6       43M   43M     0 100% /snap/snapd/24787
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
-tmpfs           198M     0  198M   0% /run/user/1000
-overlay          28G   25G  1.7G  94% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+tmpfs           198M  4.0K  198M   1% /run/user/1000
+overlay          28G   25G  1.9G  94% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       896Mi        67Mi       960Ki       1.1Gi       1.1Gi
-Swap:          975Mi       524Ki       975Mi
+Mem:           1.9Gi       1.9Gi        31Mi       196Ki        42Mi        19Mi
+Swap:          975Mi       975Mi        52Ki
 
 📌 Détail mémoire :
-RAM utilisée : 897 MiB / 1977 MiB (45.37%)
-SWAP utilisée : 0 MiB / 975 MiB (0.00%)
+RAM utilisée : 1957 MiB / 1977 MiB (98.99%)
+SWAP utilisée : 975 MiB / 975 MiB (100.00%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-999         1721 20.5 415812 mysqld
-jonathan    1637  8.9 182012 node
-jonathan  176591  5.0 102272 node
-root         558  3.9 80740 dockerd
-jonathan     518  3.6 74472 npm run dev --h
-jonathan  176579  3.1 62960 npm run preview
-root         996  2.1 43308 containerd
-root        1223  2.0 41508 snapd
-root      115613  1.8 38216 systemd-journal
-root        1692  1.0 21812 containerd-shim
+999      4182058 13.5 274980 mysqld
+jonathan 4183591  1.5 31888 node
+root     4167345  0.9 18568 dockerd
+root     4181939  0.7 14660 snapd
+jonathan 4183507  0.7 14196 npm run preview
+root         996  0.6 13620 containerd
+jonathan 4183790  0.5 11028 node
+jonathan 4184140  0.5 11028 node
+jonathan 4184161  0.5 11028 node
+jonathan 4183811  0.5 11024 node
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     89 root
-      9 jonathan
+    294 jonathan
+     85 root
       1 systemd-timesync
       1 messagebus
       1 999
 
 📌 Consommation mémoire par type de processus :
-mysqld               : 20.50%
-node                 : 8.90%
-dockerd              : 3.90%
-containerd           : 2.10%
-snapd                : 2.00%
-systemd-journal      : 1.80%
-containerd-shim      : 1.00%
-esbuild              : 0.80%
-systemd              : 0.50%
-sshd                 : 0.40%
-systemd-timesyn      : 0.30%
-systemd-logind       : 0.30%
-systemd-udevd        : 0.20%
-dbus-daemon          : 0.20%
-cron                 : 0.20%
+node                 : 54.00%
+mysqld               : 13.50%
+dockerd              : 0.90%
+snapd                : 0.70%
+containerd           : 0.50%
+containerd-shim      : 0.30%
+ps                   : 0.20%
+systemd              : 0.10%
+zswap-shrink         : 0.00%
+writeback            : 0.00%
+watchdogd            : 0.00%
+tpm_dev_wq           : 0.00%
+tls-strp             : 0.00%
+systemd-udevd        : 0.00%
+systemd-timesyn      : 0.00%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root      176651  100  0.2   9124  4364 ?        R    19:00   0:00 ps aux --sort=-%cpu
-root      176610 11.1  0.1   3792  2772 ?        S    19:00   0:00 /bin/bash ./analyser_logs.sh
-999         1721  0.5 20.5 1739820 415812 ?      Ssl  10:49   2:47 mysqld
-root           1  0.2  0.5 168888 12124 ?        Ss   09:55   1:10 /sbin/init
-root      115613  0.1  1.8  74368 38216 ?        Ss   16:26   0:13 /lib/systemd/systemd-journald
-jonathan    1637  0.0  8.9 23147172 182012 ?     Sl   10:42   0:28 node /var/www/sarahHasaera/node_modules/.bin/vite --host 0.0.0.0 --port 5173
-root          14  0.0  0.0      0     0 ?        I    09:55   0:29 [rcu_sched]
-root         558  0.0  3.9 1909960 80740 ?       Ssl  09:58   0:18 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-jonathan    1675  0.0  0.8 1235980 17384 ?       Sl   10:46   0:16 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+root     4184738  600  0.2   9652  4812 ?        R    19:04   0:00 ps aux --sort=-%cpu
+root     4167345  3.8  0.9 1893704 18568 ?       Ssl  09:38  21:49 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root          44  2.9  0.0      0     0 ?        R    Oct10 360:55 [kswapd0]
+root     4181939  2.0  0.7 1847696 14660 ?       Ssl  17:41   1:42 /usr/lib/snapd/snapd
+jonathan 4176984  0.8  0.0 481756  1080 ?        Sl   15:03   1:58 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root     4182037  0.6  0.3 1458864 7172 ?        Sl   17:46   0:31 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 785efad1de838cce57a14839904811ea0e56dce6c8a33a6dd16ab0c2bd7d54eb -address /run/containerd/containerd.sock
+root           1  0.6  0.1 168928  3612 ?        Ss   Oct10  80:06 /sbin/init
+jonathan 4176909  0.5  0.0 481756    80 ?        Sl   14:55   1:27 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root         996  0.5  0.4 1266456 9268 ?        Ssl  Oct10  60:13 /usr/bin/containerd
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
 udp   UNCONN 0      0            0.0.0.0:68         0.0.0.0:*          
 tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
-tcp   LISTEN 0      511          0.0.0.0:5173       0.0.0.0:*          
 tcp   LISTEN 0      128             [::]:22            [::]:*          
 
 📌 Services en échec :
