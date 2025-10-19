@@ -1,0 +1,104 @@
+🛡️ Rapport de sécurité – 19/10/2025 à 03h15
+==========================================================
+
+📌 Uptime et charge système :
+ 03:15:36 up 8 days, 17:20,  1 user,  load average: 16.07, 16.18, 16.05
+
+📌 Connexions SSH actives :
+jonathan ttyAMA0      Oct 10 10:02
+
+📌 Derniers redémarrages :
+reboot   system boot  6.1.0-37-arm64   Fri Oct 10 09:56   still running
+reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
+reboot   system boot  6.1.0-37-arm64   Tue Aug 19 16:10   still running
+reboot   system boot  6.1.0-37-arm64   Sat Aug  9 06:23   still running
+reboot   system boot  6.1.0-37-arm64   Wed Jul  9 04:21   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jul  3 20:14   still running
+reboot   system boot  6.1.0-34-arm64   Wed Jun 11 17:32   still running
+reboot   system boot  6.1.0-34-arm64   Wed Jun 11 16:48   still running
+reboot   system boot  6.1.0-34-arm64   Tue May 27 18:36   still running
+reboot   system boot  6.1.0-33-arm64   Sat Apr 26 00:29   still running
+
+📌 Utilisation disque :
+Filesystem      Size  Used Avail Use% Mounted on
+udev            940M     0  940M   0% /dev
+tmpfs           198M  944K  197M   1% /run
+/dev/vda2        28G   25G  2.4G  91% /
+tmpfs           989M     0  989M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/loop1       67M   67M     0 100% /snap/certbot/5058
+/dev/loop3       62M   62M     0 100% /snap/core24/1152
+/dev/loop2       92M   92M     0 100% /snap/core/17250
+/dev/loop0       67M   67M     0 100% /snap/certbot/4966
+/dev/loop5       45M   45M     0 100% /snap/snapd/25205
+/dev/loop4       62M   62M     0 100% /snap/core24/1197
+/dev/loop6       43M   43M     0 100% /snap/snapd/24787
+/dev/vda1       512M  6.1M  506M   2% /boot/efi
+tmpfs           198M  4.0K  198M   1% /run/user/1000
+overlay          28G   25G  2.4G  91% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+
+📌 Utilisation mémoire (RAM + Swap) :
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       1.9Gi        40Mi       360Ki        70Mi        43Mi
+Swap:          975Mi       975Mi          0B
+
+📌 Détail mémoire :
+RAM utilisée : 1936 MiB / 1977 MiB (97.93%)
+SWAP utilisée : 975 MiB / 975 MiB (100.00%)
+
+📌 Top 10 processus utilisant le plus de RAM :
+USER         PID %MEM   RSS COMMAND
+root       45958  1.0 20652 python3
+root     4194009  0.9 19092 dockerd
+jonathan   43803  0.8 17408 node
+jonathan   43802  0.7 15488 node
+jonathan   44886  0.5 11364 node
+root       43835  0.5 11344 snapd
+root         996  0.5 11088 containerd
+jonathan   45792  0.4  9384 node
+jonathan   44997  0.4  9380 node
+jonathan   44914  0.4  9372 node
+
+📌 Nombre total de processus par utilisateur (top 5) :
+    317 jonathan
+    104 root
+      1 systemd-timesync
+      1 messagebus
+      1 man
+
+📌 Consommation mémoire par type de processus :
+node                 : 62.40%
+python3              : 1.00%
+dockerd              : 0.90%
+snapd                : 0.50%
+containerd           : 0.50%
+systemd              : 0.20%
+ps                   : 0.20%
+systemd-journal      : 0.10%
+systemctl            : 0.10%
+mandb                : 0.10%
+awk                  : 0.10%
+analyser_logs.s      : 0.10%
+zswap-shrink         : 0.00%
+writeback            : 0.00%
+watchdogd            : 0.00%
+
+📌 Top processus gourmands CPU :
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root       46371  400  0.2   8684  4244 ?        R    03:15   0:00 ps aux --sort=-%cpu
+root       43835  6.8  0.5 1847440 10672 ?       Ssl  01:42   6:28 /usr/lib/snapd/snapd
+root     4194009  4.6  0.9 1909000 18316 ?       Ssl  Oct18  18:00 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root          44  4.5  0.0      0     0 ?        S    Oct10 569:16 [kswapd0]
+root           1  0.8  0.2 168808  4140 ?        Ds   Oct10 108:19 /sbin/init
+root         996  0.7  0.5 1340504 10368 ?       Ssl  Oct10  89:13 /usr/bin/containerd
+root       45958  0.4  1.0  43780 20652 ?        Ds   02:21   0:15 /snap/certbot/5058/bin/python3 -s /snap/certbot/5058/bin/certbot -q renew
+root     4179129  0.0  0.0  26268   640 ?        Ss   Oct18   0:39 /lib/systemd/systemd-udevd
+root          14  0.0  0.0      0     0 ?        I    Oct10  11:45 [rcu_sched]
+
+📌 Ports ouverts (hors localhost) :
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:68         0.0.0.0:*          
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      128             [::]:22            [::]:*          
+
+📌 Services en échec :
