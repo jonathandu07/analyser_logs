@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 12/10/2025 à 05h00
+🛡️ Rapport de sécurité – 20/10/2025 à 05h00
 ==========================================================
 
 📌 Uptime et charge système :
- 05:00:16 up 1 day, 19:04,  1 user,  load average: 7.28, 2.37, 1.14
+ 05:00:22 up 9 days, 19:05,  1 user,  load average: 8.39, 8.74, 9.51
 
 📌 Connexions SSH actives :
 jonathan ttyAMA0      Oct 10 10:02
@@ -22,8 +22,8 @@ reboot   system boot  6.1.0-33-arm64   Sat Apr 26 00:29   still running
 📌 Utilisation disque :
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
-tmpfs           198M 1000K  197M   1% /run
-/dev/vda2        28G   25G  1.6G  95% /
+tmpfs           198M  932K  197M   1% /run
+/dev/vda2        28G   24G  2.7G  91% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop1       67M   67M     0 100% /snap/certbot/5058
@@ -34,72 +34,69 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop4       62M   62M     0 100% /snap/core24/1197
 /dev/loop6       43M   43M     0 100% /snap/snapd/24787
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
-tmpfs           198M     0  198M   0% /run/user/1000
-overlay          28G   25G  1.6G  95% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+tmpfs           198M  4.0K  198M   1% /run/user/1000
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       835Mi        95Mi       932Ki       1.1Gi       1.1Gi
-Swap:          975Mi        10Mi       965Mi
+Mem:           1.9Gi       1.9Gi        32Mi        84Ki       115Mi        74Mi
+Swap:          975Mi       975Mi        88Ki
 
 📌 Détail mémoire :
-RAM utilisée : 835 MiB / 1977 MiB (42.24%)
-SWAP utilisée : 10 MiB / 975 MiB (1.03%)
+RAM utilisée : 1904 MiB / 1977 MiB (96.31%)
+SWAP utilisée : 975 MiB / 975 MiB (100.00%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-999         1721 20.0 405840 mysqld
-jonathan    1637  9.1 184400 node
-root      115613  5.0 103236 systemd-journal
-root         558  4.0 81040 dockerd
-jonathan     518  3.4 70416 npm run dev --h
-root        1223  1.8 36956 snapd
-root         996  1.4 30036 containerd
-root        1692  1.0 21904 containerd-shim
-jonathan    1675  0.8 17388 esbuild
-root           1  0.5 12112 systemd
+jonathan  179026  1.9 38940 node
+jonathan  179404  1.1 24024 node
+root      179184  1.0 20512 dockerd
+jonathan  179385  0.9 19288 node
+jonathan  179371  0.9 19244 node
+jonathan  179378  0.9 19228 node
+jonathan  179357  0.9 19200 node
+jonathan  179397  0.9 19132 node
+jonathan  179317  0.9 18996 node
+jonathan  179364  0.9 18904 node
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     99 root
-      5 jonathan
+    334 jonathan
+     84 root
       1 systemd-timesync
       1 messagebus
-      1 999
 
 📌 Consommation mémoire par type de processus :
-mysqld               : 20.00%
-node                 : 9.10%
-systemd-journal      : 5.00%
-dockerd              : 4.00%
-snapd                : 1.80%
-containerd           : 1.40%
-containerd-shim      : 1.00%
-esbuild              : 0.80%
-systemd              : 0.50%
-sshd                 : 0.40%
-apt-get              : 0.40%
-systemd-timesyn      : 0.30%
-systemd-logind       : 0.30%
-systemd-udevd        : 0.20%
-cron                 : 0.20%
+node                 : 81.90%
+dockerd              : 1.00%
+snapd                : 0.40%
+containerd           : 0.30%
+ps                   : 0.20%
+systemd-journal      : 0.10%
+systemd              : 0.10%
+analyser_logs.s      : 0.10%
+zswap-shrink         : 0.00%
+writeback            : 0.00%
+watchdogd            : 0.00%
+tpm_dev_wq           : 0.00%
+tls-strp             : 0.00%
+systemd-udevd        : 0.00%
+systemd-timesyn      : 0.00%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root      985988  8.3  0.1   3792  2752 ?        S    05:00   0:00 /bin/bash ./analyser_logs.sh
-999         1721  0.5 20.0 1739820 405840 ?      Ssl  Oct10  14:15 mysqld
-root           1  0.2  0.5 168792 12112 ?        Ss   Oct10   6:09 /sbin/init
-root      115613  0.1  5.0 176860 103236 ?       Ssl  Oct10   3:14 /lib/systemd/systemd-journald
-root          14  0.1  0.0      0     0 ?        I    Oct10   2:40 [rcu_sched]
-root      985774  0.0  0.4  51272  8792 ?        D    04:59   0:00 apt-get check -qq
-message+     509  0.0  0.1   9460  3956 ?        Ss   Oct10   1:31 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
-jonathan    1637  0.0  9.1 23150428 184400 ?     Sl   Oct10   1:28 node /var/www/sarahHasaera/node_modules/.bin/vite --host 0.0.0.0 --port 5173
-jonathan    1675  0.0  0.8 1235980 17388 ?       Sl   Oct10   1:25 /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.9 --ping
+root      179423  500  0.2   8684  4380 ?        R    05:01   0:00 ps aux --sort=-%cpu
+jonathan  179404 10.7  0.6 481472 13820 ?        Dl   05:01   0:02 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root          44  7.0  0.0      0     0 ?        S    Oct10 1001:25 [kswapd0]
+jonathan  179397  4.7  0.4 481756 10076 ?        Sl   05:01   0:01 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+jonathan  179385  4.4  0.5 481756 10232 ?        Sl   05:01   0:01 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root      179259  2.2  0.4 1699344 9316 ?        Ssl  05:00   0:01 /usr/lib/snapd/snapd
+jonathan  179378  2.0  0.5 481756 10172 ?        Sl   05:00   0:00 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+jonathan  179371  1.4  0.5 481756 10188 ?        Sl   05:00   0:00 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root         996  1.1  0.4 1340504 9532 ?        Ssl  Oct10 163:21 /usr/bin/containerd
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
 udp   UNCONN 0      0            0.0.0.0:68         0.0.0.0:*          
 tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
-tcp   LISTEN 0      511          0.0.0.0:5173       0.0.0.0:*          
 tcp   LISTEN 0      128             [::]:22            [::]:*          
 
 📌 Services en échec :
@@ -109,12 +106,13 @@ tcp   LISTEN 0      128             [::]:22            [::]:*
 * sarahHasaera.service       loaded failed failed App SarahHasaera - Production server
 * snap.certbot.renew.service loaded failed failed Service for snap application certbot.renew
 * snapd.seeded.service       loaded failed failed Wait until snapd is fully seeded
+* systemd-logind.service     loaded failed failed User Login Management
 * user@1000.service          loaded failed failed User Manager for UID 1000
 
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
 SUB    = The low-level unit activation state, values depend on unit type.
-6 loaded units listed.
+7 loaded units listed.
 
 📌 Derniers paquets installés :
 
