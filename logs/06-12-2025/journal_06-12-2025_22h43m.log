@@ -1,0 +1,135 @@
+🛡️ Rapport de sécurité – 06/12/2025 à 22h43
+==========================================================
+
+📌 Uptime et charge système :
+ 22:44:42 up  3:45,  1 user,  load average: 28.13, 29.85, 24.70
+
+📌 Connexions SSH actives :
+jonathan ttyAMA0      Dec  6 19:55
+
+📌 Derniers redémarrages :
+reboot   system boot  6.1.0-37-arm64   Sat Dec  6 19:07   still running
+reboot   system boot  6.1.0-37-arm64   Sat Dec  6 15:03   still running
+reboot   system boot  6.1.0-37-arm64   Mon Oct 20 06:18   still running
+reboot   system boot  6.1.0-37-arm64   Fri Oct 10 09:56   still running
+reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
+reboot   system boot  6.1.0-37-arm64   Tue Aug 19 16:10   still running
+reboot   system boot  6.1.0-37-arm64   Sat Aug  9 06:23   still running
+reboot   system boot  6.1.0-37-arm64   Wed Jul  9 04:21   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jul  3 20:14   still running
+reboot   system boot  6.1.0-34-arm64   Wed Jun 11 17:32   still running
+
+📌 Utilisation disque :
+Filesystem      Size  Used Avail Use% Mounted on
+udev            940M     0  940M   0% /dev
+tmpfs           198M  896K  197M   1% /run
+/dev/vda2        28G   23G  3.8G  86% /
+tmpfs           989M     0  989M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/loop1       67M   67M     0 100% /snap/certbot/4966
+/dev/loop0       67M   67M     0 100% /snap/certbot/5058
+/dev/loop2       62M   62M     0 100% /snap/core24/1152
+/dev/loop5       45M   45M     0 100% /snap/snapd/25205
+/dev/loop4       62M   62M     0 100% /snap/core24/1197
+/dev/loop3       92M   92M     0 100% /snap/core/17250
+/dev/loop6       43M   43M     0 100% /snap/snapd/24787
+/dev/vda1       512M  6.1M  506M   2% /boot/efi
+tmpfs           198M     0  198M   0% /run/user/1000
+
+📌 Utilisation mémoire (RAM + Swap) :
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       1.8Gi        38Mi       104Ki       145Mi        96Mi
+Swap:          975Mi       563Mi       412Mi
+
+📌 Détail mémoire :
+RAM utilisée : 1869 MiB / 1977 MiB (94.54%)
+SWAP utilisée : 576 MiB / 975 MiB (59.08%)
+
+📌 Top 10 processus utilisant le plus de RAM :
+USER         PID %MEM   RSS COMMAND
+root        6591  2.3 47792 npm install
+jonathan    7065  2.2 45888 node
+root        6890  2.2 45772 node
+jonathan    6953  2.1 43848 node
+root        7045  2.1 43848 node
+root        7156  2.1 43848 node
+jonathan    7163  2.1 43848 node
+jonathan    7205  2.1 43848 node
+jonathan    6925  2.1 43844 node
+root        6933  2.1 43844 node
+
+📌 Nombre total de processus par utilisateur (top 5) :
+    444 root
+     58 jonathan
+      1 systemd-timesync
+      1 messagebus
+
+📌 Consommation mémoire par type de processus :
+node                 : 249.40%
+dockerd              : 1.10%
+containerd           : 0.70%
+systemd-journal      : 0.30%
+systemd              : 0.30%
+(npm)                : 0.30%
+ps                   : 0.20%
+awk                  : 0.10%
+zswap-shrink         : 0.00%
+writeback            : 0.00%
+watchdogd            : 0.00%
+tpm_dev_wq           : 0.00%
+systemd-udevd        : 0.00%
+systemd-timesyn      : 0.00%
+systemd-logind       : 0.00%
+
+📌 Top processus gourmands CPU :
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root          44  7.7  0.0      0     0 ?        D    18:58  18:07 [kswapd0]
+root        6572  5.2  0.3 481756  6860 ?        Sl   22:41   0:34 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root        6610  5.1  1.1 481756 23740 ?        Sl   22:45   0:20 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root        6499  3.4  0.0 481756   108 ?        Sl   22:38   0:29 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root        6488  3.2  0.0      0     0 ?        I    22:37   0:29 [kworker/1:3-events_power_efficient]
+root         584  3.1  1.1 1925768 23308 ?       Ssl  19:27   6:30 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        6487  3.0  0.0 481756   724 ?        Sl   22:37   0:28 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root        6473  2.3  0.3 481756  6720 ?        Sl   22:36   0:23 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root        6451  2.1  0.3 481756  6860 ?        Sl   22:35   0:22 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+
+📌 Ports ouverts (hors localhost) :
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:68         0.0.0.0:*          
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      128             [::]:22            [::]:*          
+
+📌 Services en échec :
+
+📌 Derniers paquets installés :
+
+📌 Utilisateurs système :
+_apt
+backup
+bin
+daemon
+games
+irc
+jonathan
+list
+lp
+mail
+man
+messagebus
+mysql
+news
+nobody
+proxy
+root
+sshd
+sync
+sys
+systemd-network
+systemd-timesync
+uucp
+www-data
+
+📌 Utilisateurs autorisés sudo :
+sudo:x:27:
+
+📌 Tentatives sudo échouées :
