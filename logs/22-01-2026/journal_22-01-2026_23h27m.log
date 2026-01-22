@@ -1,0 +1,165 @@
+🛡️ Rapport de sécurité – 22/01/2026 à 23h27
+==========================================================
+
+📌 Uptime et charge système :
+ 23:29:22 up  6:21,  0 user,  load average: 14.50, 13.88, 16.38
+
+📌 Connexions SSH actives :
+
+📌 Derniers redémarrages :
+reboot   system boot  6.1.0-37-arm64   Thu Jan 22 17:07   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jan 22 17:01   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jan 22 16:50   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jan 22 16:32   still running
+reboot   system boot  6.1.0-37-arm64   Sun Dec  7 12:34   still running
+reboot   system boot  6.1.0-37-arm64   Sat Dec  6 19:07   still running
+reboot   system boot  6.1.0-37-arm64   Sat Dec  6 15:03   still running
+reboot   system boot  6.1.0-37-arm64   Mon Oct 20 06:18   still running
+reboot   system boot  6.1.0-37-arm64   Fri Oct 10 09:56   still running
+reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
+
+📌 Utilisation disque :
+Filesystem      Size  Used Avail Use% Mounted on
+udev            940M     0  940M   0% /dev
+tmpfs           198M  912K  197M   1% /run
+/dev/vda2        28G   22G  4.7G  83% /
+tmpfs           989M     0  989M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/loop1       62M   62M     0 100% /snap/core24/1152
+/dev/loop4       92M   92M     0 100% /snap/core/17250
+/dev/loop5       45M   45M     0 100% /snap/snapd/25205
+/dev/loop2       62M   62M     0 100% /snap/core24/1197
+/dev/loop0       67M   67M     0 100% /snap/certbot/4966
+/dev/loop6       43M   43M     0 100% /snap/snapd/24787
+/dev/loop3       67M   67M     0 100% /snap/certbot/5058
+/dev/vda1       512M  6.1M  506M   2% /boot/efi
+overlay          28G   22G  4.7G  83% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+
+📌 Utilisation mémoire (RAM + Swap) :
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       1.8Gi        24Mi        92Ki       177Mi       130Mi
+Swap:          975Mi       734Mi       241Mi
+
+📌 Détail mémoire :
+RAM utilisée : 1854 MiB / 1977 MiB (93.78%)
+SWAP utilisée : 830 MiB / 975 MiB (85.13%)
+
+📌 Top 10 processus utilisant le plus de RAM :
+USER         PID %MEM   RSS COMMAND
+jonathan   12096  3.3 68308 node
+root       12645  2.7 55080 npm install
+jonathan   12721  2.0 42468 node
+jonathan   12781  2.0 42176 node
+jonathan   12728  2.0 41944 node
+jonathan   12831  2.0 40616 node
+jonathan   12817  2.0 40564 node
+jonathan   12824  2.0 40564 node
+jonathan   12774  1.9 40436 node
+jonathan   12810  1.9 40352 node
+
+📌 Nombre total de processus par utilisateur (top 5) :
+    299 jonathan
+     88 root
+      3 nobody
+      2 www-data
+      1 systemd-timesync
+
+📌 Consommation mémoire par type de processus :
+node                 : 334.80%
+dockerd              : 1.00%
+containerd           : 0.50%
+systemd-journal      : 0.30%
+snapd                : 0.30%
+dpkg-query           : 0.30%
+systemd              : 0.20%
+ps                   : 0.20%
+popularity-cont      : 0.20%
+mandb                : 0.20%
+cron                 : 0.10%
+analyser_logs.s      : 0.10%
+zswap-shrink         : 0.00%
+writeback            : 0.00%
+watchdogd            : 0.00%
+
+📌 Top processus gourmands CPU :
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root       12865  300  0.2   8684  4272 ?        R    23:39   0:00 ps aux --sort=-%cpu
+root          44 11.6  0.0      0     0 ?        S    17:07  45:42 [kswapd0]
+root       10178  5.6  1.0 1367400 20732 ?       Ssl  22:35   3:34 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+jonathan   10295  2.2  0.2 481756  5004 ?        Sl   22:41   1:17 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+root         720  1.8  0.5 1340248 11616 ?       Ssl  17:14   7:18 /usr/bin/containerd
+root           1  1.5  0.2 168840  5360 ?        Ss   17:07   5:58 /sbin/init
+man         1481  1.0  0.2  10540  5528 ?        DNs  17:57   3:39 /usr/bin/mandb --quiet
+jonathan   10174  0.9  0.0 481756   944 ?        Sl   22:32   0:38 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+jonathan   10146  0.5  0.1 481756  3440 ?        Sl   22:30   0:21 node /var/www/sarahHasaera/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.11 --ping
+
+📌 Ports ouverts (hors localhost) :
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:68         0.0.0.0:*          
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      511          0.0.0.0:80         0.0.0.0:*          
+tcp   LISTEN 0      511          0.0.0.0:443        0.0.0.0:*          
+tcp   LISTEN 0      128             [::]:22            [::]:*          
+tcp   LISTEN 0      511             [::]:80            [::]:*          
+
+📌 Services en échec :
+
+📌 Derniers paquets installés :
+
+📌 Utilisateurs système :
+_apt
+backup
+bin
+daemon
+games
+irc
+jonathan
+list
+lp
+mail
+man
+messagebus
+mysql
+news
+nobody
+proxy
+root
+sshd
+sync
+sys
+systemd-network
+systemd-timesync
+uucp
+www-data
+
+📌 Utilisateurs autorisés sudo :
+sudo:x:27:
+
+📌 Tentatives sudo échouées :
+
+📌 Vérification des logs web (Nginx/Apache/autres) :
+⚠️ /var/log/nginx/access.log est vide.
+❌ /var/log/apache2/access.log est introuvable.
+❌ /var/www/sarahHasaera/logs/access.log est introuvable.
+
+📌 IPs actives dans les logs :
+
+🚨 Recherche d’activité suspecte :
+
+🔎 Failed password dans /var/log/nginx/access.log :
+
+🔎 Invalid user dans /var/log/nginx/access.log :
+
+🔎 authentication failure dans /var/log/nginx/access.log :
+
+🔎 Did not receive identification string dans /var/log/nginx/access.log :
+
+🔎 possible break-in attempt dans /var/log/nginx/access.log :
+
+🔎 403 dans /var/log/nginx/access.log :
+
+🔎 404 dans /var/log/nginx/access.log :
+
+🔎 SQL syntax dans /var/log/nginx/access.log :
+
+🔎 wp-login dans /var/log/nginx/access.log :
