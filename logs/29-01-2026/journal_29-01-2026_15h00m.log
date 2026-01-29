@@ -1,0 +1,176 @@
+🛡️ Rapport de sécurité – 29/01/2026 à 15h00
+==========================================================
+
+📌 Uptime et charge système :
+ 15:00:02 up 6 days, 21:52,  1 user,  load average: 2.74, 2.73, 2.84
+
+📌 Connexions SSH actives :
+root     ttyAMA0      Jan 24 10:24
+
+📌 Derniers redémarrages :
+reboot   system boot  6.1.0-37-arm64   Thu Jan 22 17:07   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jan 22 17:01   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jan 22 16:50   still running
+reboot   system boot  6.1.0-37-arm64   Thu Jan 22 16:32   still running
+reboot   system boot  6.1.0-37-arm64   Sun Dec  7 12:34   still running
+reboot   system boot  6.1.0-37-arm64   Sat Dec  6 19:07   still running
+reboot   system boot  6.1.0-37-arm64   Sat Dec  6 15:03   still running
+reboot   system boot  6.1.0-37-arm64   Mon Oct 20 06:18   still running
+reboot   system boot  6.1.0-37-arm64   Fri Oct 10 09:56   still running
+reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
+
+📌 Utilisation disque :
+Filesystem      Size  Used Avail Use% Mounted on
+udev            940M     0  940M   0% /dev
+tmpfs           198M 1000K  197M   1% /run
+/dev/vda2        28G   25G  1.8G  94% /
+tmpfs           989M     0  989M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/loop4       92M   92M     0 100% /snap/core/17250
+/dev/loop5       45M   45M     0 100% /snap/snapd/25205
+/dev/loop2       62M   62M     0 100% /snap/core24/1197
+/dev/loop3       67M   67M     0 100% /snap/certbot/5058
+/dev/vda1       512M  6.1M  506M   2% /boot/efi
+overlay          28G   25G  1.8G  94% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+/dev/loop7       42M   42M     0 100% /snap/snapd/25939
+/dev/loop6       93M   93M     0 100% /snap/core/17276
+/dev/loop8       62M   62M     0 100% /snap/core24/1269
+/dev/loop1       68M   68M     0 100% /snap/certbot/5235
+tmpfs           198M     0  198M   0% /run/user/0
+
+📌 Utilisation mémoire (RAM + Swap) :
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       500Mi       161Mi       940Ki       1.4Gi       1.4Gi
+Swap:          975Mi       215Mi       760Mi
+
+📌 Détail mémoire :
+RAM utilisée : 500 MiB / 1977 MiB (25.29%)
+SWAP utilisée : 215 MiB / 975 MiB (22.05%)
+
+📌 Top 10 processus utilisant le plus de RAM :
+USER         PID %MEM   RSS COMMAND
+999      1268356  8.4 172044 mysqld
+root     2830498  7.9 160144 systemd-journal
+root     3079888  3.0 62396 npm install
+jonathan 3079887  2.9 59324 npm run preview
+root     1262233  2.4 49004 dockerd
+jonathan 3079942  1.5 32104 node
+root      798572  1.4 29056 snapd
+root         720  0.8 17348 containerd
+root     1268259  0.7 15676 containerd-shim
+root           1  0.4  8444 systemd
+
+📌 Nombre total de processus par utilisateur (top 5) :
+     95 root
+      3 jonathan
+      1 systemd-timesync
+      1 messagebus
+      1 999
+
+📌 Consommation mémoire par type de processus :
+mysqld               : 8.40%
+systemd-journal      : 7.90%
+dockerd              : 2.40%
+node                 : 2.30%
+snapd                : 1.40%
+containerd           : 0.80%
+containerd-shim      : 0.70%
+systemd              : 0.40%
+sshd                 : 0.30%
+bash                 : 0.30%
+systemd-logind       : 0.20%
+vi                   : 0.10%
+su                   : 0.10%
+ps                   : 0.10%
+login                : 0.10%
+
+📌 Top processus gourmands CPU :
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     3079961  100  0.2   9124  4380 ?        R    15:00   0:00 ps aux --sort=-%cpu
+root     3079888 88.1  3.3 857980 66936 ?        Rsl  15:00   0:00 npm install
+jonathan 3079942 80.0  2.4 488916 49140 ?        Rl   15:00   0:00 node /usr/bin/vite preview --host --port 5173
+jonathan 3079887 59.4  2.9 849232 59324 ?        Ssl  15:00   0:00 npm run preview --host --port 5173
+root          44  1.4  0.0      0     0 ?        S    Jan22 139:29 [kswapd0]
+999      1268356  1.2  8.4 1739820 172044 ?      Ssl  Jan24  92:21 mysqld
+root           1  0.7  0.4 168920  8444 ?        Ss   Jan22  78:56 /sbin/init
+root     2830498  0.3  7.9 250456 160144 ?       Ss   10:04   1:00 /lib/systemd/systemd-journald
+root          14  0.2  0.0      0     0 ?        I    Jan22  28:20 [rcu_sched]
+
+📌 Ports ouverts (hors localhost) :
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:68         0.0.0.0:*          
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      128             [::]:22            [::]:*          
+
+📌 Services en échec :
+  UNIT                       LOAD   ACTIVE SUB    DESCRIPTION
+* mariadb.service            loaded failed failed MariaDB 10.11.11 database server
+* nginx.service              loaded failed failed A high performance web server and a reverse proxy server
+* snap.certbot.renew.service loaded failed failed Service for snap application certbot.renew
+* snapd.seeded.service       loaded failed failed Wait until snapd is fully seeded
+* user@0.service             loaded failed failed User Manager for UID 0
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+5 loaded units listed.
+
+📌 Derniers paquets installés :
+
+📌 Utilisateurs système :
+_apt
+backup
+bin
+daemon
+games
+irc
+jonathan
+list
+lp
+mail
+man
+messagebus
+mysql
+news
+nobody
+proxy
+root
+sshd
+sync
+sys
+systemd-network
+systemd-timesync
+uucp
+www-data
+
+📌 Utilisateurs autorisés sudo :
+sudo:x:27:
+
+📌 Tentatives sudo échouées :
+
+📌 Vérification des logs web (Nginx/Apache/autres) :
+⚠️ /var/log/nginx/access.log est vide.
+❌ /var/log/apache2/access.log est introuvable.
+❌ /var/www/sarahHasaera/logs/access.log est introuvable.
+
+📌 IPs actives dans les logs :
+
+🚨 Recherche d’activité suspecte :
+
+🔎 Failed password dans /var/log/nginx/access.log :
+
+🔎 Invalid user dans /var/log/nginx/access.log :
+
+🔎 authentication failure dans /var/log/nginx/access.log :
+
+🔎 Did not receive identification string dans /var/log/nginx/access.log :
+
+🔎 possible break-in attempt dans /var/log/nginx/access.log :
+
+🔎 403 dans /var/log/nginx/access.log :
+
+🔎 404 dans /var/log/nginx/access.log :
+
+🔎 SQL syntax dans /var/log/nginx/access.log :
+
+🔎 wp-login dans /var/log/nginx/access.log :
