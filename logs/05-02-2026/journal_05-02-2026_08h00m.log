@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 28/01/2026 à 07h00
+🛡️ Rapport de sécurité – 05/02/2026 à 08h00
 ==========================================================
 
 📌 Uptime et charge système :
- 07:00:03 up 5 days, 13:52,  1 user,  load average: 2.24, 2.40, 3.26
+ 08:00:03 up 13 days, 14:52,  1 user,  load average: 2.58, 2.43, 2.40
 
 📌 Connexions SSH actives :
 root     ttyAMA0      Jan 24 10:24
@@ -22,79 +22,79 @@ reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
 📌 Utilisation disque :
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
-tmpfs           198M 1004K  197M   1% /run
-/dev/vda2        28G   25G  2.1G  93% /
+tmpfs           198M 1000K  197M   1% /run
+/dev/vda2        28G   26G  1.5G  95% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop4       92M   92M     0 100% /snap/core/17250
 /dev/loop5       45M   45M     0 100% /snap/snapd/25205
-/dev/loop2       62M   62M     0 100% /snap/core24/1197
-/dev/loop3       67M   67M     0 100% /snap/certbot/5058
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
-overlay          28G   25G  2.1G  93% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+overlay          28G   26G  1.5G  95% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
 /dev/loop7       42M   42M     0 100% /snap/snapd/25939
 /dev/loop6       93M   93M     0 100% /snap/core/17276
 /dev/loop8       62M   62M     0 100% /snap/core24/1269
 /dev/loop1       68M   68M     0 100% /snap/certbot/5235
 tmpfs           198M     0  198M   0% /run/user/0
+/dev/loop0       62M   62M     0 100% /snap/core24/1350
+/dev/loop2       68M   68M     0 100% /snap/certbot/5360
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       660Mi        38Mi       944Ki       1.3Gi       1.3Gi
-Swap:          975Mi       168Mi       807Mi
+Mem:           1.9Gi       402Mi       146Mi       896Ki       1.5Gi       1.5Gi
+Swap:          975Mi       350Mi       625Mi
 
 📌 Détail mémoire :
-RAM utilisée : 660 MiB / 1977 MiB (33.38%)
-SWAP utilisée : 168 MiB / 975 MiB (17.23%)
+RAM utilisée : 402 MiB / 1977 MiB (20.33%)
+SWAP utilisée : 350 MiB / 975 MiB (35.90%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-999      1268356 11.6 235552 mysqld
-root     1490576  4.6 93876 npm install
-jonathan 1490624  4.0 81096 node
-jonathan 1490599  2.9 58940 npm run dev --h
-root     1262233  2.7 56504 dockerd
-root      798572  1.5 32388 snapd
-root     1472874  1.0 20848 systemd-journal
-root         720  0.9 20064 containerd
-root     1268259  0.7 16008 containerd-shim
-root           1  0.4  8572 systemd
+root     2671313  3.9 80004 npm install
+jonathan 2671332  3.0 62016 npm run dev --h
+root     2591988  2.8 58652 systemd-journal
+jonathan 2671349  2.6 53028 node
+999      1268356  1.9 39524 mysqld
+root      798572  1.8 37124 snapd
+root     1262233  1.5 30632 dockerd
+root         720  0.7 14960 containerd
+root     1268259  0.4  9868 containerd-shim
+root           1  0.4  8700 systemd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     94 root
+     95 root
       3 jonathan
       1 systemd-timesync
       1 messagebus
       1 999
 
 📌 Consommation mémoire par type de processus :
-mysqld               : 11.60%
-node                 : 4.00%
-dockerd              : 2.70%
-snapd                : 1.50%
-systemd-journal      : 1.00%
-containerd           : 0.90%
-containerd-shim      : 0.70%
+node                 : 3.00%
+systemd-journal      : 2.80%
+mysqld               : 1.90%
+snapd                : 1.80%
+dockerd              : 1.50%
+containerd           : 0.70%
 systemd              : 0.40%
+containerd-shim      : 0.40%
+systemd-logind       : 0.30%
 sshd                 : 0.30%
-bash                 : 0.30%
-systemd-logind       : 0.20%
-esbuild              : 0.20%
-vi                   : 0.10%
+bash                 : 0.20%
+systemd-udevd        : 0.10%
 su                   : 0.10%
 ps                   : 0.10%
+login                : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root     1490576 81.3  4.6 1077316 94964 ?       Rsl  06:59   0:02 npm install
-jonathan 1490624 66.6  4.0 22032436 82852 ?      Rl   07:00   0:00 node /usr/bin/vite --host 0.0.0.0 --port 5173
-root     1490688 50.0  0.2   9124  4380 ?        R    07:00   0:00 ps aux --sort=-%cpu
-jonathan 1490599 21.6  2.9 849232 58940 ?        Ssl  07:00   0:00 npm run dev --host 0.0.0.0 --port 5173
-jonathan 1490684 16.6  0.4 1234800 8420 ?        Sl   07:00   0:00 /usr/lib/node_modules/vite/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.5 --ping
-root     1490639  2.5  0.1   3792  2780 ?        S    07:00   0:00 /bin/bash ./analyser_logs.sh
-root          44  1.7  0.0      0     0 ?        S    Jan22 139:26 [kswapd0]
-999      1268356  1.2 11.6 1739820 235552 ?      Ssl  Jan24  68:01 mysqld
-root           1  0.8  0.4 168920  8572 ?        Ss   Jan22  64:57 /sbin/init
+root     2671313 72.4  4.0 872252 82384 ?        Rsl  08:00   0:01 npm install
+jonathan 2671349 63.4  3.2 754900 66564 ?        Rl   08:00   0:00 node /usr/bin/vite --host 0.0.0.0 --port 5173
+root     2671405 50.0  0.2   9124  4388 ?        R    08:00   0:00 ps aux --sort=-%cpu
+jonathan 2671332 35.1  3.0 849232 62016 ?        Ssl  08:00   0:00 npm run dev --host 0.0.0.0 --port 5173
+root     2671364  2.8  0.1   3792  2780 ?        S    08:00   0:00 /bin/bash ./analyser_logs.sh
+999      1268356  1.2  1.9 1739820 39524 ?       Ssl  Jan24 215:57 mysqld
+root           1  0.7  0.4 168920  8700 ?        Ss   Jan22 149:03 /sbin/init
+root          44  0.7  0.0      0     0 ?        S    Jan22 139:46 [kswapd0]
+root     2591988  0.3  2.8 103040 58652 ?        Ss   06:22   0:19 /lib/systemd/systemd-journald
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
