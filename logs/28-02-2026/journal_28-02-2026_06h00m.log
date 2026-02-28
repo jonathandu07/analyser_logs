@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 20/02/2026 à 06h00
+🛡️ Rapport de sécurité – 28/02/2026 à 06h00
 ==========================================================
 
 📌 Uptime et charge système :
- 06:00:03 up 28 days, 12:52,  1 user,  load average: 2.66, 3.56, 3.41
+ 06:00:03 up 36 days, 12:52,  1 user,  load average: 2.51, 2.53, 2.55
 
 📌 Connexions SSH actives :
 root     ttyAMA0      Jan 24 10:24
@@ -40,34 +40,34 @@ tmpfs           198M     0  198M   0% /run/user/0
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       323Mi       183Mi       876Ki       1.5Gi       1.6Gi
+Mem:           1.9Gi       347Mi       160Mi       876Ki       1.5Gi       1.6Gi
 Swap:          975Mi       368Mi       607Mi
 
 📌 Détail mémoire :
-RAM utilisée : 323 MiB / 1977 MiB (16.34%)
+RAM utilisée : 347 MiB / 1977 MiB (17.55%)
 SWAP utilisée : 368 MiB / 975 MiB (37.74%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root     3575594  4.5 91852 systemd-journal
-root     3710192  3.1 63900 npm install
-root      798572  1.4 29744 snapd
-root     1262233  1.3 26796 dockerd
-999      1268356  1.1 22752 mysqld
-root         720  0.7 14816 containerd
-root     1268259  0.6 12184 containerd-shim
-root           1  0.4  8412 systemd
-root     1325284  0.3  7108 systemd-logind
-root     1191758  0.3  6288 sshd
+root      708936  4.6 94140 npm install
+root      414054  4.0 81644 systemd-journal
+root      798572  1.4 30224 snapd
+root     1262233  1.3 26772 dockerd
+999      1268356  1.1 22616 mysqld
+root         720  0.7 14552 containerd
+root     1268259  0.6 12340 containerd-shim
+root           1  0.4  8364 systemd
+root     1325284  0.3  7104 systemd-logind
+root     1191758  0.3  6272 sshd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-    111 root
+     93 root
       1 systemd-timesync
       1 messagebus
       1 999
 
 📌 Consommation mémoire par type de processus :
-systemd-journal      : 4.50%
+systemd-journal      : 4.00%
 snapd                : 1.40%
 dockerd              : 1.30%
 mysqld               : 1.10%
@@ -85,15 +85,15 @@ login                : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root     3710192 97.9  3.2 856412 65860 ?        Rsl  06:00   0:00 npm install
-root     3710206  5.0  0.1   3792  2784 ?        S    06:00   0:00 /bin/bash ./analyser_logs.sh
-999      1268356  1.2  1.1 1739820 22752 ?       Ssl  Jan24 492:02 mysqld
-root           1  0.7  0.4 168920  8412 ?        Ss   Jan22 305:12 /sbin/init
-root          44  0.3  0.0      0     0 ?        S    Jan22 140:31 [kswapd0]
-root     3575594  0.3  4.5 139868 91852 ?        Ss   03:16   0:32 /lib/systemd/systemd-journald
-root          14  0.3  0.0      0     0 ?        I    Jan22 127:29 [rcu_sched]
-message+     508  0.1  0.1   9540  2648 ?        Ss   Jan22  63:29 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
-root          32  0.1  0.0      0     0 ?        S    Jan22  45:07 [kcompactd0]
+root      708936  109  4.6 876496 94140 ?        Rsl  06:00   0:01 npm install
+root      708950  5.2  0.1   3792  2772 ?        S    06:00   0:00 /bin/bash ./analyser_logs.sh
+999      1268356  1.2  1.1 1739820 22616 ?       Ssl  Jan24 641:02 mysqld
+root           1  0.7  0.4 168920  8364 ?        Ss   Jan22 389:18 /sbin/init
+root      414054  0.3  4.0 152648 81644 ?        Ss   00:07   1:13 /lib/systemd/systemd-journald
+root          14  0.3  0.0      0     0 ?        I    Jan22 164:23 [rcu_sched]
+root          44  0.2  0.0      0     0 ?        S    Jan22 140:58 [kswapd0]
+message+     508  0.1  0.1   9540  2648 ?        Ss   Jan22  82:26 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root          32  0.1  0.0      0     0 ?        S    Jan22  58:47 [kcompactd0]
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
