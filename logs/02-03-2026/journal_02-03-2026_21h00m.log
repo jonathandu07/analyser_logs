@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 22/02/2026 à 21h00
+🛡️ Rapport de sécurité – 02/03/2026 à 21h00
 ==========================================================
 
 📌 Uptime et charge système :
- 21:00:03 up 31 days,  3:52,  1 user,  load average: 3.83, 5.36, 4.29
+ 21:00:18 up 39 days,  3:52,  1 user,  load average: 8.23, 9.50, 6.86
 
 📌 Connexions SSH actives :
 root     ttyAMA0      Jan 24 10:24
@@ -22,7 +22,7 @@ reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
 📌 Utilisation disque :
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
-tmpfs           198M  996K  197M   1% /run
+tmpfs           198M 1000K  197M   1% /run
 /dev/vda2        28G   26G  1.3G  96% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
@@ -40,43 +40,43 @@ tmpfs           198M     0  198M   0% /run/user/0
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       365Mi       138Mi       876Ki       1.5Gi       1.6Gi
-Swap:          975Mi       368Mi       607Mi
+Mem:           1.9Gi       324Mi       184Mi       880Ki       1.5Gi       1.6Gi
+Swap:          975Mi       369Mi       606Mi
 
 📌 Détail mémoire :
-RAM utilisée : 365 MiB / 1977 MiB (18.46%)
-SWAP utilisée : 368 MiB / 975 MiB (37.74%)
+RAM utilisée : 325 MiB / 1977 MiB (16.44%)
+SWAP utilisée : 369 MiB / 975 MiB (37.85%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root     2661757  5.0 101268 npm install
-root      798572  1.4 29732 snapd
-root     1262233  1.3 26820 dockerd
-999      1268356  1.1 22676 mysqld
-root     2660633  0.7 15324 systemd-journal
-root         720  0.7 14716 containerd
-root     1268259  0.6 12244 containerd-shim
-root           1  0.4  8380 systemd
-root     1325284  0.3  7108 systemd-logind
-root     1191758  0.3  6284 sshd
+root     3841115  2.7 55916 npm
+root      798572  1.4 29688 snapd
+root     3836442  1.4 29580 python3
+root     1262233  1.3 26756 dockerd
+999      1268356  1.1 22604 mysqld
+root         720  0.7 14548 containerd
+root     1268259  0.6 12256 containerd-shim
+root     3839298  0.5 10884 systemd-journal
+root           1  0.4  8360 systemd
+root     1325284  0.3  7104 systemd-logind
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     98 root
+    117 root
       1 systemd-timesync
       1 messagebus
       1 999
 
 📌 Consommation mémoire par type de processus :
 snapd                : 1.40%
+python3              : 1.40%
 dockerd              : 1.30%
 mysqld               : 1.10%
-systemd-journal      : 0.70%
 containerd           : 0.70%
 containerd-shim      : 0.60%
+systemd-journal      : 0.50%
 systemd              : 0.40%
 systemd-logind       : 0.30%
 sshd                 : 0.30%
-bash                 : 0.20%
 systemd-udevd        : 0.10%
 systemd-timesyn      : 0.10%
 su                   : 0.10%
@@ -85,15 +85,15 @@ login                : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root     2661874  100  0.2   9124  4384 ?        R    21:00   0:00 ps aux --sort=-%cpu
-root     2661757 84.4  5.0 1076568 101592 ?      Rsl  20:59   0:02 npm install
-root     2661833  5.2  0.1   3792  2780 ?        S    21:00   0:00 /bin/bash ./analyser_logs.sh
-999      1268356  1.2  1.1 1739820 22676 ?       Ssl  Jan24 540:58 mysqld
-root           1  0.7  0.4 168920  8380 ?        Ss   Jan22 332:51 /sbin/init
-root     2660633  0.6  0.7  33276 15324 ?        Ss   20:58   0:00 /lib/systemd/systemd-journald
-root          44  0.3  0.0      0     0 ?        S    Jan22 140:40 [kswapd0]
-root          14  0.3  0.0      0     0 ?        I    Jan22 139:36 [rcu_sched]
-message+     508  0.1  0.1   9540  2648 ?        Ss   Jan22  69:42 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root     3841161  100  0.2   9124  4384 ?        R    21:00   0:00 ps aux --sort=-%cpu
+root     3841115 96.9  2.8 848448 58320 ?        Rsl  21:00   0:00 npm install
+root     3836442  6.9  1.4  41988 29580 ?        Ds   20:51   0:38 /snap/certbot/5371/bin/python3 -s /snap/certbot/5371/bin/certbot -q renew
+999      1268356  1.2  1.1 1739820 22604 ?       Ssl  Jan24 689:42 mysqld
+root           1  0.7  0.4 168920  8360 ?        Ss   Jan22 416:48 /sbin/init
+root          14  0.3  0.0      0     0 ?        I    Jan22 176:28 [rcu_sched]
+root          44  0.2  0.0      0     0 ?        S    Jan22 141:06 [kswapd0]
+message+     508  0.1  0.1   9540  2648 ?        Ss   Jan22  88:38 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root     3841030  0.1  0.1   3792  2780 ?        S    21:00   0:00 /bin/bash ./analyser_logs.sh
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
@@ -102,17 +102,16 @@ tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*
 tcp   LISTEN 0      128             [::]:22            [::]:*          
 
 📌 Services en échec :
-  UNIT                       LOAD   ACTIVE SUB    DESCRIPTION
-* mariadb.service            loaded failed failed MariaDB 10.11.11 database server
-* nginx.service              loaded failed failed A high performance web server and a reverse proxy server
-* snap.certbot.renew.service loaded failed failed Service for snap application certbot.renew
-* snapd.seeded.service       loaded failed failed Wait until snapd is fully seeded
-* user@0.service             loaded failed failed User Manager for UID 0
+  UNIT                 LOAD   ACTIVE SUB    DESCRIPTION
+* mariadb.service      loaded failed failed MariaDB 10.11.11 database server
+* nginx.service        loaded failed failed A high performance web server and a reverse proxy server
+* snapd.seeded.service loaded failed failed Wait until snapd is fully seeded
+* user@0.service       loaded failed failed User Manager for UID 0
 
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
 SUB    = The low-level unit activation state, values depend on unit type.
-5 loaded units listed.
+4 loaded units listed.
 
 📌 Derniers paquets installés :
 
