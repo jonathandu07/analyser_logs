@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 02/03/2026 à 00h00
+🛡️ Rapport de sécurité – 10/03/2026 à 00h00
 ==========================================================
 
 📌 Uptime et charge système :
- 00:00:03 up 38 days,  6:52,  1 user,  load average: 2.71, 2.55, 2.48
+ 00:00:19 up 46 days,  6:52,  1 user,  load average: 3.80, 2.81, 3.51
 
 📌 Connexions SSH actives :
 root     ttyAMA0      Jan 24 10:24
@@ -40,36 +40,34 @@ tmpfs           198M     0  198M   0% /run/user/0
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       353Mi       154Mi       892Ki       1.5Gi       1.6Gi
-Swap:          975Mi       368Mi       607Mi
+Mem:           1.9Gi       380Mi       126Mi       884Ki       1.5Gi       1.6Gi
+Swap:          975Mi       369Mi       606Mi
 
 📌 Détail mémoire :
-RAM utilisée : 355 MiB / 1977 MiB (17.96%)
-SWAP utilisée : 368 MiB / 975 MiB (37.74%)
+RAM utilisée : 381 MiB / 1977 MiB (19.27%)
+SWAP utilisée : 369 MiB / 975 MiB (37.85%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root     2648809  4.8 98044 systemd-journal
-jonathan 2800218  3.0 61172 node
-jonathan 2800196  3.0 61012 npm run dev --h
-root     2800219  2.7 56408 npm
-root      798572  1.4 29372 snapd
-root     1262233  1.3 26764 dockerd
-999      1268356  1.1 22608 mysqld
-root         720  0.7 14560 containerd
-root     1268259  0.6 12288 containerd-shim
+root     3950936  2.8 58628 npm install
+root      798572  1.4 29772 snapd
+root     3926208  1.4 28728 systemd-journal
+root     1262233  1.3 26736 dockerd
+999      1268356  1.1 22548 mysqld
+root         720  0.7 14656 containerd
+root     1268259  0.6 12384 containerd-shim
 root           1  0.4  8368 systemd
+root     1325284  0.3  7104 systemd-logind
+root     1191758  0.3  6260 sshd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     97 root
-      3 jonathan
+     99 root
       1 systemd-timesync
       1 messagebus
       1 999
 
 📌 Consommation mémoire par type de processus :
-systemd-journal      : 4.80%
-node                 : 3.50%
+systemd-journal      : 1.40%
 snapd                : 1.40%
 dockerd              : 1.30%
 mysqld               : 1.10%
@@ -83,18 +81,19 @@ systemd-timesyn      : 0.10%
 su                   : 0.10%
 ps                   : 0.10%
 login                : 0.10%
+dbus-daemon          : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-jonathan 2800218 87.0  3.7 755156 75884 ?        Rl   00:00   0:00 node /usr/bin/vite --host 0.0.0.0 --port 5173
-root     2800219 69.8  2.9 848856 59404 ?        Rsl  00:00   0:00 npm install
-jonathan 2800196 37.5  3.0 849236 61012 ?        Ssl  00:00   0:00 npm run dev --host 0.0.0.0 --port 5173
-root     2800235  5.5  0.1   3792  2784 ?        S    00:00   0:00 /bin/bash ./analyser_logs.sh
-root     2800161  2.4  0.0    220     4 ?        DNs  Mar01   0:00 [logrotate]
-999      1268356  1.2  1.1 1739820 22608 ?       Ssl  Jan24 673:29 mysqld
-root           1  0.7  0.4 168920  8368 ?        Ss   Jan22 407:41 /sbin/init
-root     2648809  0.3  4.8 139880 98044 ?        Ss   Mar01   0:36 /lib/systemd/systemd-journald
-root          14  0.3  0.0      0     0 ?        I    Jan22 172:27 [rcu_sched]
+root     3951000  100  0.2   9124  4388 ?        R    00:00   0:00 ps aux --sort=-%cpu
+root     3950936 77.7  2.9 849492 60180 ?        Rsl  00:00   0:00 npm install
+root     3950950  7.4  0.1   3792  2776 ?        S    00:00   0:00 /bin/bash ./analyser_logs.sh
+999      1268356  1.2  1.1 1739820 22548 ?       Ssl  Jan24 822:09 mysqld
+root           1  0.7  0.4 168920  8368 ?        Ss   Jan22 491:25 /sbin/init
+root     3950672  0.4  0.0   3460  1980 ?        DNs  Mar09   0:00 /usr/sbin/logrotate /etc/logrotate.conf
+root     3926208  0.3  1.4  57976 28728 ?        Ss   Mar09   0:06 /lib/systemd/systemd-journald
+root          14  0.3  0.0      0     0 ?        I    Jan22 209:19 [rcu_sched]
+root          44  0.2  0.0      0     0 ?        S    Jan22 141:28 [kswapd0]
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
