@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 02/03/2026 à 02h00
+🛡️ Rapport de sécurité – 10/03/2026 à 02h00
 ==========================================================
 
 📌 Uptime et charge système :
- 02:00:02 up 38 days,  8:52,  1 user,  load average: 3.00, 2.67, 2.84
+ 02:00:07 up 46 days,  8:52,  1 user,  load average: 3.75, 2.72, 2.56
 
 📌 Connexions SSH actives :
 root     ttyAMA0      Jan 24 10:24
@@ -23,13 +23,13 @@ reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
 tmpfs           198M 1000K  197M   1% /run
-/dev/vda2        28G   26G  1.2G  96% /
+/dev/vda2        28G   26G  1.1G  97% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/loop4       92M   92M     0 100% /snap/core/17250
 /dev/loop5       45M   45M     0 100% /snap/snapd/25205
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
-overlay          28G   26G  1.2G  96% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+overlay          28G   26G  1.1G  97% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
 /dev/loop7       42M   42M     0 100% /snap/snapd/25939
 /dev/loop6       93M   93M     0 100% /snap/core/17276
 /dev/loop8       62M   62M     0 100% /snap/core24/1269
@@ -40,36 +40,37 @@ tmpfs           198M     0  198M   0% /run/user/0
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       389Mi       116Mi       880Ki       1.5Gi       1.6Gi
-Swap:          975Mi       368Mi       607Mi
+Mem:           1.9Gi       399Mi       109Mi       876Ki       1.5Gi       1.5Gi
+Swap:          975Mi       369Mi       606Mi
 
 📌 Détail mémoire :
-RAM utilisée : 390 MiB / 1977 MiB (19.73%)
-SWAP utilisée : 368 MiB / 975 MiB (37.74%)
+RAM utilisée : 400 MiB / 1977 MiB (20.23%)
+SWAP utilisée : 369 MiB / 975 MiB (37.85%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root     2897641  4.8 97660 npm install
-jonathan 2897684  3.1 63156 npm run dev --h
-root     2814869  3.0 60808 systemd-journal
-jonathan 2897698  2.6 53344 node
-root      798572  1.4 29396 snapd
-root     1262233  1.3 26808 dockerd
-999      1268356  1.1 22608 mysqld
-root         720  0.7 14548 containerd
-root     1268259  0.6 12224 containerd-shim
-root           1  0.4  8368 systemd
+root     4049569  4.9 100196 npm install
+jonathan 4049593  3.6 73488 node
+root     3962481  3.1 64644 systemd-journal
+jonathan 4049580  3.1 63340 npm run dev --h
+jonathan 4049617  1.8 37604 node
+root      798572  1.4 29744 snapd
+root     1262233  1.3 26720 dockerd
+999      1268356  1.1 22548 mysqld
+root         720  0.7 14648 containerd
+root     1268259  0.6 12320 containerd-shim
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     95 root
-      3 jonathan
+     97 root
+      4 jonathan
       1 systemd-timesync
       1 messagebus
       1 999
 
 📌 Consommation mémoire par type de processus :
-systemd-journal      : 3.00%
-node                 : 3.00%
+node                 : 3.70%
+systemd-journal      : 3.10%
+npm                  : 2.30%
 snapd                : 1.40%
 dockerd              : 1.30%
 mysqld               : 1.10%
@@ -82,19 +83,18 @@ systemd-udevd        : 0.10%
 systemd-timesyn      : 0.10%
 su                   : 0.10%
 ps                   : 0.10%
-login                : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root     2897748  100  0.2   9124  4384 ?        R    02:00   0:00 ps aux --sort=-%cpu
-jonathan 2897698 77.5  3.2 754612 64924 ?        Rl   02:00   0:00 node /usr/bin/vite --host 0.0.0.0 --port 5173
-jonathan 2897684 51.1  3.1 849232 63156 ?        Ssl  02:00   0:00 npm run dev --host 0.0.0.0 --port 5173
-root     2897707  3.5  0.1   3792  2776 ?        S    02:00   0:00 /bin/bash ./analyser_logs.sh
-999      1268356  1.2  1.1 1739820 22608 ?       Ssl  Jan24 675:01 mysqld
-root           1  0.7  0.4 168920  8368 ?        Ss   Jan22 408:32 /sbin/init
-root     2814869  0.3  3.0 111208 60808 ?        Ss   00:21   0:19 /lib/systemd/systemd-journald
-root          14  0.3  0.0      0     0 ?        I    Jan22 172:50 [rcu_sched]
-root          44  0.2  0.0      0     0 ?        S    Jan22 141:04 [kswapd0]
+root     4049569  101  4.9 1077304 101160 ?      Rsl  02:00   0:02 npm install
+root     4049648  100  0.2   9124  4388 ?        R    02:00   0:00 ps aux --sort=-%cpu
+jonathan 4049593 75.3  3.7 756180 76036 ?        Rl   02:00   0:00 node /usr/bin/vite --host 0.0.0.0 --port 5173
+jonathan 4049617 42.8  2.3 679360 47936 ?        Rsl  02:00   0:00 npm
+jonathan 4049580 38.7  3.1 849144 63340 ?        Ssl  02:00   0:00 npm run dev --host 0.0.0.0 --port 5173
+root     4049600  5.1  0.1   3792  2780 ?        S    02:00   0:00 /bin/bash ./analyser_logs.sh
+999      1268356  1.2  1.1 1739820 22548 ?       Ssl  Jan24 823:42 mysqld
+root           1  0.7  0.4 168920  8368 ?        Ss   Jan22 492:17 /sbin/init
+root     3962481  0.3  3.1 115332 64644 ?        Ssl  00:14   0:21 /lib/systemd/systemd-journald
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
