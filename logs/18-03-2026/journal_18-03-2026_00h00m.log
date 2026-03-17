@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 09/03/2026 à 23h00
+🛡️ Rapport de sécurité – 18/03/2026 à 00h00
 ==========================================================
 
 📌 Uptime et charge système :
- 23:00:06 up 46 days,  5:52,  1 user,  load average: 2.45, 2.76, 2.79
+ 00:00:03 up 54 days,  6:52,  1 user,  load average: 2.63, 2.64, 2.64
 
 📌 Connexions SSH actives :
 root     ttyAMA0      Jan 24 10:24
@@ -22,78 +22,78 @@ reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
 📌 Utilisation disque :
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
-tmpfs           198M  996K  197M   1% /run
-/dev/vda2        28G   26G  1.1G  97% /
+tmpfs           198M 1008K  197M   1% /run
+/dev/vda2        28G   26G  920M  97% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
-/dev/loop4       92M   92M     0 100% /snap/core/17250
 /dev/loop5       45M   45M     0 100% /snap/snapd/25205
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
-overlay          28G   26G  1.1G  97% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+overlay          28G   26G  920M  97% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
 /dev/loop7       42M   42M     0 100% /snap/snapd/25939
 /dev/loop6       93M   93M     0 100% /snap/core/17276
-/dev/loop8       62M   62M     0 100% /snap/core24/1269
-tmpfs           198M     0  198M   0% /run/user/0
+tmpfs           198M  4.0K  198M   1% /run/user/0
 /dev/loop0       62M   62M     0 100% /snap/core24/1350
-/dev/loop2       68M   68M     0 100% /snap/certbot/5360
 /dev/loop3       68M   68M     0 100% /snap/certbot/5371
+/dev/loop1       62M   62M     0 100% /snap/core24/1500
+/dev/loop8       68M   68M     0 100% /snap/certbot/5452
+/dev/loop2       93M   93M     0 100% /snap/core/17288
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       352Mi       153Mi       872Ki       1.5Gi       1.6Gi
+Mem:           1.9Gi       356Mi       153Mi       904Ki       1.5Gi       1.6Gi
 Swap:          975Mi       369Mi       606Mi
 
 📌 Détail mémoire :
-RAM utilisée : 352 MiB / 1977 MiB (17.80%)
+RAM utilisée : 356 MiB / 1977 MiB (18.01%)
 SWAP utilisée : 369 MiB / 975 MiB (37.85%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root     3903367  4.7 96780 npm install
-root     3808301  3.3 68728 systemd-journal
-root      798572  1.4 29952 snapd
-root     1262233  1.3 26744 dockerd
-999      1268356  1.1 22548 mysqld
-root         720  0.7 14664 containerd
-root     1268259  0.6 12384 containerd-shim
-root           1  0.4  8368 systemd
-root     1325284  0.3  7104 systemd-logind
-root     1191758  0.3  6260 sshd
+root      454617  8.2 166868 systemd-journal
+root      892686  4.6 93404 npm install
+root      798572  1.7 34688 snapd
+root     1262233  1.3 26616 dockerd
+999      1268356  1.1 22376 mysqld
+root         720  0.7 14452 containerd
+root     1268259  0.6 12260 containerd-shim
+root     3625758  0.5 10256 systemd
+root           1  0.4  8532 systemd
+root     3625757  0.3  7432 systemd-logind
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     95 root
+    101 root
       1 systemd-timesync
       1 messagebus
       1 999
 
 📌 Consommation mémoire par type de processus :
-systemd-journal      : 3.30%
-snapd                : 1.40%
+systemd-journal      : 8.20%
+snapd                : 1.70%
 dockerd              : 1.30%
 mysqld               : 1.10%
+systemd              : 0.90%
 containerd           : 0.70%
 containerd-shim      : 0.60%
-systemd              : 0.40%
 systemd-logind       : 0.30%
 sshd                 : 0.30%
+(sd-pam)             : 0.20%
 systemd-udevd        : 0.10%
 systemd-timesyn      : 0.10%
 su                   : 0.10%
 ps                   : 0.10%
-login                : 0.10%
 dbus-daemon          : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root     3903469  100  0.2   9124  4384 ?        R    23:00   0:00 ps aux --sort=-%cpu
-root     3903367 90.0  4.7 1075296 96780 ?       Rsl  23:00   0:02 npm install
-999      1268356  1.2  1.1 1739820 22548 ?       Ssl  Jan24 821:23 mysqld
-root           1  0.7  0.4 168920  8368 ?        Ss   Jan22 491:00 /sbin/init
-root     3903396  0.3  0.1   3792  2780 ?        S    23:00   0:00 /bin/bash ./analyser_logs.sh
-root     3808301  0.3  3.3 115320 68728 ?        Ss   21:07   0:23 /lib/systemd/systemd-journald
-root          14  0.3  0.0      0     0 ?        I    Jan22 209:08 [rcu_sched]
-root          44  0.2  0.0      0     0 ?        S    Jan22 141:28 [kswapd0]
-message+     508  0.1  0.1   9540  2648 ?        Ss   Jan22 105:19 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root      892686  100  4.6 1074908 93404 ?       Rsl  00:00   0:02 npm install
+root      892734  5.2  0.1   3792  2780 ?        S    00:00   0:00 /bin/bash ./analyser_logs.sh
+root      892684  2.2  0.0    220     4 ?        DNs  00:00   0:00 [logrotate]
+999      1268356  1.2  1.1 1739820 22376 ?       Ssl  Jan24 970:44 mysqld
+root           1  0.7  0.4 169048  8532 ?        Ss   Jan22 575:21 /sbin/init
+root      454617  0.3  8.2 258900 166868 ?       Ss   Mar17   1:47 /lib/systemd/systemd-journald
+root          14  0.3  0.0      0     0 ?        I    Jan22 246:15 [rcu_sched]
+root          44  0.1  0.0      0     0 ?        S    Jan22 141:53 [kswapd0]
+message+     508  0.1  0.1   9540  2652 ?        Ss   Jan22 124:21 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
@@ -107,12 +107,11 @@ tcp   LISTEN 0      128             [::]:22            [::]:*
 * nginx.service              loaded failed failed A high performance web server and a reverse proxy server
 * snap.certbot.renew.service loaded failed failed Service for snap application certbot.renew
 * snapd.seeded.service       loaded failed failed Wait until snapd is fully seeded
-* user@0.service             loaded failed failed User Manager for UID 0
 
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
 SUB    = The low-level unit activation state, values depend on unit type.
-5 loaded units listed.
+4 loaded units listed.
 
 📌 Derniers paquets installés :
 
