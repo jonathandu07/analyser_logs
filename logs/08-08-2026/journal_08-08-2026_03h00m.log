@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 31/07/2026 à 02h00
+🛡️ Rapport de sécurité – 08/08/2026 à 03h00
 ==========================================================
 
 📌 Uptime et charge système :
- 02:00:03 up 189 days,  7:52,  1 user,  load average: 3.05, 2.76, 2.74
+ 03:00:02 up 197 days,  8:52,  1 user,  load average: 2.80, 2.81, 2.99
 
 📌 Connexions SSH actives :
 root     ttyAMA0      Jan 24 10:24
@@ -22,12 +22,12 @@ reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
 📌 Utilisation disque :
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
-tmpfs           198M 1012K  197M   1% /run
-/dev/vda2        28G   27G   96M 100% /
+tmpfs           198M 1008K  197M   1% /run
+/dev/vda2        28G   27G   21M 100% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
-overlay          28G   27G   96M 100% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+overlay          28G   27G   21M 100% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
 tmpfs           198M  4.0K  198M   1% /run/user/0
 /dev/loop2       93M   93M     0 100% /snap/core/17288
 /dev/loop5       62M   62M     0 100% /snap/core24/1588
@@ -40,40 +40,39 @@ tmpfs           198M  4.0K  198M   1% /run/user/0
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       408Mi        94Mi       900Ki       1.5Gi       1.5Gi
-Swap:          975Mi       375Mi       600Mi
+Mem:           1.9Gi       354Mi       141Mi       888Ki       1.5Gi       1.6Gi
+Swap:          975Mi       376Mi       599Mi
 
 📌 Détail mémoire :
-RAM utilisée : 410 MiB / 1977 MiB (20.74%)
-SWAP utilisée : 375 MiB / 975 MiB (38.46%)
+RAM utilisée : 355 MiB / 1977 MiB (17.96%)
+SWAP utilisée : 376 MiB / 975 MiB (38.56%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-jonathan 3389756  4.1 83844 node
-jonathan 3389763  4.0 83012 node
-jonathan 3389732  3.0 61028 npm run preview
-jonathan 3389733  3.0 60936 npm run dev --h
-root     3312964  2.8 57552 systemd-journal
-root     3389784  2.0 41852 node
-root     1262233  1.6 33536 dockerd
-root     3847745  1.5 30424 snapd
-root         720  1.0 20788 containerd
-999      1268356  0.8 17600 mysqld
+root     2788866  4.7 95972 npm install
+root     2677622  3.0 61936 systemd-journal
+jonathan 2788889  1.7 35480 node
+root     1262233  1.4 30236 dockerd
+root     3847745  1.2 24660 snapd
+root         720  0.9 18824 containerd
+999      1268356  0.8 17592 mysqld
+root     1268259  0.5 11952 containerd-shim
+root     3625758  0.4  8892 systemd
+root           1  0.4  8420 systemd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     97 root
-      6 jonathan
+    100 root
       1 systemd-timesync
       1 messagebus
+      1 jonathan
       1 999
 
 📌 Consommation mémoire par type de processus :
-node                 : 8.30%
-systemd-journal      : 2.80%
-npm                  : 2.50%
-dockerd              : 1.60%
-snapd                : 1.50%
-containerd           : 1.00%
+systemd-journal      : 3.00%
+npm                  : 2.40%
+dockerd              : 1.40%
+snapd                : 1.20%
+containerd           : 0.90%
 systemd              : 0.80%
 mysqld               : 0.80%
 containerd-shim      : 0.50%
@@ -82,19 +81,20 @@ systemd-logind       : 0.30%
 sshd                 : 0.20%
 systemd-udevd        : 0.10%
 ps                   : 0.10%
-esbuild              : 0.10%
+dbus-daemon          : 0.10%
+cron                 : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-jonathan 3389763 62.5  4.1 1027416 84456 ?       Rl   02:00   0:00 node /usr/bin/vite --host 0.0.0.0 --port 5173
-jonathan 3389756 61.2  4.2 21999188 85424 ?      Rl   02:00   0:00 node /usr/bin/vite preview --host --port 5173
-root     3389826 50.0  0.2   9124  4388 ?        R    02:00   0:00 ps aux --sort=-%cpu
-root     3389784 47.0  2.6 746144 53188 ?        Dsl  02:00   0:00 npm
-jonathan 3389733 22.8  3.0 849488 60936 ?        Ssl  02:00   0:00 npm run dev --host 0.0.0.0 --port 5173
-jonathan 3389732 22.0  3.0 849232 61028 ?        Ssl  02:00   0:00 npm run preview --host --port 5173
-jonathan 3389822 14.2  0.3 1234800 7292 ?        Sl   02:00   0:00 /usr/lib/node_modules/vite/node_modules/@esbuild/linux-arm64/bin/esbuild --service=0.25.5 --ping
-root     3389774  2.5  0.1   3792  2788 ?        S    02:00   0:00 /bin/bash ./analyser_logs.sh
-999      1268356  1.2  0.8 1739820 17600 ?       Ssl  Jan24 3449:35 mysqld
+root     2788866  107  4.7 877480 96432 ?        Rsl  03:00   0:01 npm install
+jonathan 2788889 59.2  2.5 745428 50988 ?        Rsl  03:00   0:00 npm
+root     2788928 50.0  0.2   9124  4388 ?        R    03:00   0:00 ps aux --sort=-%cpu
+root     2788880  3.3  0.1   3792  2788 ?        S    03:00   0:00 /bin/bash ./analyser_logs.sh
+999      1268356  1.2  0.8 1739820 17592 ?       Ssl  Jan24 3591:53 mysqld
+root           1  0.7  0.4 169116  8420 ?        Ss   Jan22 2068:35 /sbin/init
+root     2677622  0.3  3.0 115364 61936 ?        Ss   00:19   0:31 /lib/systemd/systemd-journald
+root          14  0.3  0.0      0     0 ?        I    Jan22 889:14 [rcu_sched]
+message+     508  0.1  0.1   9540  2436 ?        Ss   Jan22 465:28 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
@@ -104,7 +104,6 @@ tcp   LISTEN 0      128             [::]:22            [::]:*
 
 📌 Services en échec :
   UNIT                       LOAD   ACTIVE SUB    DESCRIPTION
-* man-db.service             loaded failed failed Daily man-db regeneration
 * mariadb.service            loaded failed failed MariaDB 10.11.11 database server
 * nginx.service              loaded failed failed A high performance web server and a reverse proxy server
 * snap.certbot.renew.service loaded failed failed Service for snap application certbot.renew
@@ -113,7 +112,7 @@ tcp   LISTEN 0      128             [::]:22            [::]:*
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
 SUB    = The low-level unit activation state, values depend on unit type.
-5 loaded units listed.
+4 loaded units listed.
 
 📌 Derniers paquets installés :
 
