@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 12/08/2026 à 11h00
+🛡️ Rapport de sécurité – 20/08/2026 à 11h00
 ==========================================================
 
 📌 Uptime et charge système :
- 11:00:02 up 201 days, 16:52,  1 user,  load average: 1.58, 1.94, 2.09
+ 11:00:06 up 209 days, 16:52,  1 user,  load average: 2.40, 2.44, 2.42
 
 📌 Connexions SSH actives :
 root     ttyAMA0      Jan 24 10:24
@@ -33,68 +33,68 @@ tmpfs           198M  4.0K  198M   1% /run/user/0
 /dev/loop5       62M   62M     0 100% /snap/core24/1588
 /dev/loop3       93M   93M     0 100% /snap/core/17290
 /dev/loop8       62M   62M     0 100% /snap/core24/1644
-/dev/loop1       44M   44M     0 100% /snap/snapd/27407
 /dev/loop4       69M   69M     0 100% /snap/certbot/5759
 /dev/loop0       69M   69M     0 100% /snap/certbot/5779
 /dev/loop7       44M   44M     0 100% /snap/snapd/27595
+/dev/loop6       44M   44M     0 100% /snap/snapd/27709
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       358Mi       123Mi       884Ki       1.5Gi       1.6Gi
-Swap:          975Mi       377Mi       598Mi
+Mem:           1.9Gi       371Mi        81Mi       888Ki       1.6Gi       1.6Gi
+Swap:          975Mi       375Mi       600Mi
 
 📌 Détail mémoire :
-RAM utilisée : 359 MiB / 1977 MiB (18.16%)
-SWAP utilisée : 377 MiB / 975 MiB (38.67%)
+RAM utilisée : 370 MiB / 1977 MiB (18.72%)
+SWAP utilisée : 375 MiB / 975 MiB (38.46%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root     3153809  4.4 90432 npm install
-root     3075811  3.4 69504 systemd-journal
-jonathan 3153821  2.7 55916 npm
-root     1262233  1.3 27748 dockerd
-root     3847745  1.1 23940 snapd
-999      1268356  0.8 17576 mysqld
-root         720  0.7 15616 containerd
-root     1268259  0.5 11888 containerd-shim
-root     3625758  0.4  8880 systemd
-root           1  0.4  8420 systemd
+root     1620343  3.7 75420 npm install
+jonathan 1620258  2.9 59344 npm run dev --h
+jonathan 1620281  2.8 57092 npm run preview
+root     3628472  1.5 31536 snapd
+root     1314866  1.4 28480 systemd-journal
+root     1262233  1.2 26324 dockerd
+999      1268356  0.8 17552 mysqld
+root         720  0.7 14880 containerd
+root     1268259  0.5 11928 containerd-shim
+root     3625758  0.4  8852 systemd
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     99 root
+     98 root
+      2 jonathan
       1 systemd-timesync
       1 messagebus
-      1 jonathan
       1 999
 
 📌 Consommation mémoire par type de processus :
-systemd-journal      : 3.40%
-npm                  : 2.90%
-dockerd              : 1.30%
-snapd                : 1.10%
+snapd                : 1.50%
+systemd-journal      : 1.40%
+dockerd              : 1.20%
 systemd              : 0.80%
 mysqld               : 0.80%
 containerd           : 0.70%
 containerd-shim      : 0.50%
 systemd-timesyn      : 0.30%
-systemd-logind       : 0.30%
 sshd                 : 0.20%
 systemd-udevd        : 0.10%
 ps                   : 0.10%
 dbus-daemon          : 0.10%
 cron                 : 0.10%
+bash                 : 0.10%
+awk                  : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root     3153809  100  4.5 875692 92584 ?        Rsl  11:00   0:01 npm install
-root     3153875  100  0.2   9124  4392 ?        R    11:00   0:00 ps aux --sort=-%cpu
-jonathan 3153821 72.5  2.9 782716 59652 ?        Dsl  11:00   0:00 npm run preview --host --port 5173
-root     3153830  2.7  0.1   3792  2784 ?        S    11:00   0:00 /bin/bash ./analyser_logs.sh
-999      1268356  1.2  0.8 1739820 17576 ?       Ssl  Jan24 3669:28 mysqld
-root           1  0.7  0.4 168988  8420 ?        Ss   Jan22 2113:00 /sbin/init
-root          14  0.3  0.0      0     0 ?        I    Jan22 907:58 [rcu_sched]
-root     3075811  0.3  3.4 119376 69504 ?        Ss   08:36   0:26 /lib/systemd/systemd-journald
-message+     508  0.1  0.1   9540  2432 ?        Ss   Jan22 475:49 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root     1620343  109  3.8 861896 77332 ?        Rsl  11:00   0:00 npm install
+jonathan 1620281  5.1  2.8 782716 57092 ?        Dsl  11:00   0:00 npm run preview --host --port 5173
+jonathan 1620258  3.8  2.9 782716 59344 ?        Dsl  11:00   0:00 npm run dev --host 0.0.0.0 --port 5173
+999      1268356  1.2  0.8 1739820 17552 ?       Ssl  Jan24 3807:42 mysqld
+root           1  0.7  0.4 168924  8364 ?        Ss   Jan22 2178:24 /sbin/init
+root          14  0.3  0.0      0     0 ?        I    Jan22 939:22 [rcu_sched]
+root     1314866  0.2  1.4  74412 28480 ?        Ss   00:57   1:45 /lib/systemd/systemd-journald
+root     1620306  0.1  0.1   3792  2780 ?        S    11:00   0:00 /bin/bash ./analyser_logs.sh
+message+     508  0.1  0.1   9540  2480 ?        Ss   Jan22 476:45 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
@@ -109,11 +109,12 @@ tcp   LISTEN 0      128             [::]:22            [::]:*
 * nginx.service              loaded failed failed A high performance web server and a reverse proxy server
 * snap.certbot.renew.service loaded failed failed Service for snap application certbot.renew
 * snapd.seeded.service       loaded failed failed Wait until snapd is fully seeded
+* systemd-logind.service     loaded failed failed User Login Management
 
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
 SUB    = The low-level unit activation state, values depend on unit type.
-5 loaded units listed.
+6 loaded units listed.
 
 📌 Derniers paquets installés :
 
