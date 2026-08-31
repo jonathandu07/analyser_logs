@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 23/08/2026 à 10h00
+🛡️ Rapport de sécurité – 31/08/2026 à 10h00
 ==========================================================
 
 📌 Uptime et charge système :
- 10:00:05 up 212 days, 15:52,  1 user,  load average: 1.91, 2.07, 2.40
+ 10:00:10 up 220 days, 15:52,  1 user,  load average: 2.90, 3.76, 3.13
 
 📌 Connexions SSH actives :
 root     ttyAMA0      Jan 24 10:24
@@ -22,12 +22,12 @@ reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
 📌 Utilisation disque :
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
-tmpfs           198M 1008K  197M   1% /run
-/dev/vda2        28G   27G     0 100% /
+tmpfs           198M 1000K  197M   1% /run
+/dev/vda2        28G   27G   17M 100% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/vda1       512M  6.1M  506M   2% /boot/efi
-overlay          28G   27G     0 100% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
+overlay          28G   27G   17M 100% /var/lib/docker/overlay2/c8a1d2e12effca01832468cef9a6c17f8dd37c14fad0c48cddd4fd0df289d136/merged
 tmpfs           198M  4.0K  198M   1% /run/user/0
 /dev/loop2       93M   93M     0 100% /snap/core/17288
 /dev/loop5       62M   62M     0 100% /snap/core24/1588
@@ -40,36 +40,35 @@ tmpfs           198M  4.0K  198M   1% /run/user/0
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       395Mi        71Mi       884Ki       1.6Gi       1.5Gi
-Swap:          975Mi       375Mi       600Mi
+Mem:           1.9Gi       363Mi       143Mi       880Ki       1.5Gi       1.6Gi
+Swap:          975Mi       377Mi       598Mi
 
 📌 Détail mémoire :
-RAM utilisée : 396 MiB / 1977 MiB (20.03%)
-SWAP utilisée : 375 MiB / 975 MiB (38.46%)
+RAM utilisée : 363 MiB / 1977 MiB (18.36%)
+SWAP utilisée : 377 MiB / 975 MiB (38.67%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root     3877221  6.2 125636 systemd-journal
-root     4067882  4.7 95492 npm install
-jonathan 4067850  2.9 58968 npm run preview
-jonathan 4067861  2.8 57376 npm run dev --h
-root     3628472  1.4 28748 snapd
-root     1262233  1.2 26284 dockerd
-999      1268356  0.8 17552 mysqld
-root         720  0.7 14760 containerd
-root     1268259  0.5 11960 containerd-shim
-root     3625758  0.4  8852 systemd
+root     2109624  4.7 95756 npm install
+root     2023500  1.5 31936 systemd-journal
+root     3628472  1.3 27740 snapd
+root     1262233  1.2 26148 dockerd
+999      1268356  0.8 17536 mysqld
+root         720  0.7 14772 containerd
+root     1268259  0.5 12024 containerd-shim
+root     3625758  0.4  8848 systemd
+root           1  0.4  8324 systemd
+systemd+ 3540589  0.3  6452 systemd-timesyn
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     95 root
-      2 jonathan
+    106 root
       1 systemd-timesync
       1 messagebus
       1 999
 
 📌 Consommation mémoire par type de processus :
-systemd-journal      : 6.20%
-snapd                : 1.40%
+systemd-journal      : 1.50%
+snapd                : 1.30%
 dockerd              : 1.20%
 systemd              : 0.80%
 mysqld               : 0.80%
@@ -86,15 +85,15 @@ awk                  : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root     4067882  112  4.7 878248 95492 ?        Rsl  10:00   0:01 npm install
-root     4067928  100  0.2   9124  4384 ?        R    10:00   0:00 ps aux --sort=-%cpu
-jonathan 4067861 14.5  2.8 782732 57376 ?        Dsl  10:00   0:00 npm run dev --host 0.0.0.0 --port 5173
-jonathan 4067850 11.1  2.9 717180 58968 ?        Dsl  10:00   0:00 npm run preview --host --port 5173
-999      1268356  1.2  0.8 1739820 17552 ?       Ssl  Jan24 3858:26 mysqld
-root           1  0.7  0.4 168924  8356 ?        Ss   Jan22 2202:12 /sbin/init
-root     4067872  0.4  0.1   3792  2784 ?        S    10:00   0:00 /bin/bash ./analyser_logs.sh
-root          14  0.3  0.0      0     0 ?        I    Jan22 950:46 [rcu_sched]
-root     3877221  0.2  6.2 197288 125636 ?       Ss   03:41   1:04 /lib/systemd/systemd-journald
+root     2109624 99.4  4.7 877992 95756 ?        Rsl  10:00   0:01 npm install
+root     2109655  5.2  0.1   3792  2784 ?        S    10:00   0:00 /bin/bash ./analyser_logs.sh
+999      1268356  1.2  0.8 1739820 17536 ?       Ssl  Jan24 3994:50 mysqld
+root           1  0.7  0.4 168924  8324 ?        Ss   Jan22 2267:01 /sbin/init
+root          14  0.3  0.0      0     0 ?        I    Jan22 981:16 [rcu_sched]
+root     2023500  0.2  1.5  82604 31936 ?        Ss   07:02   0:29 /lib/systemd/systemd-journald
+message+     508  0.1  0.1   9540  2448 ?        Ss   Jan22 476:45 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root          32  0.0  0.0      0     0 ?        S    Jan22 307:14 [kcompactd0]
+root         720  0.0  0.7 1340504 14772 ?       Ssl  Jan22 152:55 /usr/bin/containerd
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
@@ -104,7 +103,6 @@ tcp   LISTEN 0      128             [::]:22            [::]:*
 
 📌 Services en échec :
   UNIT                       LOAD   ACTIVE SUB    DESCRIPTION
-* man-db.service             loaded failed failed Daily man-db regeneration
 * mariadb.service            loaded failed failed MariaDB 10.11.11 database server
 * nginx.service              loaded failed failed A high performance web server and a reverse proxy server
 * snap.certbot.renew.service loaded failed failed Service for snap application certbot.renew
@@ -114,7 +112,7 @@ tcp   LISTEN 0      128             [::]:22            [::]:*
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
 SUB    = The low-level unit activation state, values depend on unit type.
-6 loaded units listed.
+5 loaded units listed.
 
 📌 Derniers paquets installés :
 
