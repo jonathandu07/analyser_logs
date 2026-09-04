@@ -1,8 +1,8 @@
-🛡️ Rapport de sécurité – 27/08/2026 à 08h00
+🛡️ Rapport de sécurité – 04/09/2026 à 09h00
 ==========================================================
 
 📌 Uptime et charge système :
- 08:00:03 up 216 days, 13:52,  1 user,  load average: 1.79, 2.01, 2.31
+ 09:00:03 up 224 days, 14:52,  1 user,  load average: 2.05, 2.42, 2.27
 
 📌 Connexions SSH actives :
 root     ttyAMA0      Jan 24 10:24
@@ -22,7 +22,7 @@ reboot   system boot  6.1.0-37-arm64   Thu Oct  9 09:20   still running
 📌 Utilisation disque :
 Filesystem      Size  Used Avail Use% Mounted on
 udev            940M     0  940M   0% /dev
-tmpfs           198M 1008K  197M   1% /run
+tmpfs           198M 1000K  197M   1% /run
 /dev/vda2        28G   27G     0 100% /
 tmpfs           989M     0  989M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
@@ -33,42 +33,41 @@ tmpfs           198M  4.0K  198M   1% /run/user/0
 /dev/loop5       62M   62M     0 100% /snap/core24/1588
 /dev/loop3       93M   93M     0 100% /snap/core/17290
 /dev/loop8       62M   62M     0 100% /snap/core24/1644
-/dev/loop4       69M   69M     0 100% /snap/certbot/5759
 /dev/loop0       69M   69M     0 100% /snap/certbot/5779
 /dev/loop7       44M   44M     0 100% /snap/snapd/27595
 /dev/loop6       44M   44M     0 100% /snap/snapd/27709
+/dev/loop1       68M   68M     0 100% /snap/certbot/5892
 
 📌 Utilisation mémoire (RAM + Swap) :
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       382Mi       117Mi       888Ki       1.5Gi       1.6Gi
-Swap:          975Mi       375Mi       600Mi
+Mem:           1.9Gi       341Mi       141Mi       884Ki       1.5Gi       1.6Gi
+Swap:          975Mi       377Mi       598Mi
 
 📌 Détail mémoire :
-RAM utilisée : 389 MiB / 1977 MiB (19.68%)
-SWAP utilisée : 375 MiB / 975 MiB (38.46%)
+RAM utilisée : 341 MiB / 1977 MiB (17.25%)
+SWAP utilisée : 377 MiB / 975 MiB (38.67%)
 
 📌 Top 10 processus utilisant le plus de RAM :
 USER         PID %MEM   RSS COMMAND
-root     2921576  4.7 95476 npm install
-jonathan 2921508  2.9 59100 npm run dev --h
-jonathan 2921516  2.7 56020 npm run preview
-root     2886139  1.8 37012 systemd-journal
-root     3628472  1.5 31348 snapd
-root     1262233  1.2 26216 dockerd
-999      1268356  0.8 17548 mysqld
-root         720  0.7 14800 containerd
-root     1268259  0.5 11896 containerd-shim
-root     3625758  0.4  8852 systemd
+root     1582367  4.0 81940 npm install
+root     1487189  3.7 75840 systemd-journal
+root     3628472  1.5 31624 snapd
+root     1262233  1.2 26296 dockerd
+999      1268356  0.8 17496 mysqld
+root         720  0.7 14912 containerd
+root     1268259  0.5 11920 containerd-shim
+root     3625758  0.4  8832 systemd
+root           1  0.4  8632 systemd
+systemd+ 3540589  0.3  6432 systemd-timesyn
 
 📌 Nombre total de processus par utilisateur (top 5) :
-     92 root
-      2 jonathan
+     97 root
       1 systemd-timesync
       1 messagebus
       1 999
 
 📌 Consommation mémoire par type de processus :
-systemd-journal      : 1.80%
+systemd-journal      : 3.70%
 snapd                : 1.50%
 dockerd              : 1.20%
 systemd              : 0.80%
@@ -82,19 +81,19 @@ ps                   : 0.10%
 dbus-daemon          : 0.10%
 cron                 : 0.10%
 bash                 : 0.10%
-awk                  : 0.10%
+analyser_logs.s      : 0.10%
 
 📌 Top processus gourmands CPU :
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root     2921603  115  4.6 877224 94616 ?        Rsl  08:00   0:01 npm install
-jonathan 2921508  3.2  2.9 782716 59100 ?        Dsl  08:00   0:00 npm run dev --host 0.0.0.0 --port 5173
-jonathan 2921516  3.2  2.7 782716 56020 ?        Dsl  08:00   0:00 npm run preview --host --port 5173
-999      1268356  1.2  0.8 1739820 17548 ?       Ssl  Jan24 3924:39 mysqld
-root           1  0.7  0.4 168924  8320 ?        Ss   Jan22 2233:54 /sbin/init
-root          14  0.3  0.0      0     0 ?        I    Jan22 965:30 [rcu_sched]
-root     2886139  0.2  1.8  74332 37028 ?        Ss   07:02   0:09 /lib/systemd/systemd-journald
-message+     508  0.1  0.1   9540  2448 ?        Ss   Jan22 476:45 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
-root     2921534  0.0  0.1   3792  2780 ?        S    08:00   0:00 /bin/bash ./analyser_logs.sh
+root     1582367  110  4.1 875500 84024 ?        Rsl  09:00   0:01 npm install
+root     1582381  4.7  0.1   3792  2784 ?        S    09:00   0:00 /bin/bash ./analyser_logs.sh
+999      1268356  1.2  0.8 1739820 17496 ?       Ssl  Jan24 4063:51 mysqld
+root           1  0.7  0.4 168988  8632 ?        Ss   Jan22 2298:45 /sbin/init
+root     1487189  0.3  3.7 123492 75840 ?        Ss   06:40   0:26 /lib/systemd/systemd-journald
+root          14  0.3  0.0      0     0 ?        I    Jan22 997:13 [rcu_sched]
+message+     508  0.1  0.1   9540  2436 ?        Ss   Jan22 476:45 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root          32  0.0  0.0      0     0 ?        S    Jan22 314:23 [kcompactd0]
+root         720  0.0  0.7 1340504 14912 ?       Ssl  Jan22 155:14 /usr/bin/containerd
 
 📌 Ports ouverts (hors localhost) :
 Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
@@ -104,7 +103,6 @@ tcp   LISTEN 0      128             [::]:22            [::]:*
 
 📌 Services en échec :
   UNIT                       LOAD   ACTIVE SUB    DESCRIPTION
-* man-db.service             loaded failed failed Daily man-db regeneration
 * mariadb.service            loaded failed failed MariaDB 10.11.11 database server
 * nginx.service              loaded failed failed A high performance web server and a reverse proxy server
 * snap.certbot.renew.service loaded failed failed Service for snap application certbot.renew
@@ -114,7 +112,7 @@ tcp   LISTEN 0      128             [::]:22            [::]:*
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
 SUB    = The low-level unit activation state, values depend on unit type.
-6 loaded units listed.
+5 loaded units listed.
 
 📌 Derniers paquets installés :
 
